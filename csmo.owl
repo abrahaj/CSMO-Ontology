@@ -10,32 +10,36 @@
 
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://escidoc.org/ontologies/csmo.owl"
+     xml:base="http://escidoc.org/ontologies/csmo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     ontologyIRI="http://escidoc.org/ontologies/csmo.owl"
-     versionIRI="http://escidoc.org/ontologies/csmo.owl">
-    <Prefix name="void" IRI="http://rdfs.org/ns/void#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+     ontologyIRI="http://escidoc.org/ontologies/csmo/">
+    <Prefix name="nfo" IRI="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"/>
     <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
     <Prefix name="org" IRI="http://www.w3.org/ns/org#"/>
-    <Prefix name="csmo" IRI="http://escidoc.org/ontologies/csmo.owl#"/>
     <Prefix name="gn" IRI="http://www.geonames.org/ontology#"/>
-    <Prefix name="" IRI="http://escidoc.org/ontologies/csmo#"/>
     <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="bibo" IRI="http://purl.org/ontology/bibo/"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="csmo" IRI="http://escidoc.org/ontologies/csmo/#"/>
+    <Prefix name="" IRI="http://escidoc.org/ontologies/csmo#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="terms:description"/>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An ontology for the representation of scientific study metadata based on the Core Scientific Metadata Model.</Literal>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Armand Brahaj</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">0.1</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">0.2</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An ontology for the representation of scientific study metadata based on the Core Scientific Metadata Model.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:publisher"/>
@@ -129,13 +133,13 @@
         <Class IRI="#Study"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#UnitsOfStorage"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="void:Dataset"/>
+        <Class abbreviatedIRI="bibo:Document"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="gn:Feature"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="nfo:Folder"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="org:Organisation"/>
@@ -190,6 +194,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasProgramme"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPublication"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasResult"/>
@@ -270,9 +277,6 @@
         <ObjectProperty IRI="#runsStudy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#subDataSetOf"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty abbreviatedIRI="org:&#39;has_member&#39;"/>
     </Declaration>
     <Declaration>
@@ -298,6 +302,12 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#fixity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDataSetStatus"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDataSetType"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasKeyword"/>
@@ -348,6 +358,9 @@
         <DataProperty abbreviatedIRI="foaf:name"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
     </Declaration>
     <Declaration>
@@ -374,7 +387,7 @@
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#DataFile"/>
-        <Class IRI="#UnitsOfStorage"/>
+        <Class IRI="#Result"/>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Facility"/>
@@ -386,7 +399,7 @@
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Investigator"/>
-        <Class abbreviatedIRI="org:Role"/>
+        <Class abbreviatedIRI="foaf:Person"/>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Programme"/>
@@ -394,6 +407,10 @@
             <ObjectProperty IRI="#isProgrammeOf"/>
             <Class IRI="#Policy"/>
         </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Publication"/>
+        <Class abbreviatedIRI="bibo:Document"/>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#SampleParameter"/>
@@ -408,7 +425,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AtomicDataObject"/>
-        <Class abbreviatedIRI="void:Dataset"/>
+        <Class abbreviatedIRI="nfo:Folder"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AtomicDataObjectParameter"/>
@@ -427,7 +444,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DataFile"/>
-        <Class abbreviatedIRI="void:Dataset"/>
+        <Class abbreviatedIRI="nfo:Folder"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DataFile"/>
@@ -544,6 +561,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Investigation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSample"/>
+            <Class IRI="#Sample"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Investigation"/>
         <ObjectMinCardinality cardinality="1">
             <ObjectProperty IRI="#hasInvestigator"/>
             <Class IRI="#Investigator"/>
@@ -591,7 +615,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Investigator"/>
-        <Class abbreviatedIRI="owl:Thing"/>
+        <Class abbreviatedIRI="org:Role"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Investigator"/>
@@ -720,7 +744,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Result"/>
-        <Class abbreviatedIRI="owl:Thing"/>
+        <Class abbreviatedIRI="nfo:Folder"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sample"/>
@@ -822,19 +846,36 @@
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#UnitsOfStorage"/>
-        <Class abbreviatedIRI="void:Dataset"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="void:Dataset"/>
+        <Class abbreviatedIRI="nfo:Folder"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="void:Dataset"/>
+        <Class abbreviatedIRI="nfo:Folder"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#subDataSetOf"/>
-            <Class abbreviatedIRI="void:Dataset"/>
+            <ObjectProperty IRI="#hasDataset"/>
+            <Class abbreviatedIRI="nfo:Folder"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="nfo:Folder"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasSample"/>
+            <Class IRI="#Sample"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="nfo:Folder"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasDataSetStatus"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="nfo:Folder"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasDataSetType"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="org:Role"/>
@@ -851,7 +892,7 @@
         <Class abbreviatedIRI="org:Role"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasAccess"/>
-            <Class abbreviatedIRI="void:Dataset"/>
+            <Class abbreviatedIRI="nfo:Folder"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -925,8 +966,8 @@
         <ObjectProperty IRI="#isPrincipalInvestigatorOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasProgramme"/>
         <ObjectProperty IRI="#isProgrammeOf"/>
+        <ObjectProperty IRI="#hasProgramme"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasResult"/>
@@ -947,10 +988,6 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="#isStudyOf"/>
         <ObjectProperty IRI="#hasStudy"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasSubDataSet"/>
-        <ObjectProperty IRI="#subDataSetOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#issuedPolicy"/>
@@ -989,6 +1026,10 @@
         <Class IRI="#Investigation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDataset"/>
+        <Class abbreviatedIRI="nfo:Folder"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasFacility"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasFacility"/>
@@ -1020,6 +1061,14 @@
         <Class IRI="#Policy"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPublication"/>
+        <Class IRI="#Project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPublication"/>
+        <Class IRI="#Study"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasResult"/>
         <Class IRI="#Investigation"/>
     </ObjectPropertyDomain>
@@ -1033,7 +1082,11 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasSample"/>
-        <Class IRI="#Study"/>
+        <Class IRI="#Investigation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSample"/>
+        <Class abbreviatedIRI="nfo:Folder"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasSampleParameter"/>
@@ -1123,10 +1176,6 @@
         <Class IRI="#Institution"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#subDataSetOf"/>
-        <Class abbreviatedIRI="void:Dataset"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="org:&#39;has_member&#39;"/>
         <Class abbreviatedIRI="org:Organisation"/>
     </ObjectPropertyDomain>
@@ -1148,7 +1197,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasAccess"/>
-        <Class abbreviatedIRI="void:Dataset"/>
+        <Class abbreviatedIRI="nfo:Folder"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDataSetParameter"/>
@@ -1188,6 +1237,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasProgramme"/>
         <Class IRI="#Programme"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPublication"/>
+        <Class IRI="#Publication"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasResult"/>
@@ -1297,10 +1350,6 @@
         <Class IRI="#Study"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#subDataSetOf"/>
-        <Class abbreviatedIRI="void:Dataset"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="org:&#39;has_member&#39;"/>
         <Class abbreviatedIRI="foaf:Person"/>
     </ObjectPropertyRange>
@@ -1318,6 +1367,14 @@
     <FunctionalDataProperty>
         <DataProperty abbreviatedIRI="foaf:name"/>
     </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDataSetStatus"/>
+        <Class abbreviatedIRI="nfo:Folder"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDataSetType"/>
+        <Class abbreviatedIRI="nfo:Folder"/>
+    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasPurpose"/>
         <Class IRI="#Study"/>
@@ -1366,6 +1423,11 @@
         <DataProperty abbreviatedIRI="foaf:name"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#AnalysedResult</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Curated and analysed data file</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AtomicDataObject</IRI>
@@ -1478,6 +1540,12 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Publication</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">bibo:Document
+A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Result</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Results deriving from the investigations usually proceed through different stages.</Literal>
     </AnnotationAssertion>
@@ -1583,6 +1651,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDataSetStatus</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hasDataSetStatus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDataSetType</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hasDataSetType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasDataset</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">hasDataset</Literal>
     </AnnotationAssertion>
@@ -1635,6 +1713,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasProgramme</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasProgramme</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPublication</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hasPublication</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1810,16 +1893,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#studyStatus</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">studyStatus</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#subDataSetOf</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Represents hierarchical containment of DataSets; indicates a dataset which is a sub-part or child of this dataset. Inverse of csmu:hasSubDataSet. </Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#subDataSetOf</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">subDataSetOf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2473,21 +2546,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>void:Dataset</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A set of RDF triples that are published, maintained or aggregated by a single provider.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <AbbreviatedIRI>void:Dataset</AbbreviatedIRI>
-        <AbbreviatedIRI>void:Dataset</AbbreviatedIRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>void:Dataset</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Dataset</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>gn:Feature</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A geographical object uniquely defined by its geonames id.</Literal>
     </AnnotationAssertion>
@@ -2500,6 +2558,27 @@
         <AnnotationProperty abbreviatedIRI="skos:note"/>
         <AbbreviatedIRI>gn:Feature</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Original Label gn:Feature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <AbbreviatedIRI>nfo:Folder</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Datafile 
+The CSMD takes a hierarchical view of data holdings, as data sets may contain other dataset as well as units of storage, typically datafiles. Each datafile has more detailed information, including its name, version, location, data format, creation and modification time, and fixity information such as a Checksum. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>nfo:Folder</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A resource containing a finite sequence of bytes with arbitrary information, that is available to a computer program and is usually based on some kind of durable storage. A file is durable in the sense that it remains available for programs to use after the current program has finished.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>nfo:Folder</AbbreviatedIRI>
+        <AbbreviatedIRI>nfo:Folder</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>nfo:Folder</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Dataset</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
