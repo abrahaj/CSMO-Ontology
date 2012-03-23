@@ -1,0 +1,1690 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY org "http://www.w3.org/ns/org#" >
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY bibo "http://purl.org/ontology/bibo/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY gn "http://www.geonames.org/ontology#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY csmo "https://www.escidoc.org/ontologies/csmo.owl#" >
+    <!ENTITY nfo "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#" >
+]>
+
+
+<rdf:RDF xmlns="https://www.escidoc.org/ontologies/csmo.owl"
+     xml:base="https://www.escidoc.org/ontologies/csmo.owl"
+     xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:org="http://www.w3.org/ns/org#"
+     xmlns:csmo="https://www.escidoc.org/ontologies/csmo.owl#"
+     xmlns:gn="http://www.geonames.org/ontology#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="https://www.escidoc.org/ontologies/csmo.owl">
+        <terms:creator>Armand Brahaj</terms:creator>
+        <owl:versionInfo>0.2</owl:versionInfo>
+        <terms:description xml:lang="en">An ontology for the representation of scientific study metadata based on the Core Scientific Metadata Model.</terms:description>
+        <terms:publisher xml:lang="en">http://www.escidoc.org</terms:publisher>
+        <owl:versionIRI rdf:resource="https://www.escidoc.org/ontologies/csmo.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&terms;creator"/>
+    <owl:AnnotationProperty rdf:about="&terms;description"/>
+    <owl:AnnotationProperty rdf:about="&terms;hasVersion"/>
+    <owl:AnnotationProperty rdf:about="&terms;publisher"/>
+    <owl:AnnotationProperty rdf:about="&terms;modified"/>
+    <owl:AnnotationProperty rdf:about="&skos;note"/>
+    <owl:AnnotationProperty rdf:about="&terms;issued"/>
+    <owl:AnnotationProperty rdf:about="&terms;title">
+        <rdfs:label xml:lang="en">title</rdfs:label>
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/org#&#39;has_member&#39; -->
+
+    <owl:ObjectProperty rdf:about="&org;&#39;has_member&#39;">
+        <rdfs:domain rdf:resource="&org;Organisation"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#&#39;member_of&#39; -->
+
+    <owl:ObjectProperty rdf:about="&org;&#39;member_of&#39;">
+        <owl:inverseOf rdf:resource="&org;&#39;has_member&#39;"/>
+        <rdfs:range rdf:resource="&org;Organisation"/>
+        <rdfs:domain rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#hasSite -->
+
+    <owl:ObjectProperty rdf:about="&org;hasSite">
+        <rdfs:range rdf:resource="&org;Site"/>
+        <rdfs:domain rdf:resource="&csmo;Institution"/>
+        <rdfs:domain rdf:resource="&csmo;Instrument"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasAccess -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasAccess">
+        <rdfs:label>hasAccess</rdfs:label>
+        <rdfs:range rdf:resource="&nfo;Folder"/>
+        <rdfs:domain rdf:resource="&org;Role"/>
+        <rdfs:range rdf:resource="&csmo;Investigation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasData -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasData">
+        <rdfs:label>hasData</rdfs:label>
+        <rdfs:domain rdf:resource="&csmo;Investigation"/>
+        <owl:inverseOf rdf:resource="&csmo;isDataOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasDataSetParameter -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasDataSetParameter">
+        <rdfs:label xml:lang="de">hasDataSetParameter</rdfs:label>
+        <rdfs:range rdf:resource="&csmo;DataSetParameter"/>
+        <rdfs:domain rdf:resource="&csmo;Investigation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasDataset -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasDataset">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:label>hasDataset</rdfs:label>
+        <rdfs:domain rdf:resource="&nfo;Folder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasFacility -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasFacility">
+        <rdfs:label>hasFacility</rdfs:label>
+        <owl:inverseOf rdf:resource="&csmo;isPartOf"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasFacility"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Institution"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasFacility"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Facility"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasInstrument -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasInstrument">
+        <rdfs:label xml:lang="en">hasInstrument</rdfs:label>
+        <rdfs:range rdf:resource="&csmo;Instrument"/>
+        <rdfs:domain rdf:resource="&csmo;Investigation"/>
+        <owl:inverseOf rdf:resource="&csmo;isInstrumentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasInvestigation -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasInvestigation">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:label xml:lang="en">hasInvestigation</rdfs:label>
+        <rdfs:range rdf:resource="&csmo;Investigation"/>
+        <rdfs:domain rdf:resource="&csmo;Study"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasInvestigator -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasInvestigator">
+        <rdfs:domain rdf:resource="&csmo;Investigation"/>
+        <rdfs:range rdf:resource="&csmo;Investigator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasLocation">
+        <rdfs:label xml:lang="en">hasLocation</rdfs:label>
+        <rdfs:comment xml:lang="en">An investigation might take place in a specific location.</rdfs:comment>
+        <rdfs:range rdf:resource="&gn;Feature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasMember -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasMember">
+        <rdfs:label>hasMember</rdfs:label>
+        <rdfs:domain rdf:resource="&csmo;Institution"/>
+        <rdfs:range rdf:resource="&csmo;Investigator"/>
+        <owl:inverseOf rdf:resource="&csmo;memberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasParameter -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasParameter">
+        <rdfs:label xml:lang="en">hasParameter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasPrincipalInvestigator -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasPrincipalInvestigator">
+        <rdfs:label xml:lang="en">hasPrincipalInvestigator</rdfs:label>
+        <rdfs:range rdf:resource="&csmo;PrincipleInvestigator"/>
+        <rdfs:domain rdf:resource="&csmo;Study"/>
+        <owl:inverseOf rdf:resource="&csmo;isPrincipalInvestigatorOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasProgramme -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasProgramme">
+        <rdfs:label xml:lang="en">hasProgramme</rdfs:label>
+        <rdfs:domain rdf:resource="&csmo;Policy"/>
+        <rdfs:range rdf:resource="&csmo;Programme"/>
+        <owl:inverseOf rdf:resource="&csmo;isProgrammeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasPublication -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasPublication">
+        <rdfs:label>hasPublication</rdfs:label>
+        <rdfs:domain rdf:resource="&csmo;Project"/>
+        <rdfs:range rdf:resource="&csmo;Publication"/>
+        <rdfs:domain rdf:resource="&csmo;Study"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasResult -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasResult">
+        <rdfs:label>hasResult</rdfs:label>
+        <rdfs:domain rdf:resource="&csmo;Investigation"/>
+        <rdfs:range rdf:resource="&csmo;Result"/>
+        <rdfs:domain rdf:resource="&csmo;Study"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasRole -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasRole">
+        <rdfs:label xml:lang="en">hasRole</rdfs:label>
+        <rdfs:range rdf:resource="&org;Role"/>
+        <rdfs:domain rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasSample -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasSample">
+        <rdfs:label xml:lang="en">hasSample</rdfs:label>
+        <rdfs:domain rdf:resource="&nfo;Folder"/>
+        <rdfs:domain rdf:resource="&csmo;Investigation"/>
+        <rdfs:range rdf:resource="&csmo;Sample"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasSampleParameter -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasSampleParameter">
+        <rdfs:label xml:lang="en">hasSampleParameter</rdfs:label>
+        <rdfs:domain rdf:resource="&csmo;Sample"/>
+        <rdfs:range rdf:resource="&csmo;SampleParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasStudy -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasStudy">
+        <rdfs:label xml:lang="en">hasStudy</rdfs:label>
+        <rdfs:domain rdf:resource="&csmo;Programme"/>
+        <rdfs:domain rdf:resource="&csmo;Project"/>
+        <rdfs:range rdf:resource="&csmo;Study"/>
+        <owl:inverseOf rdf:resource="&csmo;isStudyOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasStudyManager -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasStudyManager">
+        <rdfs:label xml:lang="en">hasStudyManager</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasSubDataSet -->
+
+    <owl:ObjectProperty rdf:about="&csmo;hasSubDataSet">
+        <rdfs:label xml:lang="de">hasSubDataSet</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#isADOParameter -->
+
+    <owl:ObjectProperty rdf:about="&csmo;isADOParameter">
+        <rdfs:label xml:lang="en">isADOParameter</rdfs:label>
+        <rdfs:range rdf:resource="&csmo;AtomicDataObject"/>
+        <rdfs:domain rdf:resource="&csmo;AtomicDataObjectParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#isDataOf -->
+
+    <owl:ObjectProperty rdf:about="&csmo;isDataOf">
+        <rdfs:label>associatedWith</rdfs:label>
+        <rdfs:range rdf:resource="&csmo;Investigation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#isDataParameterOf -->
+
+    <owl:ObjectProperty rdf:about="&csmo;isDataParameterOf">
+        <rdfs:label xml:lang="en">isDataParameterOf</rdfs:label>
+        <rdfs:domain rdf:resource="&csmo;Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#isInstrumentOf -->
+
+    <owl:ObjectProperty rdf:about="&csmo;isInstrumentOf">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&csmo;Facility"/>
+        <rdfs:domain rdf:resource="&csmo;Instrument"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#isInvestigationOf -->
+
+    <owl:ObjectProperty rdf:about="&csmo;isInvestigationOf">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdfs:comment xml:lang="en">Relates an Investigation to a Study</rdfs:comment>
+        <rdfs:domain rdf:resource="&csmo;Investigation"/>
+        <rdfs:range rdf:resource="&csmo;Study"/>
+        <owl:inverseOf rdf:resource="&csmo;hasInvestigation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#isInvestigatorOf -->
+
+    <owl:ObjectProperty rdf:about="&csmo;isInvestigatorOf">
+        <rdfs:label xml:lang="de">isInvestigatorOf</rdfs:label>
+        <rdfs:range rdf:resource="&csmo;Investigation"/>
+        <rdfs:domain rdf:resource="&csmo;Investigator"/>
+        <owl:inverseOf rdf:resource="&csmo;hasInvestigator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="&csmo;isPartOf">
+        <rdfs:label>isPartOf</rdfs:label>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;isPartOf"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Institution"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;isPartOf"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Facility"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#isPrincipalInvestigatorOf -->
+
+    <owl:ObjectProperty rdf:about="&csmo;isPrincipalInvestigatorOf">
+        <rdfs:label xml:lang="en">isPrincipalInvestigatorOf</rdfs:label>
+        <rdfs:domain rdf:resource="&csmo;PrincipleInvestigator"/>
+        <rdfs:range rdf:resource="&csmo;Study"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#isProgrammeOf -->
+
+    <owl:ObjectProperty rdf:about="&csmo;isProgrammeOf">
+        <rdfs:label xml:lang="en">isProgrammeOf</rdfs:label>
+        <rdfs:comment xml:lang="en">Provides information on the funding of a Programe</rdfs:comment>
+        <rdfs:range rdf:resource="&csmo;Institution"/>
+        <rdfs:range rdf:resource="&csmo;Policy"/>
+        <rdfs:domain rdf:resource="&csmo;Programme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#isResultOf -->
+
+    <owl:ObjectProperty rdf:about="&csmo;isResultOf">
+        <rdfs:label>isResultOf</rdfs:label>
+        <rdfs:range rdf:resource="&csmo;Investigation"/>
+        <rdfs:domain rdf:resource="&csmo;Result"/>
+        <rdfs:range rdf:resource="&csmo;Study"/>
+        <owl:inverseOf rdf:resource="&csmo;hasResult"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#isRoleOf -->
+
+    <owl:ObjectProperty rdf:about="&csmo;isRoleOf">
+        <rdfs:label xml:lang="en">isRoleOf</rdfs:label>
+        <rdfs:domain rdf:resource="&org;Role"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+        <owl:inverseOf rdf:resource="&csmo;hasRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#isSampleOf -->
+
+    <owl:ObjectProperty rdf:about="&csmo;isSampleOf">
+        <rdfs:label xml:lang="en">isSampleOf</rdfs:label>
+        <rdfs:domain rdf:resource="&csmo;Sample"/>
+        <rdfs:range rdf:resource="&csmo;Study"/>
+        <owl:inverseOf rdf:resource="&csmo;hasSample"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#isSampleParameterOf -->
+
+    <owl:ObjectProperty rdf:about="&csmo;isSampleParameterOf">
+        <rdfs:label xml:lang="en">isSampleParameterOf</rdfs:label>
+        <rdfs:range rdf:resource="&csmo;Sample"/>
+        <rdfs:domain rdf:resource="&csmo;SampleParameter"/>
+        <owl:inverseOf rdf:resource="&csmo;hasSampleParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#isStudyOf -->
+
+    <owl:ObjectProperty rdf:about="&csmo;isStudyOf">
+        <rdfs:label xml:lang="en">isStudyOf</rdfs:label>
+        <rdfs:range rdf:resource="&csmo;Programme"/>
+        <rdfs:range rdf:resource="&csmo;Project"/>
+        <rdfs:domain rdf:resource="&csmo;Study"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#issuedPolicy -->
+
+    <owl:ObjectProperty rdf:about="&csmo;issuedPolicy">
+        <rdfs:label xml:lang="en">issuedPolicy</rdfs:label>
+        <rdfs:domain rdf:resource="&csmo;Institution"/>
+        <rdfs:range rdf:resource="&csmo;Policy"/>
+        <owl:inverseOf rdf:resource="&csmo;policyCreatedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#memberOf -->
+
+    <owl:ObjectProperty rdf:about="&csmo;memberOf">
+        <rdfs:label>memberOf</rdfs:label>
+        <rdfs:range rdf:resource="&csmo;Institution"/>
+        <rdfs:domain rdf:resource="&csmo;Investigator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#policyCreatedBy -->
+
+    <owl:ObjectProperty rdf:about="&csmo;policyCreatedBy">
+        <rdfs:label xml:lang="en">policyCreatedBy</rdfs:label>
+        <rdfs:range rdf:resource="&csmo;Institution"/>
+        <rdfs:domain rdf:resource="&csmo;Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#runBy -->
+
+    <owl:ObjectProperty rdf:about="&csmo;runBy">
+        <rdfs:label xml:lang="en">runBy</rdfs:label>
+        <rdfs:range rdf:resource="&csmo;Institution"/>
+        <rdfs:domain rdf:resource="&csmo;Study"/>
+        <owl:inverseOf rdf:resource="&csmo;runsStudy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#runsStudy -->
+
+    <owl:ObjectProperty rdf:about="&csmo;runsStudy">
+        <rdfs:label xml:lang="en">runsStudy</rdfs:label>
+        <rdfs:domain rdf:resource="&csmo;Institution"/>
+        <rdfs:range rdf:resource="&csmo;Study"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/alternative -->
+
+    <owl:DatatypeProperty rdf:about="&terms;alternative">
+        <rdfs:label xml:lang="en">alternative</rdfs:label>
+        <rdfs:comment xml:lang="en">An alternative name for the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:DatatypeProperty rdf:about="&terms;title">
+        <rdfs:label xml:lang="en">title</rdfs:label>
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:DatatypeProperty rdf:about="&foaf;name">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&foaf;Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#abstract -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;abstract">
+        <rdfs:label xml:lang="de">abstract</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#chemicalFormula -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;chemicalFormula">
+        <rdfs:label xml:lang="de">chemicalFormula</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#creationDate -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;creationDate">
+        <rdfs:label xml:lang="de">creationDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#dataStatus -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;dataStatus">
+        <rdfs:label xml:lang="de">dataStatus</rdfs:label>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#derivedPublication -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;derivedPublication">
+        <rdfs:label xml:lang="en">derivedPublication</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#fixity -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;fixity">
+        <rdfs:label xml:lang="en">fixity</rdfs:label>
+        <rdfs:comment xml:lang="en">Fixity information such as checksum</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasDataSetStatus -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;hasDataSetStatus">
+        <rdfs:label>hasDataSetStatus</rdfs:label>
+        <rdfs:domain rdf:resource="&nfo;Folder"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasDataSetType -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;hasDataSetType">
+        <rdfs:label>hasDataSetType</rdfs:label>
+        <rdfs:domain rdf:resource="&nfo;Folder"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasKeyword -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;hasKeyword">
+        <rdfs:label xml:lang="en">hasKeyword</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasPurpose -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;hasPurpose">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">hasPurpose</rdfs:label>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&csmo;Study"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasTopic -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;hasTopic">
+        <rdfs:label xml:lang="en">hasTopic</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#investigationAbstract -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;investigationAbstract">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&csmo;Investigation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#investigationDate -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;investigationDate">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="&csmo;Investigation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#link -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;link">
+        <rdfs:label>link</rdfs:label>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+        <rdfs:domain rdf:resource="&csmo;Publication"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#modificationDate -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;modificationDate">
+        <rdfs:label xml:lang="de">modificationDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#motivatingPublication -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;motivatingPublication">
+        <rdfs:label xml:lang="en">motivatingPublication</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#relatedMaterial -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;relatedMaterial">
+        <rdfs:label xml:lang="de">relatedMaterial</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#settings -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;settings">
+        <rdfs:label xml:lang="de">settings</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#studyCreationDate -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;studyCreationDate">
+        <rdfs:label xml:lang="de">studyCreationDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#studyStatus -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;studyStatus">
+        <rdfs:label xml:lang="en">studyStatus</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#version -->
+
+    <owl:DatatypeProperty rdf:about="&csmo;version">
+        <rdfs:label xml:lang="en">version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ontology/bibo/Document -->
+
+    <owl:Class rdf:about="&bibo;Document">
+        <owl:equivalentClass rdf:resource="&csmo;Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geonames.org/ontology#Feature -->
+
+    <owl:Class rdf:about="&gn;Feature">
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+        <rdfs:comment xml:lang="en">A geographical object uniquely defined by its geonames id.</rdfs:comment>
+        <skos:note xml:lang="en">Original Label gn:Feature</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Folder -->
+
+    <owl:Class rdf:about="&nfo;Folder">
+        <rdfs:label xml:lang="en">Dataset</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasDataSetStatus"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasDataset"/>
+                <owl:someValuesFrom rdf:resource="&nfo;Folder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasDataSetType"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasSample"/>
+                <owl:onClass rdf:resource="&csmo;Sample"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A resource containing a finite sequence of bytes with arbitrary information, that is available to a computer program and is usually based on some kind of durable storage. A file is durable in the sense that it remains available for programs to use after the current program has finished.</rdfs:comment>
+        <terms:description xml:lang="en">Datafile 
+The CSMD takes a hierarchical view of data holdings, as data sets may contain other dataset as well as units of storage, typically datafiles. Each datafile has more detailed information, including its name, version, location, data format, creation and modification time, and fixity information such as a Checksum. </terms:description>
+        <rdfs:isDefinedBy rdf:resource="&nfo;Folder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/org#Organisation -->
+
+    <owl:Class rdf:about="&org;Organisation">
+        <owl:equivalentClass rdf:resource="&csmo;Institution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/org#Role -->
+
+    <owl:Class rdf:about="&org;Role">
+        <rdfs:label xml:lang="en">Role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasAccess"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Investigation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasAccess"/>
+                <owl:someValuesFrom rdf:resource="&nfo;Folder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Denotes a role that a Person or other Agent can take in an organization.</rdfs:comment>
+        <rdfs:isDefinedBy>org:Role</rdfs:isDefinedBy>
+        <skos:note>sameAs foaf:Group</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/org#Site -->
+
+    <owl:Class rdf:about="&org;Site">
+        <rdfs:label xml:lang="en">Site</rdfs:label>
+        <owl:equivalentClass rdf:resource="&csmo;Facility"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">An office or other premise at which the study/investigation takes place is located. Many studies/investigations are spread across multiple sites. In most cases a Site will be a physical location.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="&foaf;Agent"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="&foaf;Person">
+        <owl:equivalentClass rdf:resource="&csmo;Investigator"/>
+        <rdfs:subClassOf rdf:resource="&foaf;Agent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasRole"/>
+                <owl:someValuesFrom rdf:resource="&org;Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&org;&#39;member_of&#39;"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Institution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>foaf:Person</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#AnalysedResult -->
+
+    <owl:Class rdf:about="&csmo;AnalysedResult">
+        <owl:equivalentClass rdf:resource="&csmo;DerivedDataResult"/>
+        <rdfs:subClassOf rdf:resource="&csmo;Result"/>
+        <terms:description xml:lang="en">Curated and analysed data file</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#AtomicDataObject -->
+
+    <owl:Class rdf:about="&csmo;AtomicDataObject">
+        <rdfs:label xml:lang="en">AtomicDataObject</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&nfo;Folder"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#AtomicDataObjectParameter -->
+
+    <owl:Class rdf:about="&csmo;AtomicDataObjectParameter">
+        <rdfs:label xml:lang="en">AtomicDataObjectParameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&csmo;Parameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;isADOParameter"/>
+                <owl:someValuesFrom rdf:resource="&csmo;AtomicDataObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#CalibrationData -->
+
+    <owl:Class rdf:about="&csmo;CalibrationData">
+        <rdfs:label xml:lang="en">CalibrationData</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&csmo;Result"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#DataFile -->
+
+    <owl:Class rdf:about="&csmo;DataFile">
+        <rdfs:label xml:lang="en">DataFile</rdfs:label>
+        <owl:equivalentClass rdf:resource="&csmo;Result"/>
+        <rdfs:subClassOf rdf:resource="&nfo;Folder"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasLocation"/>
+                <owl:someValuesFrom rdf:resource="&gn;Feature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&terms;title"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;version"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;modificationDate"/>
+                <owl:someValuesFrom rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;creationDate"/>
+                <owl:someValuesFrom rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;fixity"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Each datafile has more detailed information, including its name, version, location, data format, creation and modification time, and fixity information such as a Checksum.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#DataSetParameter -->
+
+    <owl:Class rdf:about="&csmo;DataSetParameter">
+        <rdfs:label xml:lang="en">DataSetParameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&csmo;Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#DerivedDataResult -->
+
+    <owl:Class rdf:about="&csmo;DerivedDataResult">
+        <rdfs:subClassOf rdf:resource="&csmo;Result"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#EndResult -->
+
+    <owl:Class rdf:about="&csmo;EndResult">
+        <rdfs:subClassOf rdf:resource="&csmo;Result"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#Experiment -->
+
+    <owl:Class rdf:about="&csmo;Experiment">
+        <rdfs:label xml:lang="en">Experiment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&csmo;Investigation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasInstrument"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Instrument"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Experiments. Investigations into the physical behaviour of the environment usually to test a hypothesis, typically involving an instrument operating under some instrumental settings and environmental conditions, and generating datasets in files. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#Facility -->
+
+    <owl:Class rdf:about="&csmo;Facility">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#Institution -->
+
+    <owl:Class rdf:about="&csmo;Institution">
+        <rdfs:label xml:lang="en">Institution</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&org;hasSite"/>
+                <owl:onClass rdf:resource="&org;Site"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#Instrument -->
+
+    <owl:Class rdf:about="&csmo;Instrument">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;isInstrumentOf"/>
+                <owl:allValuesFrom rdf:resource="&csmo;Facility"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;settings"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#Investigation -->
+
+    <owl:Class rdf:about="&csmo;Investigation">
+        <rdfs:label xml:lang="en">Investigation</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasInstrument"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Instrument"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasTopic"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasResult"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Result"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasSample"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Sample"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&terms;title"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasKeyword"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasData"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Result"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;isInvestigationOf"/>
+                <owl:onClass rdf:resource="&csmo;Study"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasPrincipalInvestigator"/>
+                <owl:onClass rdf:resource="&csmo;Investigator"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;abstract"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasInvestigator"/>
+                <owl:onClass rdf:resource="&csmo;Investigator"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Investigation: forms the fundamental unit of the model, with a title, abstract, dates, and unique identifiers referencing the particular study. Also associated with the investigation are the facility and instrument used to collect data. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#Investigator -->
+
+    <owl:Class rdf:about="&csmo;Investigator">
+        <rdfs:label xml:lang="en">Investigator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&org;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;memberOf"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Institution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Investigator describes the people involved in the study together with their institution and role in the study.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#Measurement -->
+
+    <owl:Class rdf:about="&csmo;Measurement">
+        <rdfs:label xml:lang="en">Measurement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&csmo;Investigation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasInstrument"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Instrument"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Measurements. Investigations that record the state of some aspect of the environment over a sequence of points in time and space, using some passive detector, e.g., the measurement of temperature at a point on the earth surface taken hourly using a thermometer of known accuracy.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#Observation -->
+
+    <owl:Class rdf:about="&csmo;Observation">
+        <rdfs:subClassOf rdf:resource="&csmo;Investigation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#Parameter -->
+
+    <owl:Class rdf:about="&csmo;Parameter">
+        <rdfs:label xml:lang="en">Parameter</rdfs:label>
+        <rdfs:comment xml:lang="en">Parameters can be associated with data holdings, datasets, or ADOs. The same metadata item is used to represent either experimental conditions or measured items stored as data points in the data collection, but are distinguished via a parameter type qualifier (‘fixed’ or ‘measured’).Each parameter has a set of fields describing its name (e.g., temperature, pressure), its value (if fixed in as an input parameter), the units of measurement used to qualify the data points, the range of values over-which a parameter can take and the error margin expected on the value.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#Policy -->
+
+    <owl:Class rdf:about="&csmo;Policy">
+        <rdfs:label xml:lang="en">Policy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&terms;title"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;policyCreatedBy"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Institution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasProgramme"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Programme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Policy. The company or government policies which initiate Programmes of work.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#PrincipleInvestigator -->
+
+    <owl:Class rdf:about="&csmo;PrincipleInvestigator">
+        <rdfs:subClassOf rdf:resource="&csmo;Investigator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;isPrincipalInvestigatorOf"/>
+                <owl:onClass rdf:resource="&csmo;Study"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&csmo;ResearchStudent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#Programme -->
+
+    <owl:Class rdf:about="&csmo;Programme">
+        <rdfs:label xml:lang="en">Programme</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;isProgrammeOf"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Policy"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;isProgrammeOf"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Institution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasStudy"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Study"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&terms;title"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Programmes. Related studies that have a common theme which are usually funded and resourced directly or with an intermediary organisation under the rubric of the programme.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Scientific research programme</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#Project -->
+
+    <owl:Class rdf:about="&csmo;Project">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasStudy"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Study"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#Publication -->
+
+    <owl:Class rdf:about="&csmo;Publication">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;link"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;motivatingPublication"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;derivedPublication"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">bibo:Document
+A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#RawData -->
+
+    <owl:Class rdf:about="&csmo;RawData">
+        <rdfs:subClassOf rdf:resource="&csmo;Result"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#ResearchStudent -->
+
+    <owl:Class rdf:about="&csmo;ResearchStudent">
+        <rdfs:subClassOf rdf:resource="&csmo;Investigator"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#Result -->
+
+    <owl:Class rdf:about="&csmo;Result">
+        <rdfs:label xml:lang="en">Result</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&nfo;Folder"/>
+        <rdfs:comment xml:lang="en">Results deriving from the investigations usually proceed through different stages.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#Sample -->
+
+    <owl:Class rdf:about="&csmo;Sample">
+        <rdfs:label xml:lang="en">Sample</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&terms;alternative"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&terms;title"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasSampleParameter"/>
+                <owl:someValuesFrom rdf:resource="&csmo;SampleParameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;chemicalFormula"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Information on the material sample under investigation within the study. </rdfs:comment>
+        <skos:note xml:lang="en">Sample: information on the material sample under investigation within the study. The model has fields for a sample’s name, chemical formula and any associated special information about it, such as specific safety information on a toxic material. </skos:note>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#SampleParameter -->
+
+    <owl:Class rdf:about="&csmo;SampleParameter">
+        <rdfs:label xml:lang="en">SampleParameter</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;isSampleParameterOf"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Sample"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&csmo;Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#Simulation -->
+
+    <owl:Class rdf:about="&csmo;Simulation">
+        <rdfs:label xml:lang="en">Simulation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&csmo;Investigation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasParameter"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Parameter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Investigations that test a model of part of the world, and a computer simulation of the state space of that model. This will typically involve some simulation package with some initial parameters, and generate a dataset representing the result of the simulation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://www.escidoc.org/ontologies/csmo.owl#Study -->
+
+    <owl:Class rdf:about="&csmo;Study">
+        <rdfs:label xml:lang="en">Study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;isStudyOf"/>
+                <owl:onClass rdf:resource="&csmo;Programme"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&terms;title"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasPurpose"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasInvestigation"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Investigation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;relatedMaterial"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;studyCreationDate"/>
+                <owl:someValuesFrom rdf:resource="&xsd;dateTimeStamp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;studyStatus"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasStudyManager"/>
+                <owl:someValuesFrom rdf:resource="&foaf;Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Studies investigate some aspect of science and have a Principal Investigator and/or institution, co-investigators and some specific purpose. </rdfs:comment>
+        <rdfs:comment xml:lang="en">Study is a body of scientific work on a particular subject of investigation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/format">
+        <rdfs:label xml:lang="en-us">Format</rdfs:label>
+        <terms:modified>2008-01-14</terms:modified>
+        <terms:issued>1999-07-02</terms:issued>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en-us">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</terms:description>
+        <rdfs:comment xml:lang="en-us">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <rdfs:label xml:lang="en-us">Creator</rdfs:label>
+        <terms:issued>1999-07-02</terms:issued>
+        <terms:modified>2008-01-14</terms:modified>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en-us">An entity primarily responsible for making the resource.</rdfs:comment>
+        <terms:description xml:lang="en-us">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#creator-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+        <rdfs:label xml:lang="en-us">Description</rdfs:label>
+        <terms:modified>2008-01-14</terms:modified>
+        <terms:issued>1999-07-02</terms:issued>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en-us">An account of the resource.</rdfs:comment>
+        <terms:description xml:lang="en-us">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#description-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/contributor">
+        <rdfs:label xml:lang="en-us">Contributor</rdfs:label>
+        <terms:issued>1999-07-02</terms:issued>
+        <terms:modified>2008-01-14</terms:modified>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en-us">An entity responsible for making contributions to the resource.</rdfs:comment>
+        <terms:description xml:lang="en-us">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributor-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language">
+        <rdfs:label xml:lang="en-us">Language</rdfs:label>
+        <terms:issued>1999-07-02</terms:issued>
+        <terms:modified>2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en-us">A language of the resource.</rdfs:comment>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en-us">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#language-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <rdfs:label xml:lang="en-us">Identifier</rdfs:label>
+        <terms:modified>2008-01-14</terms:modified>
+        <terms:issued>1999-07-02</terms:issued>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en-us">An unambiguous reference to the resource within a given context.</rdfs:comment>
+        <terms:description xml:lang="en-us">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/">
+        <terms:modified>2010-10-11</terms:modified>
+        <terms:title xml:lang="en-us">Dublin Core Metadata Element Set, Version 1.1</terms:title>
+        <terms:publisher rdf:resource="http://purl.org/dc/aboutdcmi#DCMI"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/publisher">
+        <rdfs:label xml:lang="en-us">Publisher</rdfs:label>
+        <terms:issued>1999-07-02</terms:issued>
+        <terms:modified>2008-01-14</terms:modified>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en-us">An entity responsible for making the resource available.</rdfs:comment>
+        <terms:description xml:lang="en-us">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#publisher-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/source">
+        <rdfs:label xml:lang="en-us">Source</rdfs:label>
+        <terms:issued>1999-07-02</terms:issued>
+        <terms:modified>2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en-us">A related resource from which the described resource is derived.</rdfs:comment>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en-us">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#source-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+        <rdfs:label xml:lang="en-us">Rights</rdfs:label>
+        <terms:modified>2008-01-14</terms:modified>
+        <terms:issued>1999-07-02</terms:issued>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en-us">Information about rights held in and over the resource.</rdfs:comment>
+        <terms:description xml:lang="en-us">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#rights-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/coverage">
+        <rdfs:label xml:lang="en-us">Coverage</rdfs:label>
+        <terms:modified>2008-01-14</terms:modified>
+        <terms:issued>1999-07-02</terms:issued>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en-us">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</terms:description>
+        <rdfs:comment xml:lang="en-us">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#coverage-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/subject">
+        <rdfs:label xml:lang="en-us">Subject</rdfs:label>
+        <terms:modified>2008-01-14</terms:modified>
+        <terms:issued>1999-07-02</terms:issued>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en-us">The topic of the resource.</rdfs:comment>
+        <terms:description xml:lang="en-us">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary. To describe the spatial or temporal topic of the resource, use the Coverage element.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#subject-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
+        <rdfs:label xml:lang="en-us">Type</rdfs:label>
+        <terms:modified>2008-01-14</terms:modified>
+        <terms:issued>1999-07-02</terms:issued>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en-us">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</terms:description>
+        <rdfs:comment xml:lang="en-us">The nature or genre of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#type-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+        <rdfs:label xml:lang="en-us">Date</rdfs:label>
+        <terms:issued>1999-07-02</terms:issued>
+        <terms:modified>2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en-us">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en-us">Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#date-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/relation">
+        <rdfs:label xml:lang="en-us">Relation</rdfs:label>
+        <terms:modified>2008-01-14</terms:modified>
+        <terms:issued>1999-07-02</terms:issued>
+        <rdfs:comment xml:lang="en-us">A related resource.</rdfs:comment>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en-us">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relation-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:label xml:lang="en-us">Title</rdfs:label>
+        <terms:issued>1999-07-02</terms:issued>
+        <terms:modified>2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en-us">A name given to the resource.</rdfs:comment>
+        <skos:note xml:lang="en-us">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#title-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&csmo;Experiment"/>
+            <rdf:Description rdf:about="&csmo;Measurement"/>
+            <rdf:Description rdf:about="&csmo;Observation"/>
+            <rdf:Description rdf:about="&csmo;Simulation"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&csmo;AtomicDataObjectParameter"/>
+            <rdf:Description rdf:about="&csmo;DataSetParameter"/>
+            <rdf:Description rdf:about="&csmo;SampleParameter"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&csmo;AnalysedResult"/>
+            <rdf:Description rdf:about="&csmo;EndResult"/>
+            <rdf:Description rdf:about="&csmo;RawData"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
