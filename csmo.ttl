@@ -8,23 +8,23 @@
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix csmo: <https://www.escidoc.org/ontologies/csmo.owl#> .
-@prefix : <https://www.escidoc.org/ontologies/csmo.owl> .
+@prefix csmo: <https://www.escidoc.org/ontologies/csmo/> .
+@prefix : <https://www.escidoc.org/ontologies/csmo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@base <https://www.escidoc.org/ontologies/csmo.owl> .
+@base <https://www.escidoc.org/ontologies/csmo/> .
 
-<https://www.escidoc.org/ontologies/csmo.owl> rdf:type owl:Ontology ;
-                                              
-                                              terms:creator "Armand Brahaj" ;
-                                              
-                                              owl:versionInfo "0.2" ;
-                                              
-                                              terms:description "An ontology for the representation of scientific study metadata based on the Core Scientific Metadata Model."@en ;
-                                              
-                                              terms:publisher "http://www.escidoc.org"@en ;
-                                              
-                                              owl:versionIRI <https://www.escidoc.org/ontologies/csmo.owl> .
+<https://www.escidoc.org/ontologies/csmo/> rdf:type owl:Ontology ;
+                                           
+                                           terms:creator "Armand Brahaj" ;
+                                           
+                                           owl:versionInfo "0.2" ;
+                                           
+                                           terms:description "An ontology for the representation of scientific study metadata based on the Core Scientific Metadata Model."@en ;
+                                           
+                                           terms:publisher "http://www.escidoc.org"@en ;
+                                           
+                                           owl:versionIRI <https://www.escidoc.org/ontologies/csmo/> .
 
 
 #################################################################
@@ -118,524 +118,524 @@ org:hasSite rdf:type owl:ObjectProperty ;
             
             rdfs:range org:Site ;
             
-            rdfs:domain csmo:Institution ,
-                        csmo:Instrument .
+            rdfs:domain csmo:#Institution ,
+                        csmo:#Instrument .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#hasAccess
+###  https://www.escidoc.org/ontologies/csmo/#hasAccess
 
-csmo:hasAccess rdf:type owl:ObjectProperty ;
+csmo:#hasAccess rdf:type owl:ObjectProperty ;
+                
+                rdfs:label "hasAccess" ;
+                
+                rdfs:range nfo:Folder ;
+                
+                rdfs:domain org:Role ;
+                
+                rdfs:range csmo:#Investigation .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasData
+
+csmo:#hasData rdf:type owl:ObjectProperty ;
+              
+              rdfs:label "hasData" ;
+              
+              rdfs:domain csmo:#Investigation .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasDataSetParameter
+
+csmo:#hasDataSetParameter rdf:type owl:ObjectProperty ;
+                          
+                          rdfs:label "hasDataSetParameter"@de ;
+                          
+                          rdfs:range csmo:#DataSetParameter ;
+                          
+                          rdfs:domain csmo:#Investigation .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasDataset
+
+csmo:#hasDataset rdf:type owl:AsymmetricProperty ,
+                          owl:ObjectProperty ;
+                 
+                 rdfs:label "hasDataset" ;
+                 
+                 rdfs:domain nfo:Folder .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasFacility
+
+csmo:#hasFacility rdf:type owl:ObjectProperty ;
+                  
+                  rdfs:label "hasFacility" ;
+                  
+                  rdfs:domain [ rdf:type owl:Restriction ;
+                                owl:onProperty csmo:#hasFacility ;
+                                owl:someValuesFrom csmo:#Institution
+                              ] ;
+                  
+                  rdfs:range [ rdf:type owl:Restriction ;
+                               owl:onProperty csmo:#hasFacility ;
+                               owl:someValuesFrom csmo:#Facility
+                             ] .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasInstrument
+
+csmo:#hasInstrument rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:label "hasInstrument"@en ;
+                    
+                    rdfs:range csmo:#Instrument ;
+                    
+                    rdfs:domain csmo:#Investigation .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasInvestigation
+
+csmo:#hasInvestigation rdf:type owl:AsymmetricProperty ,
+                                owl:ObjectProperty ;
+                       
+                       rdfs:label "hasInvestigation"@en ;
+                       
+                       rdfs:range csmo:#Investigation ;
+                       
+                       rdfs:domain csmo:#Study ;
+                       
+                       owl:inverseOf csmo:#isInvestigationOf .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasInvestigator
+
+csmo:#hasInvestigator rdf:type owl:ObjectProperty ;
+                      
+                      rdfs:domain csmo:#Investigation ;
+                      
+                      rdfs:range csmo:#Investigator ;
+                      
+                      owl:inverseOf csmo:#isInvestigatorOf .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasLocation
+
+csmo:#hasLocation rdf:type owl:ObjectProperty ;
+                  
+                  rdfs:label "hasLocation"@en ;
+                  
+                  rdfs:comment "An investigation might take place in a specific location."@en ;
+                  
+                  rdfs:range gn:Feature .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasMember
+
+csmo:#hasMember rdf:type owl:ObjectProperty ;
+                
+                rdfs:label "hasMember" ;
+                
+                rdfs:domain csmo:#Institution ;
+                
+                rdfs:range csmo:#Investigator ;
+                
+                owl:inverseOf csmo:#memberOf .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasParameter
+
+csmo:#hasParameter rdf:type owl:ObjectProperty ;
+                   
+                   rdfs:label "hasParameter"@en .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasPrincipalInvestigator
+
+csmo:#hasPrincipalInvestigator rdf:type owl:ObjectProperty ;
+                               
+                               rdfs:label "hasPrincipalInvestigator"@en ;
+                               
+                               rdfs:range csmo:#PrincipleInvestigator ;
+                               
+                               rdfs:domain csmo:#Study ;
+                               
+                               owl:inverseOf csmo:#isPrincipalInvestigatorOf .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasProgramme
+
+csmo:#hasProgramme rdf:type owl:ObjectProperty ;
+                   
+                   rdfs:label "hasProgramme"@en ;
+                   
+                   rdfs:domain csmo:#Policy ;
+                   
+                   rdfs:range csmo:#Programme .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasPublication
+
+csmo:#hasPublication rdf:type owl:ObjectProperty ;
+                     
+                     rdfs:label "hasPublication" ;
+                     
+                     rdfs:domain csmo:#Project ;
+                     
+                     rdfs:range csmo:#Publication ;
+                     
+                     rdfs:domain csmo:#Study .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasResult
+
+csmo:#hasResult rdf:type owl:ObjectProperty ;
+                
+                rdfs:label "hasResult" ;
+                
+                rdfs:domain csmo:#Investigation ;
+                
+                rdfs:range csmo:#Result ;
+                
+                rdfs:domain csmo:#Study ;
+                
+                owl:inverseOf csmo:#isResultOf .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasRole
+
+csmo:#hasRole rdf:type owl:ObjectProperty ;
+              
+              rdfs:label "hasRole"@en ;
+              
+              rdfs:range org:Role ;
+              
+              rdfs:domain foaf:Person .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasSample
+
+csmo:#hasSample rdf:type owl:ObjectProperty ;
+                
+                rdfs:label "hasSample"@en ;
+                
+                rdfs:domain nfo:Folder ,
+                            csmo:#Investigation ;
+                
+                rdfs:range csmo:#Sample ;
+                
+                owl:inverseOf csmo:#isSampleOf .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasSampleParameter
+
+csmo:#hasSampleParameter rdf:type owl:ObjectProperty ;
+                         
+                         rdfs:label "hasSampleParameter"@en ;
+                         
+                         rdfs:domain csmo:#Sample ;
+                         
+                         rdfs:range csmo:#SampleParameter ;
+                         
+                         owl:inverseOf csmo:#isSampleParameterOf .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasStudy
+
+csmo:#hasStudy rdf:type owl:ObjectProperty ;
                
-               rdfs:label "hasAccess" ;
+               rdfs:label "hasStudy"@en ;
                
-               rdfs:range nfo:Folder ;
+               rdfs:domain csmo:#Programme ,
+                           csmo:#Project ;
+               
+               rdfs:range csmo:#Study .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasStudyManager
+
+csmo:#hasStudyManager rdf:type owl:ObjectProperty ;
+                      
+                      rdfs:label "hasStudyManager"@en .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasSubDataSet
+
+csmo:#hasSubDataSet rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:label "hasSubDataSet"@de .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#isADOParameter
+
+csmo:#isADOParameter rdf:type owl:ObjectProperty ;
+                     
+                     rdfs:label "isADOParameter"@en ;
+                     
+                     rdfs:range csmo:#AtomicDataObject ;
+                     
+                     rdfs:domain csmo:#AtomicDataObjectParameter .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#isDataOf
+
+csmo:#isDataOf rdf:type owl:ObjectProperty ;
+               
+               rdfs:label "associatedWith" ;
+               
+               rdfs:range csmo:#Investigation ;
+               
+               owl:inverseOf csmo:#hasData .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#isDataParameterOf
+
+csmo:#isDataParameterOf rdf:type owl:ObjectProperty ;
+                        
+                        rdfs:label "isDataParameterOf"@en ;
+                        
+                        rdfs:domain csmo:#Parameter .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#isInstrumentOf
+
+csmo:#isInstrumentOf rdf:type owl:FunctionalProperty ,
+                              owl:ObjectProperty ;
+                     
+                     rdfs:range csmo:#Facility ;
+                     
+                     rdfs:domain csmo:#Instrument ;
+                     
+                     owl:inverseOf csmo:#hasInstrument .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#isInvestigationOf
+
+csmo:#isInvestigationOf rdf:type owl:AsymmetricProperty ,
+                                 owl:ObjectProperty ;
+                        
+                        rdfs:comment "Relates an Investigation to a Study"@en ;
+                        
+                        rdfs:domain csmo:#Investigation ;
+                        
+                        rdfs:range csmo:#Study .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#isInvestigatorOf
+
+csmo:#isInvestigatorOf rdf:type owl:ObjectProperty ;
+                       
+                       rdfs:label "isInvestigatorOf"@de ;
+                       
+                       rdfs:range csmo:#Investigation ;
+                       
+                       rdfs:domain csmo:#Investigator .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#isPartOf
+
+csmo:#isPartOf rdf:type owl:ObjectProperty ;
+               
+               rdfs:label "isPartOf" ;
+               
+               owl:inverseOf csmo:#hasFacility ;
+               
+               rdfs:range [ rdf:type owl:Restriction ;
+                            owl:onProperty csmo:#isPartOf ;
+                            owl:someValuesFrom csmo:#Institution
+                          ] ;
+               
+               rdfs:domain [ rdf:type owl:Restriction ;
+                             owl:onProperty csmo:#isPartOf ;
+                             owl:someValuesFrom csmo:#Facility
+                           ] .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#isPrincipalInvestigatorOf
+
+csmo:#isPrincipalInvestigatorOf rdf:type owl:ObjectProperty ;
+                                
+                                rdfs:label "isPrincipalInvestigatorOf"@en ;
+                                
+                                rdfs:domain csmo:#PrincipleInvestigator ;
+                                
+                                rdfs:range csmo:#Study .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#isProgrammeOf
+
+csmo:#isProgrammeOf rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:label "isProgrammeOf"@en ;
+                    
+                    rdfs:comment "Provides information on the funding of a Programe"@en ;
+                    
+                    rdfs:range csmo:#Institution ,
+                               csmo:#Policy ;
+                    
+                    rdfs:domain csmo:#Programme ;
+                    
+                    owl:inverseOf csmo:#hasProgramme .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#isResultOf
+
+csmo:#isResultOf rdf:type owl:ObjectProperty ;
+                 
+                 rdfs:label "isResultOf" ;
+                 
+                 rdfs:range csmo:#Investigation ;
+                 
+                 rdfs:domain csmo:#Result ;
+                 
+                 rdfs:range csmo:#Study .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#isRoleOf
+
+csmo:#isRoleOf rdf:type owl:ObjectProperty ;
+               
+               rdfs:label "isRoleOf"@en ;
                
                rdfs:domain org:Role ;
                
-               rdfs:range csmo:Investigation .
+               rdfs:range foaf:Person ;
+               
+               owl:inverseOf csmo:#hasRole .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#hasData
+###  https://www.escidoc.org/ontologies/csmo/#isSampleOf
 
-csmo:hasData rdf:type owl:ObjectProperty ;
-             
-             rdfs:label "hasData" ;
-             
-             rdfs:domain csmo:Investigation ;
-             
-             owl:inverseOf csmo:isDataOf .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasDataSetParameter
-
-csmo:hasDataSetParameter rdf:type owl:ObjectProperty ;
-                         
-                         rdfs:label "hasDataSetParameter"@de ;
-                         
-                         rdfs:range csmo:DataSetParameter ;
-                         
-                         rdfs:domain csmo:Investigation .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasDataset
-
-csmo:hasDataset rdf:type owl:AsymmetricProperty ,
-                         owl:ObjectProperty ;
-                
-                rdfs:label "hasDataset" ;
-                
-                rdfs:domain nfo:Folder .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasFacility
-
-csmo:hasFacility rdf:type owl:ObjectProperty ;
+csmo:#isSampleOf rdf:type owl:ObjectProperty ;
                  
-                 rdfs:label "hasFacility" ;
+                 rdfs:label "isSampleOf"@en ;
                  
-                 owl:inverseOf csmo:isPartOf ;
+                 rdfs:domain csmo:#Sample ;
                  
-                 rdfs:domain [ rdf:type owl:Restriction ;
-                               owl:onProperty csmo:hasFacility ;
-                               owl:someValuesFrom csmo:Institution
-                             ] ;
-                 
-                 rdfs:range [ rdf:type owl:Restriction ;
-                              owl:onProperty csmo:hasFacility ;
-                              owl:someValuesFrom csmo:Facility
-                            ] .
+                 rdfs:range csmo:#Study .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#hasInstrument
+###  https://www.escidoc.org/ontologies/csmo/#isSampleParameterOf
 
-csmo:hasInstrument rdf:type owl:ObjectProperty ;
+csmo:#isSampleParameterOf rdf:type owl:ObjectProperty ;
+                          
+                          rdfs:label "isSampleParameterOf"@en ;
+                          
+                          rdfs:range csmo:#Sample ;
+                          
+                          rdfs:domain csmo:#SampleParameter .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#isStudyOf
+
+csmo:#isStudyOf rdf:type owl:ObjectProperty ;
+                
+                rdfs:label "isStudyOf"@en ;
+                
+                rdfs:range csmo:#Programme ,
+                           csmo:#Project ;
+                
+                rdfs:domain csmo:#Study ;
+                
+                owl:inverseOf csmo:#hasStudy .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#issuedPolicy
+
+csmo:#issuedPolicy rdf:type owl:ObjectProperty ;
                    
-                   rdfs:label "hasInstrument"@en ;
+                   rdfs:label "issuedPolicy"@en ;
                    
-                   rdfs:range csmo:Instrument ;
+                   rdfs:domain csmo:#Institution ;
                    
-                   rdfs:domain csmo:Investigation ;
+                   rdfs:range csmo:#Policy ;
                    
-                   owl:inverseOf csmo:isInstrumentOf .
+                   owl:inverseOf csmo:#policyCreatedBy .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#hasInvestigation
+###  https://www.escidoc.org/ontologies/csmo/#memberOf
 
-csmo:hasInvestigation rdf:type owl:AsymmetricProperty ,
-                               owl:ObjectProperty ;
+csmo:#memberOf rdf:type owl:ObjectProperty ;
+               
+               rdfs:label "memberOf" ;
+               
+               rdfs:range csmo:#Institution ;
+               
+               rdfs:domain csmo:#Investigator .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#policyCreatedBy
+
+csmo:#policyCreatedBy rdf:type owl:ObjectProperty ;
                       
-                      rdfs:label "hasInvestigation"@en ;
+                      rdfs:label "policyCreatedBy"@en ;
                       
-                      rdfs:range csmo:Investigation ;
+                      rdfs:range csmo:#Institution ;
                       
-                      rdfs:domain csmo:Study .
+                      rdfs:domain csmo:#Policy .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#hasInvestigator
+###  https://www.escidoc.org/ontologies/csmo/#runBy
 
-csmo:hasInvestigator rdf:type owl:ObjectProperty ;
-                     
-                     rdfs:domain csmo:Investigation ;
-                     
-                     rdfs:range csmo:Investigator .
+csmo:#runBy rdf:type owl:ObjectProperty ;
+            
+            rdfs:label "runBy"@en ;
+            
+            rdfs:range csmo:#Institution ;
+            
+            rdfs:domain csmo:#Study ;
+            
+            owl:inverseOf csmo:#runsStudy .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#hasLocation
+###  https://www.escidoc.org/ontologies/csmo/#runsStudy
 
-csmo:hasLocation rdf:type owl:ObjectProperty ;
-                 
-                 rdfs:label "hasLocation"@en ;
-                 
-                 rdfs:comment "An investigation might take place in a specific location."@en ;
-                 
-                 rdfs:range gn:Feature .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasMember
-
-csmo:hasMember rdf:type owl:ObjectProperty ;
-               
-               rdfs:label "hasMember" ;
-               
-               rdfs:domain csmo:Institution ;
-               
-               rdfs:range csmo:Investigator ;
-               
-               owl:inverseOf csmo:memberOf .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasParameter
-
-csmo:hasParameter rdf:type owl:ObjectProperty ;
-                  
-                  rdfs:label "hasParameter"@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasPrincipalInvestigator
-
-csmo:hasPrincipalInvestigator rdf:type owl:ObjectProperty ;
-                              
-                              rdfs:label "hasPrincipalInvestigator"@en ;
-                              
-                              rdfs:range csmo:PrincipleInvestigator ;
-                              
-                              rdfs:domain csmo:Study ;
-                              
-                              owl:inverseOf csmo:isPrincipalInvestigatorOf .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasProgramme
-
-csmo:hasProgramme rdf:type owl:ObjectProperty ;
-                  
-                  rdfs:label "hasProgramme"@en ;
-                  
-                  rdfs:domain csmo:Policy ;
-                  
-                  rdfs:range csmo:Programme ;
-                  
-                  owl:inverseOf csmo:isProgrammeOf .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasPublication
-
-csmo:hasPublication rdf:type owl:ObjectProperty ;
-                    
-                    rdfs:label "hasPublication" ;
-                    
-                    rdfs:domain csmo:Project ;
-                    
-                    rdfs:range csmo:Publication ;
-                    
-                    rdfs:domain csmo:Study .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasResult
-
-csmo:hasResult rdf:type owl:ObjectProperty ;
-               
-               rdfs:label "hasResult" ;
-               
-               rdfs:domain csmo:Investigation ;
-               
-               rdfs:range csmo:Result ;
-               
-               rdfs:domain csmo:Study .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasRole
-
-csmo:hasRole rdf:type owl:ObjectProperty ;
-             
-             rdfs:label "hasRole"@en ;
-             
-             rdfs:range org:Role ;
-             
-             rdfs:domain foaf:Person .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasSample
-
-csmo:hasSample rdf:type owl:ObjectProperty ;
-               
-               rdfs:label "hasSample"@en ;
-               
-               rdfs:domain nfo:Folder ,
-                           csmo:Investigation ;
-               
-               rdfs:range csmo:Sample .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasSampleParameter
-
-csmo:hasSampleParameter rdf:type owl:ObjectProperty ;
-                        
-                        rdfs:label "hasSampleParameter"@en ;
-                        
-                        rdfs:domain csmo:Sample ;
-                        
-                        rdfs:range csmo:SampleParameter .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasStudy
-
-csmo:hasStudy rdf:type owl:ObjectProperty ;
-              
-              rdfs:label "hasStudy"@en ;
-              
-              rdfs:domain csmo:Programme ,
-                          csmo:Project ;
-              
-              rdfs:range csmo:Study ;
-              
-              owl:inverseOf csmo:isStudyOf .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasStudyManager
-
-csmo:hasStudyManager rdf:type owl:ObjectProperty ;
-                     
-                     rdfs:label "hasStudyManager"@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasSubDataSet
-
-csmo:hasSubDataSet rdf:type owl:ObjectProperty ;
-                   
-                   rdfs:label "hasSubDataSet"@de .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#isADOParameter
-
-csmo:isADOParameter rdf:type owl:ObjectProperty ;
-                    
-                    rdfs:label "isADOParameter"@en ;
-                    
-                    rdfs:range csmo:AtomicDataObject ;
-                    
-                    rdfs:domain csmo:AtomicDataObjectParameter .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#isDataOf
-
-csmo:isDataOf rdf:type owl:ObjectProperty ;
-              
-              rdfs:label "associatedWith" ;
-              
-              rdfs:range csmo:Investigation .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#isDataParameterOf
-
-csmo:isDataParameterOf rdf:type owl:ObjectProperty ;
-                       
-                       rdfs:label "isDataParameterOf"@en ;
-                       
-                       rdfs:domain csmo:Parameter .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#isInstrumentOf
-
-csmo:isInstrumentOf rdf:type owl:FunctionalProperty ,
-                             owl:ObjectProperty ;
-                    
-                    rdfs:range csmo:Facility ;
-                    
-                    rdfs:domain csmo:Instrument .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#isInvestigationOf
-
-csmo:isInvestigationOf rdf:type owl:AsymmetricProperty ,
-                                owl:ObjectProperty ;
-                       
-                       rdfs:comment "Relates an Investigation to a Study"@en ;
-                       
-                       rdfs:domain csmo:Investigation ;
-                       
-                       rdfs:range csmo:Study ;
-                       
-                       owl:inverseOf csmo:hasInvestigation .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#isInvestigatorOf
-
-csmo:isInvestigatorOf rdf:type owl:ObjectProperty ;
-                      
-                      rdfs:label "isInvestigatorOf"@de ;
-                      
-                      rdfs:range csmo:Investigation ;
-                      
-                      rdfs:domain csmo:Investigator ;
-                      
-                      owl:inverseOf csmo:hasInvestigator .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#isPartOf
-
-csmo:isPartOf rdf:type owl:ObjectProperty ;
-              
-              rdfs:label "isPartOf" ;
-              
-              rdfs:range [ rdf:type owl:Restriction ;
-                           owl:onProperty csmo:isPartOf ;
-                           owl:someValuesFrom csmo:Institution
-                         ] ;
-              
-              rdfs:domain [ rdf:type owl:Restriction ;
-                            owl:onProperty csmo:isPartOf ;
-                            owl:someValuesFrom csmo:Facility
-                          ] .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#isPrincipalInvestigatorOf
-
-csmo:isPrincipalInvestigatorOf rdf:type owl:ObjectProperty ;
-                               
-                               rdfs:label "isPrincipalInvestigatorOf"@en ;
-                               
-                               rdfs:domain csmo:PrincipleInvestigator ;
-                               
-                               rdfs:range csmo:Study .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#isProgrammeOf
-
-csmo:isProgrammeOf rdf:type owl:ObjectProperty ;
-                   
-                   rdfs:label "isProgrammeOf"@en ;
-                   
-                   rdfs:comment "Provides information on the funding of a Programe"@en ;
-                   
-                   rdfs:range csmo:Institution ,
-                              csmo:Policy ;
-                   
-                   rdfs:domain csmo:Programme .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#isResultOf
-
-csmo:isResultOf rdf:type owl:ObjectProperty ;
+csmo:#runsStudy rdf:type owl:ObjectProperty ;
                 
-                rdfs:label "isResultOf" ;
+                rdfs:label "runsStudy"@en ;
                 
-                rdfs:range csmo:Investigation ;
+                rdfs:domain csmo:#Institution ;
                 
-                rdfs:domain csmo:Result ;
-                
-                rdfs:range csmo:Study ;
-                
-                owl:inverseOf csmo:hasResult .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#isRoleOf
-
-csmo:isRoleOf rdf:type owl:ObjectProperty ;
-              
-              rdfs:label "isRoleOf"@en ;
-              
-              rdfs:domain org:Role ;
-              
-              rdfs:range foaf:Person ;
-              
-              owl:inverseOf csmo:hasRole .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#isSampleOf
-
-csmo:isSampleOf rdf:type owl:ObjectProperty ;
-                
-                rdfs:label "isSampleOf"@en ;
-                
-                rdfs:domain csmo:Sample ;
-                
-                rdfs:range csmo:Study ;
-                
-                owl:inverseOf csmo:hasSample .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#isSampleParameterOf
-
-csmo:isSampleParameterOf rdf:type owl:ObjectProperty ;
-                         
-                         rdfs:label "isSampleParameterOf"@en ;
-                         
-                         rdfs:range csmo:Sample ;
-                         
-                         rdfs:domain csmo:SampleParameter ;
-                         
-                         owl:inverseOf csmo:hasSampleParameter .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#isStudyOf
-
-csmo:isStudyOf rdf:type owl:ObjectProperty ;
-               
-               rdfs:label "isStudyOf"@en ;
-               
-               rdfs:range csmo:Programme ,
-                          csmo:Project ;
-               
-               rdfs:domain csmo:Study .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#issuedPolicy
-
-csmo:issuedPolicy rdf:type owl:ObjectProperty ;
-                  
-                  rdfs:label "issuedPolicy"@en ;
-                  
-                  rdfs:domain csmo:Institution ;
-                  
-                  rdfs:range csmo:Policy ;
-                  
-                  owl:inverseOf csmo:policyCreatedBy .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#memberOf
-
-csmo:memberOf rdf:type owl:ObjectProperty ;
-              
-              rdfs:label "memberOf" ;
-              
-              rdfs:range csmo:Institution ;
-              
-              rdfs:domain csmo:Investigator .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#policyCreatedBy
-
-csmo:policyCreatedBy rdf:type owl:ObjectProperty ;
-                     
-                     rdfs:label "policyCreatedBy"@en ;
-                     
-                     rdfs:range csmo:Institution ;
-                     
-                     rdfs:domain csmo:Policy .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#runBy
-
-csmo:runBy rdf:type owl:ObjectProperty ;
-           
-           rdfs:label "runBy"@en ;
-           
-           rdfs:range csmo:Institution ;
-           
-           rdfs:domain csmo:Study ;
-           
-           owl:inverseOf csmo:runsStudy .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#runsStudy
-
-csmo:runsStudy rdf:type owl:ObjectProperty ;
-               
-               rdfs:label "runsStudy"@en ;
-               
-               rdfs:domain csmo:Institution ;
-               
-               rdfs:range csmo:Study .
+                rdfs:range csmo:#Study .
 
 
 
@@ -685,192 +685,192 @@ foaf:name rdf:type owl:DatatypeProperty ,
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#abstract
+###  https://www.escidoc.org/ontologies/csmo/#abstract
 
-csmo:abstract rdf:type owl:DatatypeProperty ;
-              
-              rdfs:label "abstract"@de .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#chemicalFormula
-
-csmo:chemicalFormula rdf:type owl:DatatypeProperty ;
-                     
-                     rdfs:label "chemicalFormula"@de .
+csmo:#abstract rdf:type owl:DatatypeProperty ;
+               
+               rdfs:label "abstract"@de .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#creationDate
+###  https://www.escidoc.org/ontologies/csmo/#chemicalFormula
 
-csmo:creationDate rdf:type owl:DatatypeProperty ;
-                  
-                  rdfs:label "creationDate"@de .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#dataStatus
-
-csmo:dataStatus rdf:type owl:DatatypeProperty ;
-                
-                rdfs:label "dataStatus"@de ;
-                
-                rdfs:range rdfs:Literal .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#derivedPublication
-
-csmo:derivedPublication rdf:type owl:DatatypeProperty ;
-                        
-                        rdfs:label "derivedPublication"@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#fixity
-
-csmo:fixity rdf:type owl:DatatypeProperty ;
-            
-            rdfs:label "fixity"@en ;
-            
-            rdfs:comment "Fixity information such as checksum"@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasDataSetStatus
-
-csmo:hasDataSetStatus rdf:type owl:DatatypeProperty ;
+csmo:#chemicalFormula rdf:type owl:DatatypeProperty ;
                       
-                      rdfs:label "hasDataSetStatus" ;
-                      
-                      rdfs:domain nfo:Folder .
+                      rdfs:label "chemicalFormula"@de .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#hasDataSetType
+###  https://www.escidoc.org/ontologies/csmo/#creationDate
 
-csmo:hasDataSetType rdf:type owl:DatatypeProperty ;
-                    
-                    rdfs:label "hasDataSetType" ;
-                    
-                    rdfs:domain nfo:Folder .
+csmo:#creationDate rdf:type owl:DatatypeProperty ;
+                   
+                   rdfs:label "creationDate"@de .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#hasKeyword
+###  https://www.escidoc.org/ontologies/csmo/#dataStatus
 
-csmo:hasKeyword rdf:type owl:DatatypeProperty ;
-                
-                rdfs:label "hasKeyword"@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasPurpose
-
-csmo:hasPurpose rdf:type owl:DatatypeProperty ,
-                         owl:FunctionalProperty ;
-                
-                rdfs:label "hasPurpose"@en ;
-                
-                rdfs:range rdfs:Literal ;
-                
-                rdfs:domain csmo:Study .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#hasTopic
-
-csmo:hasTopic rdf:type owl:DatatypeProperty ;
-              
-              rdfs:label "hasTopic"@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#investigationAbstract
-
-csmo:investigationAbstract rdf:type owl:DatatypeProperty ;
-                           
-                           rdfs:range rdfs:Literal ;
-                           
-                           rdfs:domain csmo:Investigation .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#investigationDate
-
-csmo:investigationDate rdf:type owl:DatatypeProperty ;
-                       
-                       rdfs:range xsd:dateTime ;
-                       
-                       rdfs:domain csmo:Investigation .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#link
-
-csmo:link rdf:type owl:DatatypeProperty ;
-          
-          rdfs:label "link" ;
-          
-          rdfs:range xsd:anyURI ;
-          
-          rdfs:domain csmo:Publication .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#modificationDate
-
-csmo:modificationDate rdf:type owl:DatatypeProperty ;
-                      
-                      rdfs:label "modificationDate"@de .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#motivatingPublication
-
-csmo:motivatingPublication rdf:type owl:DatatypeProperty ;
-                           
-                           rdfs:label "motivatingPublication"@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#relatedMaterial
-
-csmo:relatedMaterial rdf:type owl:DatatypeProperty ;
-                     
-                     rdfs:label "relatedMaterial"@de .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#settings
-
-csmo:settings rdf:type owl:DatatypeProperty ;
-              
-              rdfs:label "settings"@de .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#studyCreationDate
-
-csmo:studyCreationDate rdf:type owl:DatatypeProperty ;
-                       
-                       rdfs:label "studyCreationDate"@de .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#studyStatus
-
-csmo:studyStatus rdf:type owl:DatatypeProperty ;
+csmo:#dataStatus rdf:type owl:DatatypeProperty ;
                  
-                 rdfs:label "studyStatus"@en .
+                 rdfs:label "dataStatus"@de ;
+                 
+                 rdfs:range rdfs:Literal .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#version
+###  https://www.escidoc.org/ontologies/csmo/#derivedPublication
 
-csmo:version rdf:type owl:DatatypeProperty ;
+csmo:#derivedPublication rdf:type owl:DatatypeProperty ;
+                         
+                         rdfs:label "derivedPublication"@en .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#fixity
+
+csmo:#fixity rdf:type owl:DatatypeProperty ;
              
-             rdfs:label "version"@en .
+             rdfs:label "fixity"@en ;
+             
+             rdfs:comment "Fixity information such as checksum"@en .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasDataSetStatus
+
+csmo:#hasDataSetStatus rdf:type owl:DatatypeProperty ;
+                       
+                       rdfs:label "hasDataSetStatus" ;
+                       
+                       rdfs:domain nfo:Folder .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasDataSetType
+
+csmo:#hasDataSetType rdf:type owl:DatatypeProperty ;
+                     
+                     rdfs:label "hasDataSetType" ;
+                     
+                     rdfs:domain nfo:Folder .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasKeyword
+
+csmo:#hasKeyword rdf:type owl:DatatypeProperty ;
+                 
+                 rdfs:label "hasKeyword"@en .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasPurpose
+
+csmo:#hasPurpose rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 
+                 rdfs:label "hasPurpose"@en ;
+                 
+                 rdfs:range rdfs:Literal ;
+                 
+                 rdfs:domain csmo:#Study .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#hasTopic
+
+csmo:#hasTopic rdf:type owl:DatatypeProperty ;
+               
+               rdfs:label "hasTopic"@en .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#investigationAbstract
+
+csmo:#investigationAbstract rdf:type owl:DatatypeProperty ;
+                            
+                            rdfs:range rdfs:Literal ;
+                            
+                            rdfs:domain csmo:#Investigation .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#investigationDate
+
+csmo:#investigationDate rdf:type owl:DatatypeProperty ;
+                        
+                        rdfs:range xsd:dateTime ;
+                        
+                        rdfs:domain csmo:#Investigation .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#link
+
+csmo:#link rdf:type owl:DatatypeProperty ;
+           
+           rdfs:label "link" ;
+           
+           rdfs:range xsd:anyURI ;
+           
+           rdfs:domain csmo:#Publication .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#modificationDate
+
+csmo:#modificationDate rdf:type owl:DatatypeProperty ;
+                       
+                       rdfs:label "modificationDate"@de .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#motivatingPublication
+
+csmo:#motivatingPublication rdf:type owl:DatatypeProperty ;
+                            
+                            rdfs:label "motivatingPublication"@en .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#relatedMaterial
+
+csmo:#relatedMaterial rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:label "relatedMaterial"@de .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#settings
+
+csmo:#settings rdf:type owl:DatatypeProperty ;
+               
+               rdfs:label "settings"@de .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#studyCreationDate
+
+csmo:#studyCreationDate rdf:type owl:DatatypeProperty ;
+                        
+                        rdfs:label "studyCreationDate"@de .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#studyStatus
+
+csmo:#studyStatus rdf:type owl:DatatypeProperty ;
+                  
+                  rdfs:label "studyStatus"@en .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#version
+
+csmo:#version rdf:type owl:DatatypeProperty ;
+              
+              rdfs:label "version"@en .
 
 
 
@@ -887,7 +887,7 @@ csmo:version rdf:type owl:DatatypeProperty ;
 
 bibo:Document rdf:type owl:Class ;
               
-              owl:equivalentClass csmo:Publication .
+              owl:equivalentClass csmo:#Publication .
 
 
 
@@ -911,20 +911,20 @@ nfo:Folder rdf:type owl:Class ;
            
            rdfs:subClassOf owl:Thing ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty csmo:hasDataSetStatus ;
+                             owl:onProperty csmo:#hasDataSetStatus ;
                              owl:someValuesFrom xsd:string
                            ] ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty csmo:hasDataset ;
+                             owl:onProperty csmo:#hasDataSetType ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty csmo:#hasDataset ;
                              owl:someValuesFrom nfo:Folder
                            ] ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty csmo:hasDataSetType ;
-                             owl:someValuesFrom xsd:string
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty csmo:hasSample ;
-                             owl:onClass csmo:Sample ;
+                             owl:onProperty csmo:#hasSample ;
+                             owl:onClass csmo:#Sample ;
                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
                            ] ;
            
@@ -941,7 +941,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
 
 org:Organisation rdf:type owl:Class ;
                  
-                 owl:equivalentClass csmo:Institution .
+                 owl:equivalentClass csmo:#Institution .
 
 
 
@@ -953,12 +953,12 @@ org:Role rdf:type owl:Class ;
          
          rdfs:subClassOf owl:Thing ,
                          [ rdf:type owl:Restriction ;
-                           owl:onProperty csmo:hasAccess ;
-                           owl:someValuesFrom csmo:Investigation
+                           owl:onProperty csmo:#hasAccess ;
+                           owl:someValuesFrom nfo:Folder
                          ] ,
                          [ rdf:type owl:Restriction ;
-                           owl:onProperty csmo:hasAccess ;
-                           owl:someValuesFrom nfo:Folder
+                           owl:onProperty csmo:#hasAccess ;
+                           owl:someValuesFrom csmo:#Investigation
                          ] ;
          
          rdfs:comment "Denotes a role that a Person or other Agent can take in an organization."@en ;
@@ -975,7 +975,7 @@ org:Site rdf:type owl:Class ;
          
          rdfs:label "Site"@en ;
          
-         owl:equivalentClass csmo:Facility ;
+         owl:equivalentClass csmo:#Facility ;
          
          rdfs:subClassOf owl:Thing ;
          
@@ -993,529 +993,529 @@ foaf:Agent rdf:type owl:Class .
 
 foaf:Person rdf:type owl:Class ;
             
-            owl:equivalentClass csmo:Investigator ;
+            owl:equivalentClass csmo:#Investigator ;
             
             rdfs:subClassOf foaf:Agent ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty csmo:hasRole ;
-                              owl:someValuesFrom org:Role
+                              owl:onProperty org:'member_of' ;
+                              owl:someValuesFrom csmo:#Institution
                             ] ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty org:'member_of' ;
-                              owl:someValuesFrom csmo:Institution
+                              owl:onProperty csmo:#hasRole ;
+                              owl:someValuesFrom org:Role
                             ] ;
             
             rdfs:isDefinedBy "foaf:Person" .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#AnalysedResult
+###  https://www.escidoc.org/ontologies/csmo/#AnalysedResult
 
-csmo:AnalysedResult rdf:type owl:Class ;
-                    
-                    owl:equivalentClass csmo:DerivedDataResult ;
-                    
-                    rdfs:subClassOf csmo:Result ;
-                    
-                    terms:description "Curated and analysed data file"@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#AtomicDataObject
-
-csmo:AtomicDataObject rdf:type owl:Class ;
-                      
-                      rdfs:label "AtomicDataObject"@en ;
-                      
-                      rdfs:subClassOf nfo:Folder .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#AtomicDataObjectParameter
-
-csmo:AtomicDataObjectParameter rdf:type owl:Class ;
-                               
-                               rdfs:label "AtomicDataObjectParameter"@en ;
-                               
-                               rdfs:subClassOf csmo:Parameter ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty csmo:isADOParameter ;
-                                                 owl:someValuesFrom csmo:AtomicDataObject
-                                               ] .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#CalibrationData
-
-csmo:CalibrationData rdf:type owl:Class ;
+csmo:#AnalysedResult rdf:type owl:Class ;
                      
-                     rdfs:label "CalibrationData"@en ;
+                     owl:equivalentClass csmo:#DerivedDataResult ;
                      
-                     rdfs:subClassOf csmo:Result .
+                     rdfs:subClassOf csmo:#Result ;
+                     
+                     terms:description "Curated and analysed data file"@en .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#DataFile
+###  https://www.escidoc.org/ontologies/csmo/#AtomicDataObject
 
-csmo:DataFile rdf:type owl:Class ;
-              
-              rdfs:label "DataFile"@en ;
-              
-              owl:equivalentClass csmo:Result ;
-              
-              rdfs:subClassOf nfo:Folder ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty csmo:hasLocation ;
-                                owl:someValuesFrom gn:Feature
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty terms:title ;
-                                owl:cardinality "1"^^xsd:nonNegativeInteger
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty csmo:version ;
-                                owl:someValuesFrom rdfs:Literal
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty csmo:modificationDate ;
-                                owl:someValuesFrom xsd:dateTime
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty csmo:creationDate ;
-                                owl:someValuesFrom xsd:dateTime
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty csmo:fixity ;
-                                owl:someValuesFrom xsd:string
-                              ] ;
-              
-              rdfs:comment "Each datafile has more detailed information, including its name, version, location, data format, creation and modification time, and fixity information such as a Checksum."@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#DataSetParameter
-
-csmo:DataSetParameter rdf:type owl:Class ;
-                      
-                      rdfs:label "DataSetParameter"@en ;
-                      
-                      rdfs:subClassOf csmo:Parameter .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#DerivedDataResult
-
-csmo:DerivedDataResult rdf:type owl:Class ;
+csmo:#AtomicDataObject rdf:type owl:Class ;
                        
-                       rdfs:subClassOf csmo:Result .
+                       rdfs:label "AtomicDataObject"@en ;
+                       
+                       rdfs:subClassOf nfo:Folder .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#EndResult
+###  https://www.escidoc.org/ontologies/csmo/#AtomicDataObjectParameter
 
-csmo:EndResult rdf:type owl:Class ;
+csmo:#AtomicDataObjectParameter rdf:type owl:Class ;
+                                
+                                rdfs:label "AtomicDataObjectParameter"@en ;
+                                
+                                rdfs:subClassOf csmo:#Parameter ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty csmo:#isADOParameter ;
+                                                  owl:someValuesFrom csmo:#AtomicDataObject
+                                                ] .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#CalibrationData
+
+csmo:#CalibrationData rdf:type owl:Class ;
+                      
+                      rdfs:label "CalibrationData"@en ;
+                      
+                      rdfs:subClassOf csmo:#Result .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#DataFile
+
+csmo:#DataFile rdf:type owl:Class ;
                
-               rdfs:subClassOf csmo:Result .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#Experiment
-
-csmo:Experiment rdf:type owl:Class ;
-                
-                rdfs:label "Experiment"@en ;
-                
-                rdfs:subClassOf csmo:Investigation ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty csmo:hasInstrument ;
-                                  owl:someValuesFrom csmo:Instrument
-                                ] ;
-                
-                rdfs:comment "Experiments. Investigations into the physical behaviour of the environment usually to test a hypothesis, typically involving an instrument operating under some instrumental settings and environmental conditions, and generating datasets in files. "@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#Facility
-
-csmo:Facility rdf:type owl:Class ;
-              
-              rdfs:subClassOf owl:Thing .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#Institution
-
-csmo:Institution rdf:type owl:Class ;
-                 
-                 rdfs:label "Institution"@en ;
-                 
-                 rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                   owl:onProperty org:hasSite ;
-                                   owl:onClass org:Site ;
-                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
-                                 ] .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#Instrument
-
-csmo:Instrument rdf:type owl:Class ;
-                
-                rdfs:subClassOf owl:Thing ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty csmo:isInstrumentOf ;
-                                  owl:allValuesFrom csmo:Facility
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty csmo:settings ;
-                                  owl:cardinality "1"^^xsd:nonNegativeInteger
-                                ] .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#Investigation
-
-csmo:Investigation rdf:type owl:Class ;
-                   
-                   rdfs:label "Investigation"@en ;
-                   
-                   rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                     owl:onProperty csmo:hasInstrument ;
-                                     owl:someValuesFrom csmo:Instrument
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty csmo:hasTopic ;
-                                     owl:someValuesFrom rdfs:Literal
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty csmo:hasResult ;
-                                     owl:someValuesFrom csmo:Result
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty csmo:hasSample ;
-                                     owl:someValuesFrom csmo:Sample
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty terms:title ;
-                                     owl:cardinality "1"^^xsd:nonNegativeInteger
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty csmo:hasKeyword ;
-                                     owl:someValuesFrom rdfs:Literal
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty csmo:hasData ;
-                                     owl:someValuesFrom csmo:Result
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty csmo:isInvestigationOf ;
-                                     owl:onClass csmo:Study ;
-                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty csmo:hasPrincipalInvestigator ;
-                                     owl:onClass csmo:Investigator ;
-                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty csmo:abstract ;
-                                     owl:cardinality "1"^^xsd:nonNegativeInteger
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty csmo:hasInvestigator ;
-                                     owl:onClass csmo:Investigator ;
-                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
-                                   ] ;
-                   
-                   rdfs:comment "Investigation: forms the fundamental unit of the model, with a title, abstract, dates, and unique identifiers referencing the particular study. Also associated with the investigation are the facility and instrument used to collect data. "@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#Investigator
-
-csmo:Investigator rdf:type owl:Class ;
-                  
-                  rdfs:label "Investigator"@en ;
-                  
-                  rdfs:subClassOf org:Role ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty csmo:memberOf ;
-                                    owl:someValuesFrom csmo:Institution
-                                  ] ;
-                  
-                  rdfs:comment "Investigator describes the people involved in the study together with their institution and role in the study."@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#Measurement
-
-csmo:Measurement rdf:type owl:Class ;
-                 
-                 rdfs:label "Measurement"@en ;
-                 
-                 rdfs:subClassOf csmo:Investigation ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty csmo:hasInstrument ;
-                                   owl:someValuesFrom csmo:Instrument
-                                 ] ;
-                 
-                 rdfs:comment "Measurements. Investigations that record the state of some aspect of the environment over a sequence of points in time and space, using some passive detector, e.g., the measurement of temperature at a point on the earth surface taken hourly using a thermometer of known accuracy."@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#Observation
-
-csmo:Observation rdf:type owl:Class ;
-                 
-                 rdfs:subClassOf csmo:Investigation .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#Parameter
-
-csmo:Parameter rdf:type owl:Class ;
+               rdfs:label "DataFile"@en ;
                
-               rdfs:label "Parameter"@en ;
+               owl:equivalentClass csmo:#Result ;
                
-               rdfs:comment "Parameters can be associated with data holdings, datasets, or ADOs. The same metadata item is used to represent either experimental conditions or measured items stored as data points in the data collection, but are distinguished via a parameter type qualifier (‘fixed’ or ‘measured’).Each parameter has a set of fields describing its name (e.g., temperature, pressure), its value (if fixed in as an input parameter), the units of measurement used to qualify the data points, the range of values over-which a parameter can take and the error margin expected on the value."@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#Policy
-
-csmo:Policy rdf:type owl:Class ;
-            
-            rdfs:label "Policy"@en ;
-            
-            rdfs:subClassOf owl:Thing ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty terms:title ;
-                              owl:cardinality "1"^^xsd:nonNegativeInteger
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty csmo:policyCreatedBy ;
-                              owl:someValuesFrom csmo:Institution
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty csmo:hasProgramme ;
-                              owl:someValuesFrom csmo:Programme
-                            ] ;
-            
-            rdfs:comment "Policy. The company or government policies which initiate Programmes of work."@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#PrincipleInvestigator
-
-csmo:PrincipleInvestigator rdf:type owl:Class ;
-                           
-                           rdfs:subClassOf csmo:Investigator ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty csmo:isPrincipalInvestigatorOf ;
-                                             owl:onClass csmo:Study ;
-                                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
-                                           ] ;
-                           
-                           owl:disjointWith csmo:ResearchStudent .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#Programme
-
-csmo:Programme rdf:type owl:Class ;
-               
-               rdfs:label "Programme"@en ;
-               
-               owl:equivalentClass [ rdf:type owl:Restriction ;
-                                     owl:onProperty csmo:isProgrammeOf ;
-                                     owl:someValuesFrom csmo:Policy
-                                   ] ;
-               
-               rdfs:subClassOf owl:Thing ,
+               rdfs:subClassOf nfo:Folder ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty csmo:isProgrammeOf ;
-                                 owl:someValuesFrom csmo:Institution
+                                 owl:onProperty csmo:#creationDate ;
+                                 owl:someValuesFrom xsd:dateTime
                                ] ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty csmo:hasStudy ;
-                                 owl:someValuesFrom csmo:Study
+                                 owl:onProperty csmo:#version ;
+                                 owl:someValuesFrom rdfs:Literal
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty csmo:#fixity ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty csmo:#hasLocation ;
+                                 owl:someValuesFrom gn:Feature
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty terms:title ;
                                  owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty csmo:#modificationDate ;
+                                 owl:someValuesFrom xsd:dateTime
                                ] ;
                
-               rdfs:comment "Programmes. Related studies that have a common theme which are usually funded and resourced directly or with an intermediary organisation under the rubric of the programme."@en ,
-                            "Scientific research programme"@en .
+               rdfs:comment "Each datafile has more detailed information, including its name, version, location, data format, creation and modification time, and fixity information such as a Checksum."@en .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#Project
+###  https://www.escidoc.org/ontologies/csmo/#DataSetParameter
 
-csmo:Project rdf:type owl:Class ;
-             
-             rdfs:subClassOf owl:Thing ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty csmo:hasStudy ;
-                               owl:someValuesFrom csmo:Study
-                             ] .
+csmo:#DataSetParameter rdf:type owl:Class ;
+                       
+                       rdfs:label "DataSetParameter"@en ;
+                       
+                       rdfs:subClassOf csmo:#Parameter .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#Publication
+###  https://www.escidoc.org/ontologies/csmo/#DerivedDataResult
 
-csmo:Publication rdf:type owl:Class ;
+csmo:#DerivedDataResult rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf csmo:#Result .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#EndResult
+
+csmo:#EndResult rdf:type owl:Class ;
+                
+                rdfs:subClassOf csmo:#Result .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#Experiment
+
+csmo:#Experiment rdf:type owl:Class ;
+                 
+                 rdfs:label "Experiment"@en ;
+                 
+                 rdfs:subClassOf csmo:#Investigation ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty csmo:#hasInstrument ;
+                                   owl:someValuesFrom csmo:#Instrument
+                                 ] ;
+                 
+                 rdfs:comment "Experiments. Investigations into the physical behaviour of the environment usually to test a hypothesis, typically involving an instrument operating under some instrumental settings and environmental conditions, and generating datasets in files. "@en .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#Facility
+
+csmo:#Facility rdf:type owl:Class ;
+               
+               rdfs:subClassOf owl:Thing .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#Institution
+
+csmo:#Institution rdf:type owl:Class ;
+                  
+                  rdfs:label "Institution"@en ;
+                  
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty org:hasSite ;
+                                    owl:onClass org:Site ;
+                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                  ] .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#Instrument
+
+csmo:#Instrument rdf:type owl:Class ;
                  
                  rdfs:subClassOf owl:Thing ,
                                  [ rdf:type owl:Restriction ;
-                                   owl:onProperty csmo:link ;
-                                   owl:someValuesFrom rdfs:Literal
+                                   owl:onProperty csmo:#isInstrumentOf ;
+                                   owl:allValuesFrom csmo:#Facility
                                  ] ,
                                  [ rdf:type owl:Restriction ;
-                                   owl:onProperty csmo:motivatingPublication ;
-                                   owl:someValuesFrom rdfs:Literal
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty csmo:derivedPublication ;
-                                   owl:someValuesFrom rdfs:Literal
-                                 ] ;
-                 
-                 rdfs:comment """bibo:Document
+                                   owl:onProperty csmo:#settings ;
+                                   owl:cardinality "1"^^xsd:nonNegativeInteger
+                                 ] .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#Investigation
+
+csmo:#Investigation rdf:type owl:Class ;
+                    
+                    rdfs:label "Investigation"@en ;
+                    
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty terms:title ;
+                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty csmo:#hasInvestigator ;
+                                      owl:onClass csmo:#Investigator ;
+                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty csmo:#hasTopic ;
+                                      owl:someValuesFrom rdfs:Literal
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty csmo:#hasPrincipalInvestigator ;
+                                      owl:onClass csmo:#Investigator ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty csmo:#isInvestigationOf ;
+                                      owl:onClass csmo:#Study ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty csmo:#abstract ;
+                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty csmo:#hasKeyword ;
+                                      owl:someValuesFrom rdfs:Literal
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty csmo:#hasResult ;
+                                      owl:someValuesFrom csmo:#Result
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty csmo:#hasInstrument ;
+                                      owl:someValuesFrom csmo:#Instrument
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty csmo:#hasData ;
+                                      owl:someValuesFrom csmo:#Result
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty csmo:#hasSample ;
+                                      owl:someValuesFrom csmo:#Sample
+                                    ] ;
+                    
+                    rdfs:comment "Investigation: forms the fundamental unit of the model, with a title, abstract, dates, and unique identifiers referencing the particular study. Also associated with the investigation are the facility and instrument used to collect data. "@en .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#Investigator
+
+csmo:#Investigator rdf:type owl:Class ;
+                   
+                   rdfs:label "Investigator"@en ;
+                   
+                   rdfs:subClassOf org:Role ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty csmo:#memberOf ;
+                                     owl:someValuesFrom csmo:#Institution
+                                   ] ;
+                   
+                   rdfs:comment "Investigator describes the people involved in the study together with their institution and role in the study."@en .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#Measurement
+
+csmo:#Measurement rdf:type owl:Class ;
+                  
+                  rdfs:label "Measurement"@en ;
+                  
+                  rdfs:subClassOf csmo:#Investigation ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty csmo:#hasInstrument ;
+                                    owl:someValuesFrom csmo:#Instrument
+                                  ] ;
+                  
+                  rdfs:comment "Measurements. Investigations that record the state of some aspect of the environment over a sequence of points in time and space, using some passive detector, e.g., the measurement of temperature at a point on the earth surface taken hourly using a thermometer of known accuracy."@en .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#Observation
+
+csmo:#Observation rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf csmo:#Investigation .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#Parameter
+
+csmo:#Parameter rdf:type owl:Class ;
+                
+                rdfs:label "Parameter"@en ;
+                
+                rdfs:comment "Parameters can be associated with data holdings, datasets, or ADOs. The same metadata item is used to represent either experimental conditions or measured items stored as data points in the data collection, but are distinguished via a parameter type qualifier (‘fixed’ or ‘measured’).Each parameter has a set of fields describing its name (e.g., temperature, pressure), its value (if fixed in as an input parameter), the units of measurement used to qualify the data points, the range of values over-which a parameter can take and the error margin expected on the value."@en .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#Policy
+
+csmo:#Policy rdf:type owl:Class ;
+             
+             rdfs:label "Policy"@en ;
+             
+             rdfs:subClassOf owl:Thing ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty csmo:#policyCreatedBy ;
+                               owl:someValuesFrom csmo:#Institution
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty csmo:#hasProgramme ;
+                               owl:someValuesFrom csmo:#Programme
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty terms:title ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ;
+             
+             rdfs:comment "Policy. The company or government policies which initiate Programmes of work."@en .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#PrincipleInvestigator
+
+csmo:#PrincipleInvestigator rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf csmo:#Investigator ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty csmo:#isPrincipalInvestigatorOf ;
+                                              owl:onClass csmo:#Study ;
+                                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                            ] ;
+                            
+                            owl:disjointWith csmo:#ResearchStudent .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#Programme
+
+csmo:#Programme rdf:type owl:Class ;
+                
+                rdfs:label "Programme"@en ;
+                
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty csmo:#isProgrammeOf ;
+                                      owl:someValuesFrom csmo:#Policy
+                                    ] ;
+                
+                rdfs:subClassOf owl:Thing ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty csmo:#isProgrammeOf ;
+                                  owl:someValuesFrom csmo:#Institution
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty terms:title ;
+                                  owl:cardinality "1"^^xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty csmo:#hasStudy ;
+                                  owl:someValuesFrom csmo:#Study
+                                ] ;
+                
+                rdfs:comment "Programmes. Related studies that have a common theme which are usually funded and resourced directly or with an intermediary organisation under the rubric of the programme."@en ,
+                             "Scientific research programme"@en .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#Project
+
+csmo:#Project rdf:type owl:Class ;
+              
+              rdfs:subClassOf owl:Thing ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty csmo:#hasStudy ;
+                                owl:someValuesFrom csmo:#Study
+                              ] .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#Publication
+
+csmo:#Publication rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf owl:Thing ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty csmo:#derivedPublication ;
+                                    owl:someValuesFrom rdfs:Literal
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty csmo:#link ;
+                                    owl:someValuesFrom rdfs:Literal
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty csmo:#motivatingPublication ;
+                                    owl:someValuesFrom rdfs:Literal
+                                  ] ;
+                  
+                  rdfs:comment """bibo:Document
 A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information."""@en .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#RawData
+###  https://www.escidoc.org/ontologies/csmo/#RawData
 
-csmo:RawData rdf:type owl:Class ;
+csmo:#RawData rdf:type owl:Class ;
+              
+              rdfs:subClassOf csmo:#Result .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#ResearchStudent
+
+csmo:#ResearchStudent rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf csmo:#Investigator .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#Result
+
+csmo:#Result rdf:type owl:Class ;
              
-             rdfs:subClassOf csmo:Result .
+             rdfs:label "Result"@en ;
+             
+             rdfs:subClassOf nfo:Folder ;
+             
+             rdfs:comment "Results deriving from the investigations usually proceed through different stages."@en .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#ResearchStudent
+###  https://www.escidoc.org/ontologies/csmo/#Sample
 
-csmo:ResearchStudent rdf:type owl:Class ;
-                     
-                     rdfs:subClassOf csmo:Investigator .
+csmo:#Sample rdf:type owl:Class ;
+             
+             rdfs:label "Sample"@en ;
+             
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty terms:title ;
+                               owl:cardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty csmo:#chemicalFormula ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty csmo:#hasSampleParameter ;
+                               owl:someValuesFrom csmo:#SampleParameter
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty terms:alternative ;
+                               owl:someValuesFrom xsd:string
+                             ] ;
+             
+             rdfs:comment "Information on the material sample under investigation within the study. "@en ;
+             
+             skos:note "Sample: information on the material sample under investigation within the study. The model has fields for a sample’s name, chemical formula and any associated special information about it, such as specific safety information on a toxic material. "@en .
 
 
 
-###  https://www.escidoc.org/ontologies/csmo.owl#Result
+###  https://www.escidoc.org/ontologies/csmo/#SampleParameter
 
-csmo:Result rdf:type owl:Class ;
+csmo:#SampleParameter rdf:type owl:Class ;
+                      
+                      rdfs:label "SampleParameter"@en ;
+                      
+                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                            owl:onProperty csmo:#isSampleParameterOf ;
+                                            owl:someValuesFrom csmo:#Sample
+                                          ] ;
+                      
+                      rdfs:subClassOf csmo:#Parameter .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#Simulation
+
+csmo:#Simulation rdf:type owl:Class ;
+                 
+                 rdfs:label "Simulation"@en ;
+                 
+                 rdfs:subClassOf csmo:#Investigation ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty csmo:#hasParameter ;
+                                   owl:someValuesFrom csmo:#Parameter
+                                 ] ;
+                 
+                 rdfs:comment "Investigations that test a model of part of the world, and a computer simulation of the state space of that model. This will typically involve some simulation package with some initial parameters, and generate a dataset representing the result of the simulation."@en .
+
+
+
+###  https://www.escidoc.org/ontologies/csmo/#Study
+
+csmo:#Study rdf:type owl:Class ;
             
-            rdfs:label "Result"@en ;
+            rdfs:label "Study"@en ;
             
-            rdfs:subClassOf nfo:Folder ;
-            
-            rdfs:comment "Results deriving from the investigations usually proceed through different stages."@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#Sample
-
-csmo:Sample rdf:type owl:Class ;
-            
-            rdfs:label "Sample"@en ;
-            
-            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                              owl:onProperty terms:alternative ;
-                              owl:someValuesFrom xsd:string
+            rdfs:subClassOf owl:Thing ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty csmo:#hasInvestigation ;
+                              owl:someValuesFrom csmo:#Investigation
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty csmo:#hasPurpose ;
+                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty csmo:#studyCreationDate ;
+                              owl:someValuesFrom xsd:dateTimeStamp
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty terms:title ;
                               owl:cardinality "1"^^xsd:nonNegativeInteger
                             ] ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty csmo:hasSampleParameter ;
-                              owl:someValuesFrom csmo:SampleParameter
+                              owl:onProperty csmo:#hasStudyManager ;
+                              owl:someValuesFrom foaf:Person
                             ] ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty csmo:chemicalFormula ;
+                              owl:onProperty csmo:#isStudyOf ;
+                              owl:onClass csmo:#Programme ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty csmo:#studyStatus ;
+                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty csmo:#relatedMaterial ;
                               owl:someValuesFrom xsd:string
                             ] ;
             
-            rdfs:comment "Information on the material sample under investigation within the study. "@en ;
-            
-            skos:note "Sample: information on the material sample under investigation within the study. The model has fields for a sample’s name, chemical formula and any associated special information about it, such as specific safety information on a toxic material. "@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#SampleParameter
-
-csmo:SampleParameter rdf:type owl:Class ;
-                     
-                     rdfs:label "SampleParameter"@en ;
-                     
-                     owl:equivalentClass [ rdf:type owl:Restriction ;
-                                           owl:onProperty csmo:isSampleParameterOf ;
-                                           owl:someValuesFrom csmo:Sample
-                                         ] ;
-                     
-                     rdfs:subClassOf csmo:Parameter .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#Simulation
-
-csmo:Simulation rdf:type owl:Class ;
-                
-                rdfs:label "Simulation"@en ;
-                
-                rdfs:subClassOf csmo:Investigation ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty csmo:hasParameter ;
-                                  owl:someValuesFrom csmo:Parameter
-                                ] ;
-                
-                rdfs:comment "Investigations that test a model of part of the world, and a computer simulation of the state space of that model. This will typically involve some simulation package with some initial parameters, and generate a dataset representing the result of the simulation."@en .
-
-
-
-###  https://www.escidoc.org/ontologies/csmo.owl#Study
-
-csmo:Study rdf:type owl:Class ;
-           
-           rdfs:label "Study"@en ;
-           
-           rdfs:subClassOf owl:Thing ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty csmo:isStudyOf ;
-                             owl:onClass csmo:Programme ;
-                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty terms:title ;
-                             owl:cardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty csmo:hasPurpose ;
-                             owl:cardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty csmo:hasInvestigation ;
-                             owl:someValuesFrom csmo:Investigation
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty csmo:relatedMaterial ;
-                             owl:someValuesFrom xsd:string
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty csmo:studyCreationDate ;
-                             owl:someValuesFrom xsd:dateTimeStamp
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty csmo:studyStatus ;
-                             owl:cardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty csmo:hasStudyManager ;
-                             owl:someValuesFrom foaf:Person
-                           ] ;
-           
-           rdfs:comment "Studies investigate some aspect of science and have a Principal Investigator and/or institution, co-investigators and some specific purpose. "@en ,
-                        "Study is a body of scientific work on a particular subject of investigation"@en .
+            rdfs:comment "Studies investigate some aspect of science and have a Principal Investigator and/or institution, co-investigators and some specific purpose. "@en ,
+                         "Study is a body of scientific work on a particular subject of investigation"@en .
 
 
 
@@ -1816,22 +1816,22 @@ csmo:Study rdf:type owl:Class ;
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( csmo:Experiment
-                csmo:Measurement
-                csmo:Observation
-                csmo:Simulation
+  owl:members ( csmo:#AnalysedResult
+                csmo:#EndResult
+                csmo:#RawData
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( csmo:AtomicDataObjectParameter
-                csmo:DataSetParameter
-                csmo:SampleParameter
+  owl:members ( csmo:#AtomicDataObjectParameter
+                csmo:#DataSetParameter
+                csmo:#SampleParameter
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( csmo:AnalysedResult
-                csmo:EndResult
-                csmo:RawData
+  owl:members ( csmo:#Experiment
+                csmo:#Measurement
+                csmo:#Observation
+                csmo:#Simulation
               )
 ] .
 

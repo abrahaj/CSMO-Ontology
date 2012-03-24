@@ -11,19 +11,19 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY csmo "https://www.escidoc.org/ontologies/csmo/#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY csmo "https://www.escidoc.org/ontologies/csmo.owl#" >
     <!ENTITY nfo "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#" >
 ]>
 
 
-<rdf:RDF xmlns="https://www.escidoc.org/ontologies/csmo.owl"
-     xml:base="https://www.escidoc.org/ontologies/csmo.owl"
+<rdf:RDF xmlns="https://www.escidoc.org/ontologies/csmo/"
+     xml:base="https://www.escidoc.org/ontologies/csmo/"
      xmlns:nfo="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:org="http://www.w3.org/ns/org#"
-     xmlns:csmo="https://www.escidoc.org/ontologies/csmo.owl#"
+     xmlns:csmo="https://www.escidoc.org/ontologies/csmo/#"
      xmlns:gn="http://www.geonames.org/ontology#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:bibo="http://purl.org/ontology/bibo/"
@@ -31,12 +31,12 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-    <owl:Ontology rdf:about="https://www.escidoc.org/ontologies/csmo.owl">
+    <owl:Ontology rdf:about="https://www.escidoc.org/ontologies/csmo/">
         <terms:creator>Armand Brahaj</terms:creator>
         <owl:versionInfo>0.2</owl:versionInfo>
         <terms:description xml:lang="en">An ontology for the representation of scientific study metadata based on the Core Scientific Metadata Model.</terms:description>
         <terms:publisher xml:lang="en">http://www.escidoc.org</terms:publisher>
-        <owl:versionIRI rdf:resource="https://www.escidoc.org/ontologies/csmo.owl"/>
+        <owl:versionIRI rdf:resource="https://www.escidoc.org/ontologies/csmo/"/>
     </owl:Ontology>
     
 
@@ -115,7 +115,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasAccess -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasAccess -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasAccess">
         <rdfs:label>hasAccess</rdfs:label>
@@ -126,17 +126,16 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasData -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasData -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasData">
         <rdfs:label>hasData</rdfs:label>
         <rdfs:domain rdf:resource="&csmo;Investigation"/>
-        <owl:inverseOf rdf:resource="&csmo;isDataOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasDataSetParameter -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasDataSetParameter -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasDataSetParameter">
         <rdfs:label xml:lang="de">hasDataSetParameter</rdfs:label>
@@ -146,7 +145,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasDataset -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasDataset -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasDataset">
         <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
@@ -156,11 +155,10 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasFacility -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasFacility -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasFacility">
         <rdfs:label>hasFacility</rdfs:label>
-        <owl:inverseOf rdf:resource="&csmo;isPartOf"/>
         <rdfs:domain>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&csmo;hasFacility"/>
@@ -177,38 +175,39 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasInstrument -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasInstrument -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasInstrument">
         <rdfs:label xml:lang="en">hasInstrument</rdfs:label>
         <rdfs:range rdf:resource="&csmo;Instrument"/>
         <rdfs:domain rdf:resource="&csmo;Investigation"/>
-        <owl:inverseOf rdf:resource="&csmo;isInstrumentOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasInvestigation -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasInvestigation -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasInvestigation">
         <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
         <rdfs:label xml:lang="en">hasInvestigation</rdfs:label>
         <rdfs:range rdf:resource="&csmo;Investigation"/>
         <rdfs:domain rdf:resource="&csmo;Study"/>
+        <owl:inverseOf rdf:resource="&csmo;isInvestigationOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasInvestigator -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasInvestigator -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasInvestigator">
         <rdfs:domain rdf:resource="&csmo;Investigation"/>
         <rdfs:range rdf:resource="&csmo;Investigator"/>
+        <owl:inverseOf rdf:resource="&csmo;isInvestigatorOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasLocation -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasLocation -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasLocation">
         <rdfs:label xml:lang="en">hasLocation</rdfs:label>
@@ -218,7 +217,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasMember -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasMember -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasMember">
         <rdfs:label>hasMember</rdfs:label>
@@ -229,7 +228,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasParameter -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasParameter -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasParameter">
         <rdfs:label xml:lang="en">hasParameter</rdfs:label>
@@ -237,7 +236,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasPrincipalInvestigator -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasPrincipalInvestigator -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasPrincipalInvestigator">
         <rdfs:label xml:lang="en">hasPrincipalInvestigator</rdfs:label>
@@ -248,18 +247,17 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasProgramme -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasProgramme -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasProgramme">
         <rdfs:label xml:lang="en">hasProgramme</rdfs:label>
         <rdfs:domain rdf:resource="&csmo;Policy"/>
         <rdfs:range rdf:resource="&csmo;Programme"/>
-        <owl:inverseOf rdf:resource="&csmo;isProgrammeOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasPublication -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasPublication -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasPublication">
         <rdfs:label>hasPublication</rdfs:label>
@@ -270,18 +268,19 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasResult -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasResult -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasResult">
         <rdfs:label>hasResult</rdfs:label>
         <rdfs:domain rdf:resource="&csmo;Investigation"/>
         <rdfs:range rdf:resource="&csmo;Result"/>
         <rdfs:domain rdf:resource="&csmo;Study"/>
+        <owl:inverseOf rdf:resource="&csmo;isResultOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasRole -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasRole -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasRole">
         <rdfs:label xml:lang="en">hasRole</rdfs:label>
@@ -291,40 +290,41 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasSample -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasSample -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasSample">
         <rdfs:label xml:lang="en">hasSample</rdfs:label>
         <rdfs:domain rdf:resource="&nfo;Folder"/>
         <rdfs:domain rdf:resource="&csmo;Investigation"/>
         <rdfs:range rdf:resource="&csmo;Sample"/>
+        <owl:inverseOf rdf:resource="&csmo;isSampleOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasSampleParameter -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasSampleParameter -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasSampleParameter">
         <rdfs:label xml:lang="en">hasSampleParameter</rdfs:label>
         <rdfs:domain rdf:resource="&csmo;Sample"/>
         <rdfs:range rdf:resource="&csmo;SampleParameter"/>
+        <owl:inverseOf rdf:resource="&csmo;isSampleParameterOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasStudy -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasStudy -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasStudy">
         <rdfs:label xml:lang="en">hasStudy</rdfs:label>
         <rdfs:domain rdf:resource="&csmo;Programme"/>
         <rdfs:domain rdf:resource="&csmo;Project"/>
         <rdfs:range rdf:resource="&csmo;Study"/>
-        <owl:inverseOf rdf:resource="&csmo;isStudyOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasStudyManager -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasStudyManager -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasStudyManager">
         <rdfs:label xml:lang="en">hasStudyManager</rdfs:label>
@@ -332,7 +332,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasSubDataSet -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasSubDataSet -->
 
     <owl:ObjectProperty rdf:about="&csmo;hasSubDataSet">
         <rdfs:label xml:lang="de">hasSubDataSet</rdfs:label>
@@ -340,7 +340,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#isADOParameter -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#isADOParameter -->
 
     <owl:ObjectProperty rdf:about="&csmo;isADOParameter">
         <rdfs:label xml:lang="en">isADOParameter</rdfs:label>
@@ -350,16 +350,17 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#isDataOf -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#isDataOf -->
 
     <owl:ObjectProperty rdf:about="&csmo;isDataOf">
         <rdfs:label>associatedWith</rdfs:label>
         <rdfs:range rdf:resource="&csmo;Investigation"/>
+        <owl:inverseOf rdf:resource="&csmo;hasData"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#isDataParameterOf -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#isDataParameterOf -->
 
     <owl:ObjectProperty rdf:about="&csmo;isDataParameterOf">
         <rdfs:label xml:lang="en">isDataParameterOf</rdfs:label>
@@ -368,43 +369,43 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#isInstrumentOf -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#isInstrumentOf -->
 
     <owl:ObjectProperty rdf:about="&csmo;isInstrumentOf">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:range rdf:resource="&csmo;Facility"/>
         <rdfs:domain rdf:resource="&csmo;Instrument"/>
+        <owl:inverseOf rdf:resource="&csmo;hasInstrument"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#isInvestigationOf -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#isInvestigationOf -->
 
     <owl:ObjectProperty rdf:about="&csmo;isInvestigationOf">
         <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
         <rdfs:comment xml:lang="en">Relates an Investigation to a Study</rdfs:comment>
         <rdfs:domain rdf:resource="&csmo;Investigation"/>
         <rdfs:range rdf:resource="&csmo;Study"/>
-        <owl:inverseOf rdf:resource="&csmo;hasInvestigation"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#isInvestigatorOf -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#isInvestigatorOf -->
 
     <owl:ObjectProperty rdf:about="&csmo;isInvestigatorOf">
         <rdfs:label xml:lang="de">isInvestigatorOf</rdfs:label>
         <rdfs:range rdf:resource="&csmo;Investigation"/>
         <rdfs:domain rdf:resource="&csmo;Investigator"/>
-        <owl:inverseOf rdf:resource="&csmo;hasInvestigator"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#isPartOf -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#isPartOf -->
 
     <owl:ObjectProperty rdf:about="&csmo;isPartOf">
         <rdfs:label>isPartOf</rdfs:label>
+        <owl:inverseOf rdf:resource="&csmo;hasFacility"/>
         <rdfs:range>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&csmo;isPartOf"/>
@@ -421,7 +422,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#isPrincipalInvestigatorOf -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#isPrincipalInvestigatorOf -->
 
     <owl:ObjectProperty rdf:about="&csmo;isPrincipalInvestigatorOf">
         <rdfs:label xml:lang="en">isPrincipalInvestigatorOf</rdfs:label>
@@ -431,7 +432,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#isProgrammeOf -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#isProgrammeOf -->
 
     <owl:ObjectProperty rdf:about="&csmo;isProgrammeOf">
         <rdfs:label xml:lang="en">isProgrammeOf</rdfs:label>
@@ -439,23 +440,23 @@
         <rdfs:range rdf:resource="&csmo;Institution"/>
         <rdfs:range rdf:resource="&csmo;Policy"/>
         <rdfs:domain rdf:resource="&csmo;Programme"/>
+        <owl:inverseOf rdf:resource="&csmo;hasProgramme"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#isResultOf -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#isResultOf -->
 
     <owl:ObjectProperty rdf:about="&csmo;isResultOf">
         <rdfs:label>isResultOf</rdfs:label>
         <rdfs:range rdf:resource="&csmo;Investigation"/>
         <rdfs:domain rdf:resource="&csmo;Result"/>
         <rdfs:range rdf:resource="&csmo;Study"/>
-        <owl:inverseOf rdf:resource="&csmo;hasResult"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#isRoleOf -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#isRoleOf -->
 
     <owl:ObjectProperty rdf:about="&csmo;isRoleOf">
         <rdfs:label xml:lang="en">isRoleOf</rdfs:label>
@@ -466,40 +467,39 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#isSampleOf -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#isSampleOf -->
 
     <owl:ObjectProperty rdf:about="&csmo;isSampleOf">
         <rdfs:label xml:lang="en">isSampleOf</rdfs:label>
         <rdfs:domain rdf:resource="&csmo;Sample"/>
         <rdfs:range rdf:resource="&csmo;Study"/>
-        <owl:inverseOf rdf:resource="&csmo;hasSample"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#isSampleParameterOf -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#isSampleParameterOf -->
 
     <owl:ObjectProperty rdf:about="&csmo;isSampleParameterOf">
         <rdfs:label xml:lang="en">isSampleParameterOf</rdfs:label>
         <rdfs:range rdf:resource="&csmo;Sample"/>
         <rdfs:domain rdf:resource="&csmo;SampleParameter"/>
-        <owl:inverseOf rdf:resource="&csmo;hasSampleParameter"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#isStudyOf -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#isStudyOf -->
 
     <owl:ObjectProperty rdf:about="&csmo;isStudyOf">
         <rdfs:label xml:lang="en">isStudyOf</rdfs:label>
         <rdfs:range rdf:resource="&csmo;Programme"/>
         <rdfs:range rdf:resource="&csmo;Project"/>
         <rdfs:domain rdf:resource="&csmo;Study"/>
+        <owl:inverseOf rdf:resource="&csmo;hasStudy"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#issuedPolicy -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#issuedPolicy -->
 
     <owl:ObjectProperty rdf:about="&csmo;issuedPolicy">
         <rdfs:label xml:lang="en">issuedPolicy</rdfs:label>
@@ -510,7 +510,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#memberOf -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#memberOf -->
 
     <owl:ObjectProperty rdf:about="&csmo;memberOf">
         <rdfs:label>memberOf</rdfs:label>
@@ -520,7 +520,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#policyCreatedBy -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#policyCreatedBy -->
 
     <owl:ObjectProperty rdf:about="&csmo;policyCreatedBy">
         <rdfs:label xml:lang="en">policyCreatedBy</rdfs:label>
@@ -530,7 +530,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#runBy -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#runBy -->
 
     <owl:ObjectProperty rdf:about="&csmo;runBy">
         <rdfs:label xml:lang="en">runBy</rdfs:label>
@@ -541,7 +541,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#runsStudy -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#runsStudy -->
 
     <owl:ObjectProperty rdf:about="&csmo;runsStudy">
         <rdfs:label xml:lang="en">runsStudy</rdfs:label>
@@ -593,7 +593,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#abstract -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#abstract -->
 
     <owl:DatatypeProperty rdf:about="&csmo;abstract">
         <rdfs:label xml:lang="de">abstract</rdfs:label>
@@ -601,7 +601,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#chemicalFormula -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#chemicalFormula -->
 
     <owl:DatatypeProperty rdf:about="&csmo;chemicalFormula">
         <rdfs:label xml:lang="de">chemicalFormula</rdfs:label>
@@ -609,7 +609,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#creationDate -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#creationDate -->
 
     <owl:DatatypeProperty rdf:about="&csmo;creationDate">
         <rdfs:label xml:lang="de">creationDate</rdfs:label>
@@ -617,7 +617,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#dataStatus -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#dataStatus -->
 
     <owl:DatatypeProperty rdf:about="&csmo;dataStatus">
         <rdfs:label xml:lang="de">dataStatus</rdfs:label>
@@ -626,7 +626,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#derivedPublication -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#derivedPublication -->
 
     <owl:DatatypeProperty rdf:about="&csmo;derivedPublication">
         <rdfs:label xml:lang="en">derivedPublication</rdfs:label>
@@ -634,7 +634,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#fixity -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#fixity -->
 
     <owl:DatatypeProperty rdf:about="&csmo;fixity">
         <rdfs:label xml:lang="en">fixity</rdfs:label>
@@ -643,7 +643,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasDataSetStatus -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasDataSetStatus -->
 
     <owl:DatatypeProperty rdf:about="&csmo;hasDataSetStatus">
         <rdfs:label>hasDataSetStatus</rdfs:label>
@@ -652,7 +652,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasDataSetType -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasDataSetType -->
 
     <owl:DatatypeProperty rdf:about="&csmo;hasDataSetType">
         <rdfs:label>hasDataSetType</rdfs:label>
@@ -661,7 +661,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasKeyword -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasKeyword -->
 
     <owl:DatatypeProperty rdf:about="&csmo;hasKeyword">
         <rdfs:label xml:lang="en">hasKeyword</rdfs:label>
@@ -669,7 +669,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasPurpose -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasPurpose -->
 
     <owl:DatatypeProperty rdf:about="&csmo;hasPurpose">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -680,7 +680,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#hasTopic -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#hasTopic -->
 
     <owl:DatatypeProperty rdf:about="&csmo;hasTopic">
         <rdfs:label xml:lang="en">hasTopic</rdfs:label>
@@ -688,7 +688,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#investigationAbstract -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#investigationAbstract -->
 
     <owl:DatatypeProperty rdf:about="&csmo;investigationAbstract">
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -697,7 +697,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#investigationDate -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#investigationDate -->
 
     <owl:DatatypeProperty rdf:about="&csmo;investigationDate">
         <rdfs:range rdf:resource="&xsd;dateTime"/>
@@ -706,7 +706,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#link -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#link -->
 
     <owl:DatatypeProperty rdf:about="&csmo;link">
         <rdfs:label>link</rdfs:label>
@@ -716,7 +716,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#modificationDate -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#modificationDate -->
 
     <owl:DatatypeProperty rdf:about="&csmo;modificationDate">
         <rdfs:label xml:lang="de">modificationDate</rdfs:label>
@@ -724,7 +724,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#motivatingPublication -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#motivatingPublication -->
 
     <owl:DatatypeProperty rdf:about="&csmo;motivatingPublication">
         <rdfs:label xml:lang="en">motivatingPublication</rdfs:label>
@@ -732,7 +732,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#relatedMaterial -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#relatedMaterial -->
 
     <owl:DatatypeProperty rdf:about="&csmo;relatedMaterial">
         <rdfs:label xml:lang="de">relatedMaterial</rdfs:label>
@@ -740,7 +740,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#settings -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#settings -->
 
     <owl:DatatypeProperty rdf:about="&csmo;settings">
         <rdfs:label xml:lang="de">settings</rdfs:label>
@@ -748,7 +748,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#studyCreationDate -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#studyCreationDate -->
 
     <owl:DatatypeProperty rdf:about="&csmo;studyCreationDate">
         <rdfs:label xml:lang="de">studyCreationDate</rdfs:label>
@@ -756,7 +756,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#studyStatus -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#studyStatus -->
 
     <owl:DatatypeProperty rdf:about="&csmo;studyStatus">
         <rdfs:label xml:lang="en">studyStatus</rdfs:label>
@@ -764,7 +764,7 @@
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#version -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#version -->
 
     <owl:DatatypeProperty rdf:about="&csmo;version">
         <rdfs:label xml:lang="en">version</rdfs:label>
@@ -814,14 +814,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;hasDataset"/>
-                <owl:someValuesFrom rdf:resource="&nfo;Folder"/>
+                <owl:onProperty rdf:resource="&csmo;hasDataSetType"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;hasDataSetType"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="&csmo;hasDataset"/>
+                <owl:someValuesFrom rdf:resource="&nfo;Folder"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -855,13 +855,13 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&csmo;hasAccess"/>
-                <owl:someValuesFrom rdf:resource="&csmo;Investigation"/>
+                <owl:someValuesFrom rdf:resource="&nfo;Folder"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&csmo;hasAccess"/>
-                <owl:someValuesFrom rdf:resource="&nfo;Folder"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Investigation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Denotes a role that a Person or other Agent can take in an organization.</rdfs:comment>
@@ -895,14 +895,14 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         <rdfs:subClassOf rdf:resource="&foaf;Agent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;hasRole"/>
-                <owl:someValuesFrom rdf:resource="&org;Role"/>
+                <owl:onProperty rdf:resource="&org;&#39;member_of&#39;"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Institution"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&org;&#39;member_of&#39;"/>
-                <owl:someValuesFrom rdf:resource="&csmo;Institution"/>
+                <owl:onProperty rdf:resource="&csmo;hasRole"/>
+                <owl:someValuesFrom rdf:resource="&org;Role"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:isDefinedBy>foaf:Person</rdfs:isDefinedBy>
@@ -910,7 +910,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#AnalysedResult -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#AnalysedResult -->
 
     <owl:Class rdf:about="&csmo;AnalysedResult">
         <owl:equivalentClass rdf:resource="&csmo;DerivedDataResult"/>
@@ -920,7 +920,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#AtomicDataObject -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#AtomicDataObject -->
 
     <owl:Class rdf:about="&csmo;AtomicDataObject">
         <rdfs:label xml:lang="en">AtomicDataObject</rdfs:label>
@@ -929,7 +929,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#AtomicDataObjectParameter -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#AtomicDataObjectParameter -->
 
     <owl:Class rdf:about="&csmo;AtomicDataObjectParameter">
         <rdfs:label xml:lang="en">AtomicDataObjectParameter</rdfs:label>
@@ -944,7 +944,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#CalibrationData -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#CalibrationData -->
 
     <owl:Class rdf:about="&csmo;CalibrationData">
         <rdfs:label xml:lang="en">CalibrationData</rdfs:label>
@@ -953,12 +953,30 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#DataFile -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#DataFile -->
 
     <owl:Class rdf:about="&csmo;DataFile">
         <rdfs:label xml:lang="en">DataFile</rdfs:label>
         <owl:equivalentClass rdf:resource="&csmo;Result"/>
         <rdfs:subClassOf rdf:resource="&nfo;Folder"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;creationDate"/>
+                <owl:someValuesFrom rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;version"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;fixity"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&csmo;hasLocation"/>
@@ -973,26 +991,8 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;version"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&csmo;modificationDate"/>
                 <owl:someValuesFrom rdf:resource="&xsd;dateTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;creationDate"/>
-                <owl:someValuesFrom rdf:resource="&xsd;dateTime"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;fixity"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Each datafile has more detailed information, including its name, version, location, data format, creation and modification time, and fixity information such as a Checksum.</rdfs:comment>
@@ -1000,7 +1000,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#DataSetParameter -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#DataSetParameter -->
 
     <owl:Class rdf:about="&csmo;DataSetParameter">
         <rdfs:label xml:lang="en">DataSetParameter</rdfs:label>
@@ -1009,7 +1009,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#DerivedDataResult -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#DerivedDataResult -->
 
     <owl:Class rdf:about="&csmo;DerivedDataResult">
         <rdfs:subClassOf rdf:resource="&csmo;Result"/>
@@ -1017,7 +1017,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#EndResult -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#EndResult -->
 
     <owl:Class rdf:about="&csmo;EndResult">
         <rdfs:subClassOf rdf:resource="&csmo;Result"/>
@@ -1025,7 +1025,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#Experiment -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#Experiment -->
 
     <owl:Class rdf:about="&csmo;Experiment">
         <rdfs:label xml:lang="en">Experiment</rdfs:label>
@@ -1041,7 +1041,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#Facility -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#Facility -->
 
     <owl:Class rdf:about="&csmo;Facility">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1049,7 +1049,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#Institution -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#Institution -->
 
     <owl:Class rdf:about="&csmo;Institution">
         <rdfs:label xml:lang="en">Institution</rdfs:label>
@@ -1064,7 +1064,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#Instrument -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#Instrument -->
 
     <owl:Class rdf:about="&csmo;Instrument">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1084,34 +1084,10 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#Investigation -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#Investigation -->
 
     <owl:Class rdf:about="&csmo;Investigation">
         <rdfs:label xml:lang="en">Investigation</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;hasInstrument"/>
-                <owl:someValuesFrom rdf:resource="&csmo;Instrument"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;hasTopic"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;hasResult"/>
-                <owl:someValuesFrom rdf:resource="&csmo;Result"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;hasSample"/>
-                <owl:someValuesFrom rdf:resource="&csmo;Sample"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&terms;title"/>
@@ -1120,21 +1096,15 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;hasKeyword"/>
+                <owl:onProperty rdf:resource="&csmo;hasInvestigator"/>
+                <owl:onClass rdf:resource="&csmo;Investigator"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasTopic"/>
                 <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;hasData"/>
-                <owl:someValuesFrom rdf:resource="&csmo;Result"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;isInvestigationOf"/>
-                <owl:onClass rdf:resource="&csmo;Study"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1146,15 +1116,45 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;isInvestigationOf"/>
+                <owl:onClass rdf:resource="&csmo;Study"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&csmo;abstract"/>
                 <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;hasInvestigator"/>
-                <owl:onClass rdf:resource="&csmo;Investigator"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onProperty rdf:resource="&csmo;hasKeyword"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasResult"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Result"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasInstrument"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Instrument"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasData"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Result"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasSample"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Sample"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Investigation: forms the fundamental unit of the model, with a title, abstract, dates, and unique identifiers referencing the particular study. Also associated with the investigation are the facility and instrument used to collect data. </rdfs:comment>
@@ -1162,7 +1162,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#Investigator -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#Investigator -->
 
     <owl:Class rdf:about="&csmo;Investigator">
         <rdfs:label xml:lang="en">Investigator</rdfs:label>
@@ -1178,7 +1178,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#Measurement -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#Measurement -->
 
     <owl:Class rdf:about="&csmo;Measurement">
         <rdfs:label xml:lang="en">Measurement</rdfs:label>
@@ -1194,7 +1194,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#Observation -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#Observation -->
 
     <owl:Class rdf:about="&csmo;Observation">
         <rdfs:subClassOf rdf:resource="&csmo;Investigation"/>
@@ -1202,7 +1202,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#Parameter -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#Parameter -->
 
     <owl:Class rdf:about="&csmo;Parameter">
         <rdfs:label xml:lang="en">Parameter</rdfs:label>
@@ -1211,17 +1211,11 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#Policy -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#Policy -->
 
     <owl:Class rdf:about="&csmo;Policy">
         <rdfs:label xml:lang="en">Policy</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&terms;title"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&csmo;policyCreatedBy"/>
@@ -1234,12 +1228,18 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
                 <owl:someValuesFrom rdf:resource="&csmo;Programme"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&terms;title"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Policy. The company or government policies which initiate Programmes of work.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#PrincipleInvestigator -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#PrincipleInvestigator -->
 
     <owl:Class rdf:about="&csmo;PrincipleInvestigator">
         <rdfs:subClassOf rdf:resource="&csmo;Investigator"/>
@@ -1255,7 +1255,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#Programme -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#Programme -->
 
     <owl:Class rdf:about="&csmo;Programme">
         <rdfs:label xml:lang="en">Programme</rdfs:label>
@@ -1274,14 +1274,14 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;hasStudy"/>
-                <owl:someValuesFrom rdf:resource="&csmo;Study"/>
+                <owl:onProperty rdf:resource="&terms;title"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&terms;title"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                <owl:onProperty rdf:resource="&csmo;hasStudy"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Study"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Programmes. Related studies that have a common theme which are usually funded and resourced directly or with an intermediary organisation under the rubric of the programme.</rdfs:comment>
@@ -1290,7 +1290,7 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#Project -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#Project -->
 
     <owl:Class rdf:about="&csmo;Project">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
@@ -1304,10 +1304,16 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#Publication -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#Publication -->
 
     <owl:Class rdf:about="&csmo;Publication">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;derivedPublication"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&csmo;link"/>
@@ -1320,19 +1326,13 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
                 <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;derivedPublication"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">bibo:Document
 A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#RawData -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#RawData -->
 
     <owl:Class rdf:about="&csmo;RawData">
         <rdfs:subClassOf rdf:resource="&csmo;Result"/>
@@ -1340,7 +1340,7 @@ A document (noun) is a bounded physical representation of body of information de
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#ResearchStudent -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#ResearchStudent -->
 
     <owl:Class rdf:about="&csmo;ResearchStudent">
         <rdfs:subClassOf rdf:resource="&csmo;Investigator"/>
@@ -1348,7 +1348,7 @@ A document (noun) is a bounded physical representation of body of information de
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#Result -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#Result -->
 
     <owl:Class rdf:about="&csmo;Result">
         <rdfs:label xml:lang="en">Result</rdfs:label>
@@ -1358,20 +1358,20 @@ A document (noun) is a bounded physical representation of body of information de
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#Sample -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#Sample -->
 
     <owl:Class rdf:about="&csmo;Sample">
         <rdfs:label xml:lang="en">Sample</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&terms;alternative"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="&terms;title"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&terms;title"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                <owl:onProperty rdf:resource="&csmo;chemicalFormula"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1382,7 +1382,7 @@ A document (noun) is a bounded physical representation of body of information de
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;chemicalFormula"/>
+                <owl:onProperty rdf:resource="&terms;alternative"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1392,7 +1392,7 @@ A document (noun) is a bounded physical representation of body of information de
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#SampleParameter -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#SampleParameter -->
 
     <owl:Class rdf:about="&csmo;SampleParameter">
         <rdfs:label xml:lang="en">SampleParameter</rdfs:label>
@@ -1407,7 +1407,7 @@ A document (noun) is a bounded physical representation of body of information de
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#Simulation -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#Simulation -->
 
     <owl:Class rdf:about="&csmo;Simulation">
         <rdfs:label xml:lang="en">Simulation</rdfs:label>
@@ -1423,22 +1423,15 @@ A document (noun) is a bounded physical representation of body of information de
     
 
 
-    <!-- https://www.escidoc.org/ontologies/csmo.owl#Study -->
+    <!-- https://www.escidoc.org/ontologies/csmo/#Study -->
 
     <owl:Class rdf:about="&csmo;Study">
         <rdfs:label xml:lang="en">Study</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;isStudyOf"/>
-                <owl:onClass rdf:resource="&csmo;Programme"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&terms;title"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                <owl:onProperty rdf:resource="&csmo;hasInvestigation"/>
+                <owl:someValuesFrom rdf:resource="&csmo;Investigation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1449,20 +1442,27 @@ A document (noun) is a bounded physical representation of body of information de
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;hasInvestigation"/>
-                <owl:someValuesFrom rdf:resource="&csmo;Investigation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;relatedMaterial"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&csmo;studyCreationDate"/>
                 <owl:someValuesFrom rdf:resource="&xsd;dateTimeStamp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&terms;title"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;hasStudyManager"/>
+                <owl:someValuesFrom rdf:resource="&foaf;Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&csmo;isStudyOf"/>
+                <owl:onClass rdf:resource="&csmo;Programme"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1473,8 +1473,8 @@ A document (noun) is a bounded physical representation of body of information de
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&csmo;hasStudyManager"/>
-                <owl:someValuesFrom rdf:resource="&foaf;Person"/>
+                <owl:onProperty rdf:resource="&csmo;relatedMaterial"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Studies investigate some aspect of science and have a Principal Investigator and/or institution, co-investigators and some specific purpose. </rdfs:comment>
@@ -1660,10 +1660,9 @@ A document (noun) is a bounded physical representation of body of information de
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&csmo;Experiment"/>
-            <rdf:Description rdf:about="&csmo;Measurement"/>
-            <rdf:Description rdf:about="&csmo;Observation"/>
-            <rdf:Description rdf:about="&csmo;Simulation"/>
+            <rdf:Description rdf:about="&csmo;AnalysedResult"/>
+            <rdf:Description rdf:about="&csmo;EndResult"/>
+            <rdf:Description rdf:about="&csmo;RawData"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -1677,9 +1676,10 @@ A document (noun) is a bounded physical representation of body of information de
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&csmo;AnalysedResult"/>
-            <rdf:Description rdf:about="&csmo;EndResult"/>
-            <rdf:Description rdf:about="&csmo;RawData"/>
+            <rdf:Description rdf:about="&csmo;Experiment"/>
+            <rdf:Description rdf:about="&csmo;Measurement"/>
+            <rdf:Description rdf:about="&csmo;Observation"/>
+            <rdf:Description rdf:about="&csmo;Simulation"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
