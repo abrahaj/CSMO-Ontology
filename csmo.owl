@@ -71,91 +71,91 @@
         <Class abbreviatedIRI="foaf:Person"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#AnalysedResult"/>
+        <Class IRI="#AnalysedResult"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#AtomicDataObject"/>
+        <Class IRI="#AtomicDataObject"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#AtomicDataObjectParameter"/>
+        <Class IRI="#AtomicDataObjectParameter"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#CalibrationData"/>
+        <Class IRI="#CalibrationData"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#DataFile"/>
+        <Class IRI="#DataFile"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#DataSetParameter"/>
+        <Class IRI="#DataSetParameter"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#DerivedDataResult"/>
+        <Class IRI="#DerivedDataResult"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#EndResult"/>
+        <Class IRI="#EndResult"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Experiment"/>
+        <Class IRI="#Experiment"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Facility"/>
+        <Class IRI="#Facility"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Institution"/>
+        <Class IRI="#Institution"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Instrument"/>
+        <Class IRI="#Instrument"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <Class IRI="#Investigation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigator"/>
+        <Class IRI="#Investigator"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Measurement"/>
+        <Class IRI="#Measurement"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Observation"/>
+        <Class IRI="#Observation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Parameter"/>
+        <Class IRI="#Parameter"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Policy"/>
+        <Class IRI="#Policy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#PrincipleInvestigator"/>
+        <Class IRI="#PrincipleInvestigator"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Programme"/>
+        <Class IRI="#Programme"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Project"/>
+        <Class IRI="#Project"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Publication"/>
+        <Class IRI="#Publication"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#RawData"/>
+        <Class IRI="#RawData"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#ResearchStudent"/>
+        <Class IRI="#ResearchStudent"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Result"/>
+        <Class IRI="#Result"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Sample"/>
+        <Class IRI="#Sample"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#SampleParameter"/>
+        <Class IRI="#SampleParameter"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Simulation"/>
+        <Class IRI="#Simulation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <Class IRI="#Study"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="org:&#39;has_member&#39;"/>
@@ -167,124 +167,124 @@
         <ObjectProperty abbreviatedIRI="org:hasSite"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasAccess"/>
+        <ObjectProperty IRI="#hasAccess"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasData"/>
+        <ObjectProperty IRI="#hasData"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasDataSetParameter"/>
+        <ObjectProperty IRI="#hasDataSetParameter"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasDataset"/>
+        <ObjectProperty IRI="#hasDataset"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasFacility"/>
+        <ObjectProperty IRI="#hasFacility"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInstrument"/>
+        <ObjectProperty IRI="#hasInstrument"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInvestigation"/>
+        <ObjectProperty IRI="#hasInvestigation"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInvestigator"/>
+        <ObjectProperty IRI="#hasInvestigator"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasLocation"/>
+        <ObjectProperty IRI="#hasLocation"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasMember"/>
+        <ObjectProperty IRI="#hasMember"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasParameter"/>
+        <ObjectProperty IRI="#hasParameter"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasPrincipalInvestigator"/>
+        <ObjectProperty IRI="#hasPrincipalInvestigator"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasProgramme"/>
+        <ObjectProperty IRI="#hasProgramme"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasPublication"/>
+        <ObjectProperty IRI="#hasPublication"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasResult"/>
+        <ObjectProperty IRI="#hasResult"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasRole"/>
+        <ObjectProperty IRI="#hasRole"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasSample"/>
+        <ObjectProperty IRI="#hasSample"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasSampleParameter"/>
+        <ObjectProperty IRI="#hasSampleParameter"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasStudy"/>
+        <ObjectProperty IRI="#hasStudy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasStudyManager"/>
+        <ObjectProperty IRI="#hasStudyManager"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasSubDataSet"/>
+        <ObjectProperty IRI="#hasSubDataSet"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isADOParameter"/>
+        <ObjectProperty IRI="#isADOParameter"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isDataOf"/>
+        <ObjectProperty IRI="#isDataOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isDataParameterOf"/>
+        <ObjectProperty IRI="#isDataParameterOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isInstrumentOf"/>
+        <ObjectProperty IRI="#isInstrumentOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isInvestigationOf"/>
+        <ObjectProperty IRI="#isInvestigationOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isInvestigatorOf"/>
+        <ObjectProperty IRI="#isInvestigatorOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isPartOf"/>
+        <ObjectProperty IRI="#isPartOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isPrincipalInvestigatorOf"/>
+        <ObjectProperty IRI="#isPrincipalInvestigatorOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isProgrammeOf"/>
+        <ObjectProperty IRI="#isProgrammeOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isResultOf"/>
+        <ObjectProperty IRI="#isResultOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isRoleOf"/>
+        <ObjectProperty IRI="#isRoleOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isSampleOf"/>
+        <ObjectProperty IRI="#isSampleOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isSampleParameterOf"/>
+        <ObjectProperty IRI="#isSampleParameterOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isStudyOf"/>
+        <ObjectProperty IRI="#isStudyOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#issuedPolicy"/>
+        <ObjectProperty IRI="#issuedPolicy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#memberOf"/>
+        <ObjectProperty IRI="#memberOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#policyCreatedBy"/>
+        <ObjectProperty IRI="#policyCreatedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#runBy"/>
+        <ObjectProperty IRI="#runBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#runsStudy"/>
+        <ObjectProperty IRI="#runsStudy"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="terms:alternative"/>
@@ -296,67 +296,67 @@
         <DataProperty abbreviatedIRI="foaf:name"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#abstract"/>
+        <DataProperty IRI="#abstract"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#chemicalFormula"/>
+        <DataProperty IRI="#chemicalFormula"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#creationDate"/>
+        <DataProperty IRI="#creationDate"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#dataStatus"/>
+        <DataProperty IRI="#dataStatus"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#derivedPublication"/>
+        <DataProperty IRI="#derivedPublication"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#fixity"/>
+        <DataProperty IRI="#fixity"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasDataSetStatus"/>
+        <DataProperty IRI="#hasDataSetStatus"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasDataSetType"/>
+        <DataProperty IRI="#hasDataSetType"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasKeyword"/>
+        <DataProperty IRI="#hasKeyword"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasPurpose"/>
+        <DataProperty IRI="#hasPurpose"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasTopic"/>
+        <DataProperty IRI="#hasTopic"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#investigationAbstract"/>
+        <DataProperty IRI="#investigationAbstract"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#investigationDate"/>
+        <DataProperty IRI="#investigationDate"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#link"/>
+        <DataProperty IRI="#link"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#modificationDate"/>
+        <DataProperty IRI="#modificationDate"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#motivatingPublication"/>
+        <DataProperty IRI="#motivatingPublication"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#relatedMaterial"/>
+        <DataProperty IRI="#relatedMaterial"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#settings"/>
+        <DataProperty IRI="#settings"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#studyCreationDate"/>
+        <DataProperty IRI="#studyCreationDate"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#studyStatus"/>
+        <DataProperty IRI="#studyStatus"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#version"/>
+        <DataProperty IRI="#version"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="terms:creator"/>
@@ -384,40 +384,40 @@
     </Declaration>
     <EquivalentClasses>
         <Class abbreviatedIRI="bibo:Document"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Publication"/>
+        <Class IRI="#Publication"/>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class abbreviatedIRI="org:Organisation"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Institution"/>
+        <Class IRI="#Institution"/>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class abbreviatedIRI="org:Site"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Facility"/>
+        <Class IRI="#Facility"/>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class abbreviatedIRI="foaf:Person"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigator"/>
+        <Class IRI="#Investigator"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#AnalysedResult"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#DerivedDataResult"/>
+        <Class IRI="#AnalysedResult"/>
+        <Class IRI="#DerivedDataResult"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#DataFile"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Result"/>
+        <Class IRI="#DataFile"/>
+        <Class IRI="#Result"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Programme"/>
+        <Class IRI="#Programme"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isProgrammeOf"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Policy"/>
+            <ObjectProperty IRI="#isProgrammeOf"/>
+            <Class IRI="#Policy"/>
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#SampleParameter"/>
+        <Class IRI="#SampleParameter"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isSampleParameterOf"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Sample"/>
+            <ObjectProperty IRI="#isSampleParameterOf"/>
+            <Class IRI="#Sample"/>
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <SubClassOf>
@@ -427,28 +427,28 @@
     <SubClassOf>
         <Class abbreviatedIRI="nfo:Folder"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasDataset"/>
+            <ObjectProperty IRI="#hasDataset"/>
             <Class abbreviatedIRI="nfo:Folder"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="nfo:Folder"/>
         <ObjectMaxCardinality cardinality="1">
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasSample"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Sample"/>
+            <ObjectProperty IRI="#hasSample"/>
+            <Class IRI="#Sample"/>
         </ObjectMaxCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="nfo:Folder"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasDataSetStatus"/>
+            <DataProperty IRI="#hasDataSetStatus"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="nfo:Folder"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasDataSetType"/>
+            <DataProperty IRI="#hasDataSetType"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -459,15 +459,15 @@
     <SubClassOf>
         <Class abbreviatedIRI="org:Role"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasAccess"/>
+            <ObjectProperty IRI="#hasAccess"/>
             <Class abbreviatedIRI="nfo:Folder"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="org:Role"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasAccess"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+            <ObjectProperty IRI="#hasAccess"/>
+            <Class IRI="#Investigation"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -482,537 +482,537 @@
         <Class abbreviatedIRI="foaf:Person"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="org:&#39;member_of&#39;"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Institution"/>
+            <Class IRI="#Institution"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="foaf:Person"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasRole"/>
+            <ObjectProperty IRI="#hasRole"/>
             <Class abbreviatedIRI="org:Role"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#AnalysedResult"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Result"/>
+        <Class IRI="#AnalysedResult"/>
+        <Class IRI="#Result"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#AtomicDataObject"/>
+        <Class IRI="#AtomicDataObject"/>
         <Class abbreviatedIRI="nfo:Folder"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#AtomicDataObjectParameter"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Parameter"/>
+        <Class IRI="#AtomicDataObjectParameter"/>
+        <Class IRI="#Parameter"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#AtomicDataObjectParameter"/>
+        <Class IRI="#AtomicDataObjectParameter"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isADOParameter"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#AtomicDataObject"/>
+            <ObjectProperty IRI="#isADOParameter"/>
+            <Class IRI="#AtomicDataObject"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#CalibrationData"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Result"/>
+        <Class IRI="#CalibrationData"/>
+        <Class IRI="#Result"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#DataFile"/>
+        <Class IRI="#DataFile"/>
         <Class abbreviatedIRI="nfo:Folder"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#DataFile"/>
+        <Class IRI="#DataFile"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasLocation"/>
+            <ObjectProperty IRI="#hasLocation"/>
             <Class abbreviatedIRI="gn:Feature"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#DataFile"/>
+        <Class IRI="#DataFile"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#creationDate"/>
+            <DataProperty IRI="#creationDate"/>
             <Datatype abbreviatedIRI="xsd:dateTime"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#DataFile"/>
+        <Class IRI="#DataFile"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#fixity"/>
+            <DataProperty IRI="#fixity"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#DataFile"/>
+        <Class IRI="#DataFile"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#modificationDate"/>
+            <DataProperty IRI="#modificationDate"/>
             <Datatype abbreviatedIRI="xsd:dateTime"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#DataFile"/>
+        <Class IRI="#DataFile"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#version"/>
+            <DataProperty IRI="#version"/>
             <Datatype abbreviatedIRI="rdfs:Literal"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#DataFile"/>
+        <Class IRI="#DataFile"/>
         <DataExactCardinality cardinality="1">
             <DataProperty abbreviatedIRI="terms:title"/>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#DataSetParameter"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Parameter"/>
+        <Class IRI="#DataSetParameter"/>
+        <Class IRI="#Parameter"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#DerivedDataResult"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Result"/>
+        <Class IRI="#DerivedDataResult"/>
+        <Class IRI="#Result"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#EndResult"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Result"/>
+        <Class IRI="#EndResult"/>
+        <Class IRI="#Result"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Experiment"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <Class IRI="#Experiment"/>
+        <Class IRI="#Investigation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Experiment"/>
+        <Class IRI="#Experiment"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInstrument"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Instrument"/>
+            <ObjectProperty IRI="#hasInstrument"/>
+            <Class IRI="#Instrument"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Facility"/>
+        <Class IRI="#Facility"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Institution"/>
+        <Class IRI="#Institution"/>
         <ObjectMinCardinality cardinality="1">
             <ObjectProperty abbreviatedIRI="org:hasSite"/>
             <Class abbreviatedIRI="org:Site"/>
         </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Instrument"/>
+        <Class IRI="#Instrument"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Instrument"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isInstrumentOf"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Facility"/>
-        </ObjectAllValuesFrom>
+        <Class IRI="#Instrument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isInstrumentOf"/>
+            <Class IRI="#Facility"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Instrument"/>
+        <Class IRI="#Instrument"/>
         <DataExactCardinality cardinality="1">
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#settings"/>
+            <DataProperty IRI="#settings"/>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <Class IRI="#Investigation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasData"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Result"/>
+            <ObjectProperty IRI="#hasData"/>
+            <Class IRI="#Result"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <Class IRI="#Investigation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInstrument"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Instrument"/>
+            <ObjectProperty IRI="#hasInstrument"/>
+            <Class IRI="#Instrument"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <Class IRI="#Investigation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasResult"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Result"/>
+            <ObjectProperty IRI="#hasResult"/>
+            <Class IRI="#Result"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <Class IRI="#Investigation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasSample"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Sample"/>
+            <ObjectProperty IRI="#hasSample"/>
+            <Class IRI="#Sample"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <Class IRI="#Investigation"/>
         <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInvestigator"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigator"/>
+            <ObjectProperty IRI="#hasInvestigator"/>
+            <Class IRI="#Investigator"/>
         </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <Class IRI="#Investigation"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasPrincipalInvestigator"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigator"/>
+            <ObjectProperty IRI="#hasPrincipalInvestigator"/>
+            <Class IRI="#Investigator"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <Class IRI="#Investigation"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isInvestigationOf"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+            <ObjectProperty IRI="#isInvestigationOf"/>
+            <Class IRI="#Study"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <Class IRI="#Investigation"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasKeyword"/>
+            <DataProperty IRI="#hasKeyword"/>
             <Datatype abbreviatedIRI="rdfs:Literal"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <Class IRI="#Investigation"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasTopic"/>
+            <DataProperty IRI="#hasTopic"/>
             <Datatype abbreviatedIRI="rdfs:Literal"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <Class IRI="#Investigation"/>
         <DataExactCardinality cardinality="1">
             <DataProperty abbreviatedIRI="terms:title"/>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <Class IRI="#Investigation"/>
         <DataExactCardinality cardinality="1">
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#abstract"/>
+            <DataProperty IRI="#abstract"/>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigator"/>
+        <Class IRI="#Investigator"/>
         <Class abbreviatedIRI="org:Role"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigator"/>
+        <Class IRI="#Investigator"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#memberOf"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Institution"/>
+            <ObjectProperty IRI="#memberOf"/>
+            <Class IRI="#Institution"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Measurement"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <Class IRI="#Measurement"/>
+        <Class IRI="#Investigation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Measurement"/>
+        <Class IRI="#Measurement"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInstrument"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Instrument"/>
+            <ObjectProperty IRI="#hasInstrument"/>
+            <Class IRI="#Instrument"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Observation"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <Class IRI="#Observation"/>
+        <Class IRI="#Investigation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Policy"/>
+        <Class IRI="#Policy"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Policy"/>
+        <Class IRI="#Policy"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasProgramme"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Programme"/>
+            <ObjectProperty IRI="#hasProgramme"/>
+            <Class IRI="#Programme"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Policy"/>
+        <Class IRI="#Policy"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#policyCreatedBy"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Institution"/>
+            <ObjectProperty IRI="#policyCreatedBy"/>
+            <Class IRI="#Institution"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Policy"/>
+        <Class IRI="#Policy"/>
         <DataExactCardinality cardinality="1">
             <DataProperty abbreviatedIRI="terms:title"/>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#PrincipleInvestigator"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigator"/>
+        <Class IRI="#PrincipleInvestigator"/>
+        <Class IRI="#Investigator"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#PrincipleInvestigator"/>
+        <Class IRI="#PrincipleInvestigator"/>
         <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isPrincipalInvestigatorOf"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+            <ObjectProperty IRI="#isPrincipalInvestigatorOf"/>
+            <Class IRI="#Study"/>
         </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Programme"/>
+        <Class IRI="#Programme"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Programme"/>
+        <Class IRI="#Programme"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasStudy"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+            <ObjectProperty IRI="#hasStudy"/>
+            <Class IRI="#Study"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Programme"/>
+        <Class IRI="#Programme"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isProgrammeOf"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Institution"/>
+            <ObjectProperty IRI="#isProgrammeOf"/>
+            <Class IRI="#Institution"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Programme"/>
+        <Class IRI="#Programme"/>
         <DataExactCardinality cardinality="1">
             <DataProperty abbreviatedIRI="terms:title"/>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Project"/>
+        <Class IRI="#Project"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Project"/>
+        <Class IRI="#Project"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasStudy"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+            <ObjectProperty IRI="#hasStudy"/>
+            <Class IRI="#Study"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Publication"/>
+        <Class IRI="#Publication"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Publication"/>
+        <Class IRI="#Publication"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#derivedPublication"/>
+            <DataProperty IRI="#derivedPublication"/>
             <Datatype abbreviatedIRI="rdfs:Literal"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Publication"/>
+        <Class IRI="#Publication"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#link"/>
+            <DataProperty IRI="#link"/>
             <Datatype abbreviatedIRI="rdfs:Literal"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Publication"/>
+        <Class IRI="#Publication"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#motivatingPublication"/>
+            <DataProperty IRI="#motivatingPublication"/>
             <Datatype abbreviatedIRI="rdfs:Literal"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#RawData"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Result"/>
+        <Class IRI="#RawData"/>
+        <Class IRI="#Result"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#ResearchStudent"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigator"/>
+        <Class IRI="#ResearchStudent"/>
+        <Class IRI="#Investigator"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Result"/>
+        <Class IRI="#Result"/>
         <Class abbreviatedIRI="nfo:Folder"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Sample"/>
+        <Class IRI="#Sample"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasSampleParameter"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#SampleParameter"/>
+            <ObjectProperty IRI="#hasSampleParameter"/>
+            <Class IRI="#SampleParameter"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Sample"/>
+        <Class IRI="#Sample"/>
         <DataSomeValuesFrom>
             <DataProperty abbreviatedIRI="terms:alternative"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Sample"/>
+        <Class IRI="#Sample"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#chemicalFormula"/>
+            <DataProperty IRI="#chemicalFormula"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Sample"/>
+        <Class IRI="#Sample"/>
         <DataExactCardinality cardinality="1">
             <DataProperty abbreviatedIRI="terms:title"/>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#SampleParameter"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Parameter"/>
+        <Class IRI="#SampleParameter"/>
+        <Class IRI="#Parameter"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Simulation"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <Class IRI="#Simulation"/>
+        <Class IRI="#Investigation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Simulation"/>
+        <Class IRI="#Simulation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasParameter"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Parameter"/>
+            <ObjectProperty IRI="#hasParameter"/>
+            <Class IRI="#Parameter"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <Class IRI="#Study"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <Class IRI="#Study"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInvestigation"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+            <ObjectProperty IRI="#hasInvestigation"/>
+            <Class IRI="#Investigation"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <Class IRI="#Study"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasStudyManager"/>
+            <ObjectProperty IRI="#hasStudyManager"/>
             <Class abbreviatedIRI="foaf:Person"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <Class IRI="#Study"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isStudyOf"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Programme"/>
+            <ObjectProperty IRI="#isStudyOf"/>
+            <Class IRI="#Programme"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <Class IRI="#Study"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#relatedMaterial"/>
+            <DataProperty IRI="#relatedMaterial"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <Class IRI="#Study"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#studyCreationDate"/>
+            <DataProperty IRI="#studyCreationDate"/>
             <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <Class IRI="#Study"/>
         <DataExactCardinality cardinality="1">
             <DataProperty abbreviatedIRI="terms:title"/>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <Class IRI="#Study"/>
         <DataExactCardinality cardinality="1">
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasPurpose"/>
+            <DataProperty IRI="#hasPurpose"/>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <Class IRI="#Study"/>
         <DataExactCardinality cardinality="1">
-            <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#studyStatus"/>
+            <DataProperty IRI="#studyStatus"/>
         </DataExactCardinality>
     </SubClassOf>
     <DisjointClasses>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#AnalysedResult"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#EndResult"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#RawData"/>
+        <Class IRI="#AnalysedResult"/>
+        <Class IRI="#EndResult"/>
+        <Class IRI="#RawData"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#AtomicDataObjectParameter"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#DataSetParameter"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#SampleParameter"/>
+        <Class IRI="#AtomicDataObjectParameter"/>
+        <Class IRI="#DataSetParameter"/>
+        <Class IRI="#SampleParameter"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Experiment"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Measurement"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Observation"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Simulation"/>
+        <Class IRI="#Experiment"/>
+        <Class IRI="#Measurement"/>
+        <Class IRI="#Observation"/>
+        <Class IRI="#Simulation"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#PrincipleInvestigator"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#ResearchStudent"/>
+        <Class IRI="#PrincipleInvestigator"/>
+        <Class IRI="#ResearchStudent"/>
     </DisjointClasses>
     <InverseObjectProperties>
         <ObjectProperty abbreviatedIRI="org:&#39;member_of&#39;"/>
         <ObjectProperty abbreviatedIRI="org:&#39;has_member&#39;"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasData"/>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isDataOf"/>
+        <ObjectProperty IRI="#isDataOf"/>
+        <ObjectProperty IRI="#hasData"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasFacility"/>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isPartOf"/>
+        <ObjectProperty IRI="#isPartOf"/>
+        <ObjectProperty IRI="#hasFacility"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInstrument"/>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isInstrumentOf"/>
+        <ObjectProperty IRI="#isInstrumentOf"/>
+        <ObjectProperty IRI="#hasInstrument"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isInvestigationOf"/>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInvestigation"/>
+        <ObjectProperty IRI="#hasInvestigation"/>
+        <ObjectProperty IRI="#isInvestigationOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isInvestigatorOf"/>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInvestigator"/>
+        <ObjectProperty IRI="#hasInvestigator"/>
+        <ObjectProperty IRI="#isInvestigatorOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasMember"/>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#memberOf"/>
+        <ObjectProperty IRI="#hasMember"/>
+        <ObjectProperty IRI="#memberOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasPrincipalInvestigator"/>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isPrincipalInvestigatorOf"/>
+        <ObjectProperty IRI="#hasPrincipalInvestigator"/>
+        <ObjectProperty IRI="#isPrincipalInvestigatorOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasProgramme"/>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isProgrammeOf"/>
+        <ObjectProperty IRI="#isProgrammeOf"/>
+        <ObjectProperty IRI="#hasProgramme"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isResultOf"/>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasResult"/>
+        <ObjectProperty IRI="#hasResult"/>
+        <ObjectProperty IRI="#isResultOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isRoleOf"/>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasRole"/>
+        <ObjectProperty IRI="#isRoleOf"/>
+        <ObjectProperty IRI="#hasRole"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isSampleOf"/>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasSample"/>
+        <ObjectProperty IRI="#hasSample"/>
+        <ObjectProperty IRI="#isSampleOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isSampleParameterOf"/>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasSampleParameter"/>
+        <ObjectProperty IRI="#hasSampleParameter"/>
+        <ObjectProperty IRI="#isSampleParameterOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasStudy"/>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isStudyOf"/>
+        <ObjectProperty IRI="#isStudyOf"/>
+        <ObjectProperty IRI="#hasStudy"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#issuedPolicy"/>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#policyCreatedBy"/>
+        <ObjectProperty IRI="#issuedPolicy"/>
+        <ObjectProperty IRI="#policyCreatedBy"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#runBy"/>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#runsStudy"/>
+        <ObjectProperty IRI="#runBy"/>
+        <ObjectProperty IRI="#runsStudy"/>
     </InverseObjectProperties>
     <FunctionalObjectProperty>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isInstrumentOf"/>
+        <ObjectProperty IRI="#isInstrumentOf"/>
     </FunctionalObjectProperty>
     <AsymmetricObjectProperty>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasDataset"/>
+        <ObjectProperty IRI="#hasDataset"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInvestigation"/>
+        <ObjectProperty IRI="#hasInvestigation"/>
     </AsymmetricObjectProperty>
     <AsymmetricObjectProperty>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isInvestigationOf"/>
+        <ObjectProperty IRI="#isInvestigationOf"/>
     </AsymmetricObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="org:&#39;has_member&#39;"/>
@@ -1024,173 +1024,173 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="org:hasSite"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Institution"/>
+        <Class IRI="#Institution"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="org:hasSite"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Instrument"/>
+        <Class IRI="#Instrument"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasAccess"/>
+        <ObjectProperty IRI="#hasAccess"/>
         <Class abbreviatedIRI="org:Role"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasData"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <ObjectProperty IRI="#hasData"/>
+        <Class IRI="#Investigation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasDataSetParameter"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <ObjectProperty IRI="#hasDataSetParameter"/>
+        <Class IRI="#Investigation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasDataset"/>
+        <ObjectProperty IRI="#hasDataset"/>
         <Class abbreviatedIRI="nfo:Folder"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasFacility"/>
+        <ObjectProperty IRI="#hasFacility"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasFacility"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Institution"/>
+            <ObjectProperty IRI="#hasFacility"/>
+            <Class IRI="#Institution"/>
         </ObjectSomeValuesFrom>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInstrument"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <ObjectProperty IRI="#hasInstrument"/>
+        <Class IRI="#Investigation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInvestigation"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <ObjectProperty IRI="#hasInvestigation"/>
+        <Class IRI="#Study"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInvestigator"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <ObjectProperty IRI="#hasInvestigator"/>
+        <Class IRI="#Investigation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasMember"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Institution"/>
+        <ObjectProperty IRI="#hasMember"/>
+        <Class IRI="#Institution"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasPrincipalInvestigator"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <ObjectProperty IRI="#hasPrincipalInvestigator"/>
+        <Class IRI="#Study"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasProgramme"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Policy"/>
+        <ObjectProperty IRI="#hasProgramme"/>
+        <Class IRI="#Policy"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasPublication"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Project"/>
+        <ObjectProperty IRI="#hasPublication"/>
+        <Class IRI="#Project"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasPublication"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <ObjectProperty IRI="#hasPublication"/>
+        <Class IRI="#Study"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasResult"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <ObjectProperty IRI="#hasResult"/>
+        <Class IRI="#Investigation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasResult"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <ObjectProperty IRI="#hasResult"/>
+        <Class IRI="#Study"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasRole"/>
+        <ObjectProperty IRI="#hasRole"/>
         <Class abbreviatedIRI="foaf:Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasSample"/>
+        <ObjectProperty IRI="#hasSample"/>
         <Class abbreviatedIRI="nfo:Folder"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasSample"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <ObjectProperty IRI="#hasSample"/>
+        <Class IRI="#Investigation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasSampleParameter"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Sample"/>
+        <ObjectProperty IRI="#hasSampleParameter"/>
+        <Class IRI="#Sample"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasStudy"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Programme"/>
+        <ObjectProperty IRI="#hasStudy"/>
+        <Class IRI="#Programme"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasStudy"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Project"/>
+        <ObjectProperty IRI="#hasStudy"/>
+        <Class IRI="#Project"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isADOParameter"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#AtomicDataObjectParameter"/>
+        <ObjectProperty IRI="#isADOParameter"/>
+        <Class IRI="#AtomicDataObjectParameter"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isDataParameterOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Parameter"/>
+        <ObjectProperty IRI="#isDataParameterOf"/>
+        <Class IRI="#Parameter"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isInstrumentOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Instrument"/>
+        <ObjectProperty IRI="#isInstrumentOf"/>
+        <Class IRI="#Instrument"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isInvestigationOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <ObjectProperty IRI="#isInvestigationOf"/>
+        <Class IRI="#Investigation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isInvestigatorOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigator"/>
+        <ObjectProperty IRI="#isInvestigatorOf"/>
+        <Class IRI="#Investigator"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isPartOf"/>
+        <ObjectProperty IRI="#isPartOf"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isPartOf"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Facility"/>
+            <ObjectProperty IRI="#isPartOf"/>
+            <Class IRI="#Facility"/>
         </ObjectSomeValuesFrom>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isPrincipalInvestigatorOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#PrincipleInvestigator"/>
+        <ObjectProperty IRI="#isPrincipalInvestigatorOf"/>
+        <Class IRI="#PrincipleInvestigator"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isProgrammeOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Programme"/>
+        <ObjectProperty IRI="#isProgrammeOf"/>
+        <Class IRI="#Programme"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isResultOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Result"/>
+        <ObjectProperty IRI="#isResultOf"/>
+        <Class IRI="#Result"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isRoleOf"/>
+        <ObjectProperty IRI="#isRoleOf"/>
         <Class abbreviatedIRI="org:Role"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isSampleOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Sample"/>
+        <ObjectProperty IRI="#isSampleOf"/>
+        <Class IRI="#Sample"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isSampleParameterOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#SampleParameter"/>
+        <ObjectProperty IRI="#isSampleParameterOf"/>
+        <Class IRI="#SampleParameter"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isStudyOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <ObjectProperty IRI="#isStudyOf"/>
+        <Class IRI="#Study"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#issuedPolicy"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Institution"/>
+        <ObjectProperty IRI="#issuedPolicy"/>
+        <Class IRI="#Institution"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#memberOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigator"/>
+        <ObjectProperty IRI="#memberOf"/>
+        <Class IRI="#Investigator"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#policyCreatedBy"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Policy"/>
+        <ObjectProperty IRI="#policyCreatedBy"/>
+        <Class IRI="#Policy"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#runBy"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <ObjectProperty IRI="#runBy"/>
+        <Class IRI="#Study"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#runsStudy"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Institution"/>
+        <ObjectProperty IRI="#runsStudy"/>
+        <Class IRI="#Institution"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="org:&#39;has_member&#39;"/>
@@ -1205,196 +1205,196 @@
         <Class abbreviatedIRI="org:Site"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasAccess"/>
+        <ObjectProperty IRI="#hasAccess"/>
         <Class abbreviatedIRI="nfo:Folder"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasAccess"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <ObjectProperty IRI="#hasAccess"/>
+        <Class IRI="#Investigation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasDataSetParameter"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#DataSetParameter"/>
+        <ObjectProperty IRI="#hasDataSetParameter"/>
+        <Class IRI="#DataSetParameter"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasFacility"/>
+        <ObjectProperty IRI="#hasFacility"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasFacility"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Facility"/>
+            <ObjectProperty IRI="#hasFacility"/>
+            <Class IRI="#Facility"/>
         </ObjectSomeValuesFrom>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInstrument"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Instrument"/>
+        <ObjectProperty IRI="#hasInstrument"/>
+        <Class IRI="#Instrument"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInvestigation"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <ObjectProperty IRI="#hasInvestigation"/>
+        <Class IRI="#Investigation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasInvestigator"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigator"/>
+        <ObjectProperty IRI="#hasInvestigator"/>
+        <Class IRI="#Investigator"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasLocation"/>
+        <ObjectProperty IRI="#hasLocation"/>
         <Class abbreviatedIRI="gn:Feature"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasMember"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigator"/>
+        <ObjectProperty IRI="#hasMember"/>
+        <Class IRI="#Investigator"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasPrincipalInvestigator"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#PrincipleInvestigator"/>
+        <ObjectProperty IRI="#hasPrincipalInvestigator"/>
+        <Class IRI="#PrincipleInvestigator"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasProgramme"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Programme"/>
+        <ObjectProperty IRI="#hasProgramme"/>
+        <Class IRI="#Programme"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasPublication"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Publication"/>
+        <ObjectProperty IRI="#hasPublication"/>
+        <Class IRI="#Publication"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasResult"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Result"/>
+        <ObjectProperty IRI="#hasResult"/>
+        <Class IRI="#Result"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasRole"/>
+        <ObjectProperty IRI="#hasRole"/>
         <Class abbreviatedIRI="org:Role"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasSample"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Sample"/>
+        <ObjectProperty IRI="#hasSample"/>
+        <Class IRI="#Sample"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasSampleParameter"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#SampleParameter"/>
+        <ObjectProperty IRI="#hasSampleParameter"/>
+        <Class IRI="#SampleParameter"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasStudy"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <ObjectProperty IRI="#hasStudy"/>
+        <Class IRI="#Study"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isADOParameter"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#AtomicDataObject"/>
+        <ObjectProperty IRI="#isADOParameter"/>
+        <Class IRI="#AtomicDataObject"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isDataOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <ObjectProperty IRI="#isDataOf"/>
+        <Class IRI="#Investigation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isInstrumentOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Facility"/>
+        <ObjectProperty IRI="#isInstrumentOf"/>
+        <Class IRI="#Facility"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isInvestigationOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <ObjectProperty IRI="#isInvestigationOf"/>
+        <Class IRI="#Study"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isInvestigatorOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <ObjectProperty IRI="#isInvestigatorOf"/>
+        <Class IRI="#Investigation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isPartOf"/>
+        <ObjectProperty IRI="#isPartOf"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isPartOf"/>
-            <Class IRI="https://www.escidoc.org/ontologies/csmo/#Institution"/>
+            <ObjectProperty IRI="#isPartOf"/>
+            <Class IRI="#Institution"/>
         </ObjectSomeValuesFrom>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isPrincipalInvestigatorOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <ObjectProperty IRI="#isPrincipalInvestigatorOf"/>
+        <Class IRI="#Study"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isProgrammeOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Institution"/>
+        <ObjectProperty IRI="#isProgrammeOf"/>
+        <Class IRI="#Institution"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isProgrammeOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Policy"/>
+        <ObjectProperty IRI="#isProgrammeOf"/>
+        <Class IRI="#Policy"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isResultOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <ObjectProperty IRI="#isResultOf"/>
+        <Class IRI="#Investigation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isResultOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <ObjectProperty IRI="#isResultOf"/>
+        <Class IRI="#Study"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isRoleOf"/>
+        <ObjectProperty IRI="#isRoleOf"/>
         <Class abbreviatedIRI="foaf:Person"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isSampleOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <ObjectProperty IRI="#isSampleOf"/>
+        <Class IRI="#Study"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isSampleParameterOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Sample"/>
+        <ObjectProperty IRI="#isSampleParameterOf"/>
+        <Class IRI="#Sample"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isStudyOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Programme"/>
+        <ObjectProperty IRI="#isStudyOf"/>
+        <Class IRI="#Programme"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#isStudyOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Project"/>
+        <ObjectProperty IRI="#isStudyOf"/>
+        <Class IRI="#Project"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#issuedPolicy"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Policy"/>
+        <ObjectProperty IRI="#issuedPolicy"/>
+        <Class IRI="#Policy"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#memberOf"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Institution"/>
+        <ObjectProperty IRI="#memberOf"/>
+        <Class IRI="#Institution"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#policyCreatedBy"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Institution"/>
+        <ObjectProperty IRI="#policyCreatedBy"/>
+        <Class IRI="#Institution"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#runBy"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Institution"/>
+        <ObjectProperty IRI="#runBy"/>
+        <Class IRI="#Institution"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="https://www.escidoc.org/ontologies/csmo/#runsStudy"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <ObjectProperty IRI="#runsStudy"/>
+        <Class IRI="#Study"/>
     </ObjectPropertyRange>
     <FunctionalDataProperty>
         <DataProperty abbreviatedIRI="foaf:name"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasPurpose"/>
+        <DataProperty IRI="#hasPurpose"/>
     </FunctionalDataProperty>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="foaf:name"/>
         <Class abbreviatedIRI="foaf:Person"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasDataSetStatus"/>
+        <DataProperty IRI="#hasDataSetStatus"/>
         <Class abbreviatedIRI="nfo:Folder"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasDataSetType"/>
+        <DataProperty IRI="#hasDataSetType"/>
         <Class abbreviatedIRI="nfo:Folder"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasPurpose"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Study"/>
+        <DataProperty IRI="#hasPurpose"/>
+        <Class IRI="#Study"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#investigationAbstract"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <DataProperty IRI="#investigationAbstract"/>
+        <Class IRI="#Investigation"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#investigationDate"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Investigation"/>
+        <DataProperty IRI="#investigationDate"/>
+        <Class IRI="#Investigation"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#link"/>
-        <Class IRI="https://www.escidoc.org/ontologies/csmo/#Publication"/>
+        <DataProperty IRI="#link"/>
+        <Class IRI="#Publication"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI="terms:title"/>
@@ -1405,23 +1405,23 @@
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#dataStatus"/>
+        <DataProperty IRI="#dataStatus"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#hasPurpose"/>
+        <DataProperty IRI="#hasPurpose"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#investigationAbstract"/>
+        <DataProperty IRI="#investigationAbstract"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#investigationDate"/>
+        <DataProperty IRI="#investigationDate"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="https://www.escidoc.org/ontologies/csmo/#link"/>
+        <DataProperty IRI="#link"/>
         <Datatype abbreviatedIRI="xsd:anyURI"/>
     </DataPropertyRange>
     <AnnotationAssertion>
@@ -2142,478 +2142,478 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#AnalysedResult</IRI>
+        <IRI>#AnalysedResult</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Curated and analysed data file</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#AtomicDataObject</IRI>
+        <IRI>#AtomicDataObject</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">AtomicDataObject</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#AtomicDataObjectParameter</IRI>
+        <IRI>#AtomicDataObjectParameter</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">AtomicDataObjectParameter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#CalibrationData</IRI>
+        <IRI>#CalibrationData</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">CalibrationData</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#DataFile</IRI>
+        <IRI>#DataFile</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Each datafile has more detailed information, including its name, version, location, data format, creation and modification time, and fixity information such as a Checksum.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#DataFile</IRI>
+        <IRI>#DataFile</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DataFile</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#DataSetParameter</IRI>
+        <IRI>#DataSetParameter</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DataSetParameter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Experiment</IRI>
+        <IRI>#Experiment</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Experiments. Investigations into the physical behaviour of the environment usually to test a hypothesis, typically involving an instrument operating under some instrumental settings and environmental conditions, and generating datasets in files. </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Experiment</IRI>
+        <IRI>#Experiment</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Experiment</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Institution</IRI>
+        <IRI>#Institution</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Institution</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Investigation</IRI>
+        <IRI>#Investigation</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Investigation: forms the fundamental unit of the model, with a title, abstract, dates, and unique identifiers referencing the particular study. Also associated with the investigation are the facility and instrument used to collect data. </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Investigation</IRI>
+        <IRI>#Investigation</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Investigation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Investigator</IRI>
+        <IRI>#Investigator</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Investigator describes the people involved in the study together with their institution and role in the study.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Investigator</IRI>
+        <IRI>#Investigator</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Investigator</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Measurement</IRI>
+        <IRI>#Measurement</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Measurements. Investigations that record the state of some aspect of the environment over a sequence of points in time and space, using some passive detector, e.g., the measurement of temperature at a point on the earth surface taken hourly using a thermometer of known accuracy.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Measurement</IRI>
+        <IRI>#Measurement</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Measurement</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Parameter</IRI>
+        <IRI>#Parameter</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Parameters can be associated with data holdings, datasets, or ADOs. The same metadata item is used to represent either experimental conditions or measured items stored as data points in the data collection, but are distinguished via a parameter type qualifier (‘fixed’ or ‘measured’).Each parameter has a set of fields describing its name (e.g., temperature, pressure), its value (if fixed in as an input parameter), the units of measurement used to qualify the data points, the range of values over-which a parameter can take and the error margin expected on the value.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Parameter</IRI>
+        <IRI>#Parameter</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Parameter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Policy</IRI>
+        <IRI>#Policy</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Policy. The company or government policies which initiate Programmes of work.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Policy</IRI>
+        <IRI>#Policy</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Policy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Programme</IRI>
+        <IRI>#Programme</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Programmes. Related studies that have a common theme which are usually funded and resourced directly or with an intermediary organisation under the rubric of the programme.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Programme</IRI>
+        <IRI>#Programme</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Scientific research programme</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Programme</IRI>
+        <IRI>#Programme</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Programme</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Publication</IRI>
+        <IRI>#Publication</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">bibo:Document
 A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Result</IRI>
+        <IRI>#Result</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Results deriving from the investigations usually proceed through different stages.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Result</IRI>
+        <IRI>#Result</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Result</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Sample</IRI>
+        <IRI>#Sample</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Information on the material sample under investigation within the study. </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Sample</IRI>
+        <IRI>#Sample</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Sample</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:note"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Sample</IRI>
+        <IRI>#Sample</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Sample: information on the material sample under investigation within the study. The model has fields for a sample’s name, chemical formula and any associated special information about it, such as specific safety information on a toxic material. </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#SampleParameter</IRI>
+        <IRI>#SampleParameter</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SampleParameter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Simulation</IRI>
+        <IRI>#Simulation</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Investigations that test a model of part of the world, and a computer simulation of the state space of that model. This will typically involve some simulation package with some initial parameters, and generate a dataset representing the result of the simulation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Simulation</IRI>
+        <IRI>#Simulation</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Simulation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Study</IRI>
+        <IRI>#Study</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Studies investigate some aspect of science and have a Principal Investigator and/or institution, co-investigators and some specific purpose. </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Study</IRI>
+        <IRI>#Study</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Study is a body of scientific work on a particular subject of investigation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#Study</IRI>
+        <IRI>#Study</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Study</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#abstract</IRI>
+        <IRI>#abstract</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">abstract</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#chemicalFormula</IRI>
+        <IRI>#chemicalFormula</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">chemicalFormula</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#creationDate</IRI>
+        <IRI>#creationDate</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">creationDate</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#dataStatus</IRI>
+        <IRI>#dataStatus</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">dataStatus</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#derivedPublication</IRI>
+        <IRI>#derivedPublication</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">derivedPublication</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#fixity</IRI>
+        <IRI>#fixity</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Fixity information such as checksum</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#fixity</IRI>
+        <IRI>#fixity</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">fixity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasAccess</IRI>
+        <IRI>#hasAccess</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">hasAccess</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasData</IRI>
+        <IRI>#hasData</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">hasData</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasDataSetParameter</IRI>
+        <IRI>#hasDataSetParameter</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">hasDataSetParameter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasDataSetStatus</IRI>
+        <IRI>#hasDataSetStatus</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">hasDataSetStatus</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasDataSetType</IRI>
+        <IRI>#hasDataSetType</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">hasDataSetType</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasDataset</IRI>
+        <IRI>#hasDataset</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">hasDataset</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasFacility</IRI>
+        <IRI>#hasFacility</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">hasFacility</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasInstrument</IRI>
+        <IRI>#hasInstrument</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasInstrument</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasInvestigation</IRI>
+        <IRI>#hasInvestigation</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasInvestigation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasKeyword</IRI>
+        <IRI>#hasKeyword</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasKeyword</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasLocation</IRI>
+        <IRI>#hasLocation</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An investigation might take place in a specific location.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasLocation</IRI>
+        <IRI>#hasLocation</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasLocation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasMember</IRI>
+        <IRI>#hasMember</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">hasMember</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasParameter</IRI>
+        <IRI>#hasParameter</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasParameter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasPrincipalInvestigator</IRI>
+        <IRI>#hasPrincipalInvestigator</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasPrincipalInvestigator</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasProgramme</IRI>
+        <IRI>#hasProgramme</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasProgramme</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasPublication</IRI>
+        <IRI>#hasPublication</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">hasPublication</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasPurpose</IRI>
+        <IRI>#hasPurpose</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasPurpose</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasResult</IRI>
+        <IRI>#hasResult</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">hasResult</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasRole</IRI>
+        <IRI>#hasRole</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasRole</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasSample</IRI>
+        <IRI>#hasSample</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasSample</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasSampleParameter</IRI>
+        <IRI>#hasSampleParameter</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasSampleParameter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasStudy</IRI>
+        <IRI>#hasStudy</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasStudy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasStudyManager</IRI>
+        <IRI>#hasStudyManager</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasStudyManager</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasSubDataSet</IRI>
+        <IRI>#hasSubDataSet</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">hasSubDataSet</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#hasTopic</IRI>
+        <IRI>#hasTopic</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasTopic</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#isADOParameter</IRI>
+        <IRI>#isADOParameter</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isADOParameter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#isDataOf</IRI>
+        <IRI>#isDataOf</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">associatedWith</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#isDataParameterOf</IRI>
+        <IRI>#isDataParameterOf</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isDataParameterOf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#isInvestigationOf</IRI>
+        <IRI>#isInvestigationOf</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relates an Investigation to a Study</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#isInvestigatorOf</IRI>
+        <IRI>#isInvestigatorOf</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">isInvestigatorOf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#isPartOf</IRI>
+        <IRI>#isPartOf</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">isPartOf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#isPrincipalInvestigatorOf</IRI>
+        <IRI>#isPrincipalInvestigatorOf</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isPrincipalInvestigatorOf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#isProgrammeOf</IRI>
+        <IRI>#isProgrammeOf</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Provides information on the funding of a Programe</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#isProgrammeOf</IRI>
+        <IRI>#isProgrammeOf</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isProgrammeOf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#isResultOf</IRI>
+        <IRI>#isResultOf</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">isResultOf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#isRoleOf</IRI>
+        <IRI>#isRoleOf</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isRoleOf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#isSampleOf</IRI>
+        <IRI>#isSampleOf</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isSampleOf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#isSampleParameterOf</IRI>
+        <IRI>#isSampleParameterOf</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isSampleParameterOf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#isStudyOf</IRI>
+        <IRI>#isStudyOf</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isStudyOf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#issuedPolicy</IRI>
+        <IRI>#issuedPolicy</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">issuedPolicy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#link</IRI>
+        <IRI>#link</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">link</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#memberOf</IRI>
+        <IRI>#memberOf</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">memberOf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#modificationDate</IRI>
+        <IRI>#modificationDate</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">modificationDate</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#motivatingPublication</IRI>
+        <IRI>#motivatingPublication</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">motivatingPublication</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#policyCreatedBy</IRI>
+        <IRI>#policyCreatedBy</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">policyCreatedBy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#relatedMaterial</IRI>
+        <IRI>#relatedMaterial</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">relatedMaterial</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#runBy</IRI>
+        <IRI>#runBy</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">runBy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#runsStudy</IRI>
+        <IRI>#runsStudy</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">runsStudy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#settings</IRI>
+        <IRI>#settings</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">settings</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#studyCreationDate</IRI>
+        <IRI>#studyCreationDate</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">studyCreationDate</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#studyStatus</IRI>
+        <IRI>#studyStatus</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">studyStatus</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://www.escidoc.org/ontologies/csmo/#version</IRI>
+        <IRI>#version</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">version</Literal>
     </AnnotationAssertion>
 </Ontology>
