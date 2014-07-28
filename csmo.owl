@@ -31,16 +31,16 @@
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
     <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="terms:description"/>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An ontology for the representation of scientific study metadata based on the Core Scientific Metadata Model.</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">0.2</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">0.3</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:publisher"/>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://www.escidoc.org</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An ontology for the representation of scientific investigation based on Core Scientific Metadata Model.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:creator"/>
@@ -71,7 +71,13 @@
         <Class abbreviatedIRI="foaf:Person"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Calibration"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Environment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Laboratory"/>
     </Declaration>
     <Declaration>
         <Class IRI="#AnalysedResult"/>
@@ -168,6 +174,12 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://www.w3.org/ns/org#&apos;member_of&apos;"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="executedonLaboratory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasCalibration"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasEnvironment"/>
@@ -499,6 +511,10 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="Laboratory"/>
+        <Class abbreviatedIRI="org:Site"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#AnalysedResult"/>
         <Class IRI="#Result"/>
     </SubClassOf>
@@ -584,10 +600,24 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Experiment"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasInstrument"/>
-            <Class IRI="#Instrument"/>
-        </ObjectSomeValuesFrom>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="executedonLaboratory"/>
+            <Class IRI="Laboratory"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Experiment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasCalibration"/>
+            <Class IRI="Calibration"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Experiment"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasDataSetParameter"/>
+            <Class IRI="#Parameter"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Facility"/>
@@ -620,13 +650,6 @@
     <SubClassOf>
         <Class IRI="#Investigation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasData"/>
-            <Class IRI="#Result"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Investigation"/>
-        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasInstrument"/>
             <Class IRI="#Instrument"/>
         </ObjectSomeValuesFrom>
@@ -636,13 +659,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasResult"/>
             <Class IRI="#Result"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Investigation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasSample"/>
-            <Class IRI="#Sample"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -930,6 +946,10 @@
         <Class IRI="#PrincipleInvestigator"/>
         <Class IRI="#ResearchStudent"/>
     </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasCalibration"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="http://www.w3.org/ns/org#&apos;member_of&apos;"/>
         <ObjectProperty IRI="http://www.w3.org/ns/org#&apos;has_member&apos;"/>
@@ -2133,6 +2153,11 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         <Literal datatypeIRI="&rdf;PlainLiteral">foaf:Person</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Calibration</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Still to be defined</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:title"/>
         <IRI>Environment</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Environment</Literal>
@@ -2141,6 +2166,11 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Environment</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Describes environment conditions for an experiment.There might be different subclasses of this concept. An Experiment has a laboratory environment, while an observer might have a different environment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Laboratory</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A more specific Site</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
