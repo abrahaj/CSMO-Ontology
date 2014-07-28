@@ -17,34 +17,34 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="https://www.escidoc.org/ontologies/csmo/"
      versionIRI="https://www.escidoc.org/ontologies/csmo/">
-    <Prefix name="" IRI="https://www.escidoc.org/ontologies/csmo/"/>
-    <Prefix name="gn" IRI="http://www.geonames.org/ontology#"/>
     <Prefix name="nfo" IRI="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
     <Prefix name="org" IRI="http://www.w3.org/ns/org#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="bibo" IRI="http://purl.org/ontology/bibo/"/>
-    <Prefix name="csmo" IRI="https://www.escidoc.org/ontologies/csmo/"/>
+    <Prefix name="gn" IRI="http://www.geonames.org/ontology#"/>
     <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="bibo" IRI="http://purl.org/ontology/bibo/"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="csmo" IRI="https://www.escidoc.org/ontologies/csmo/"/>
+    <Prefix name="" IRI="https://www.escidoc.org/ontologies/csmo/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
-    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="terms:description"/>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An ontology for the representation of scientific study metadata based on the Core Scientific Metadata Model.</Literal>
+        <AnnotationProperty abbreviatedIRI="terms:creator"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Armand Brahaj</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">0.2</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="terms:publisher"/>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://www.escidoc.org</Literal>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An ontology for the representation of scientific study metadata based on the Core Scientific Metadata Model.</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="terms:creator"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Armand Brahaj</Literal>
+        <AnnotationProperty abbreviatedIRI="terms:publisher"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://www.escidoc.org</Literal>
     </Annotation>
     <Declaration>
         <Class abbreviatedIRI="bibo:Document"/>
@@ -69,9 +69,6 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="foaf:Person"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Environment"/>
     </Declaration>
     <Declaration>
         <Class IRI="#AnalysedResult"/>
@@ -161,16 +158,13 @@
         <Class IRI="#Study"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="org:&#39;has_member&#39;"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="org:&#39;member_of&#39;"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="org:hasSite"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.w3.org/ns/org#&apos;has_member&apos;"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.w3.org/ns/org#&apos;member_of&apos;"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasEnvironment"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasAccess"/>
@@ -487,7 +481,7 @@
     <SubClassOf>
         <Class abbreviatedIRI="foaf:Person"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://www.w3.org/ns/org#&apos;member_of&apos;"/>
+            <ObjectProperty abbreviatedIRI="org:&#39;member_of&#39;"/>
             <Class IRI="#Institution"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -647,13 +641,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Investigation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="hasEnvironment"/>
-            <Class IRI="Environment"/>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Investigation"/>
         <ObjectMinCardinality cardinality="1">
             <ObjectProperty IRI="#hasInvestigator"/>
             <Class IRI="#Investigator"/>
@@ -661,10 +648,31 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Investigation"/>
-        <ObjectMinCardinality cardinality="1">
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasPrincipalInvestigator"/>
+            <Class IRI="#Investigator"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Investigation"/>
+        <ObjectExactCardinality cardinality="1">
             <ObjectProperty IRI="#isInvestigationOf"/>
             <Class IRI="#Study"/>
-        </ObjectMinCardinality>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Investigation"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasKeyword"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Investigation"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasTopic"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Investigation"/>
@@ -931,8 +939,8 @@
         <Class IRI="#ResearchStudent"/>
     </DisjointClasses>
     <InverseObjectProperties>
-        <ObjectProperty IRI="http://www.w3.org/ns/org#&apos;member_of&apos;"/>
-        <ObjectProperty IRI="http://www.w3.org/ns/org#&apos;has_member&apos;"/>
+        <ObjectProperty abbreviatedIRI="org:&#39;member_of&#39;"/>
+        <ObjectProperty abbreviatedIRI="org:&#39;has_member&#39;"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isDataOf"/>
@@ -1007,20 +1015,20 @@
         <ObjectProperty IRI="#isInvestigationOf"/>
     </AsymmetricObjectProperty>
     <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="org:&#39;has_member&#39;"/>
+        <Class abbreviatedIRI="org:Organisation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="org:&#39;member_of&#39;"/>
+        <Class abbreviatedIRI="foaf:Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="org:hasSite"/>
         <Class IRI="#Institution"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="org:hasSite"/>
         <Class IRI="#Instrument"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.w3.org/ns/org#&apos;has_member&apos;"/>
-        <Class abbreviatedIRI="org:Organisation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.w3.org/ns/org#&apos;member_of&apos;"/>
-        <Class abbreviatedIRI="foaf:Agent"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasAccess"/>
@@ -1185,16 +1193,16 @@
         <Class IRI="#Institution"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="org:hasSite"/>
-        <Class abbreviatedIRI="org:Site"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.w3.org/ns/org#&apos;has_member&apos;"/>
+        <ObjectProperty abbreviatedIRI="org:&#39;has_member&#39;"/>
         <Class abbreviatedIRI="foaf:Person"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.w3.org/ns/org#&apos;member_of&apos;"/>
+        <ObjectProperty abbreviatedIRI="org:&#39;member_of&#39;"/>
         <Class abbreviatedIRI="org:Organisation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="org:hasSite"/>
+        <Class abbreviatedIRI="org:Site"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasAccess"/>
@@ -2133,16 +2141,6 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         <Literal datatypeIRI="&rdf;PlainLiteral">foaf:Person</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="terms:title"/>
-        <IRI>Environment</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Environment</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Environment</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Describes environment conditions for an experiment.There might be different subclasses of this concept. An Experiment has a laboratory environment, while an observer might have a different environment</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>#AnalysedResult</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Curated and analysed data file</Literal>
@@ -2622,5 +2620,5 @@ A document (noun) is a bounded physical representation of body of information de
 
 
 
-<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
 
