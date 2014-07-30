@@ -80,6 +80,21 @@
         <Class IRI="Laboratory"/>
     </Declaration>
     <Declaration>
+        <Class IRI="LegalNote"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Observer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Project"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="RelatedMaterial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Topic"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#AnalysedResult"/>
     </Declaration>
     <Declaration>
@@ -183,6 +198,21 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasEnvironment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasLegalNote"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasObserver"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasRelatedMaterial"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasTopic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isObserverOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasAccess"/>
@@ -326,9 +356,6 @@
         <DataProperty IRI="#dataStatus"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#derivedPublication"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#fixity"/>
     </Declaration>
     <Declaration>
@@ -357,12 +384,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#modificationDate"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#motivatingPublication"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#relatedMaterial"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#settings"/>
@@ -402,7 +423,7 @@
     </Declaration>
     <EquivalentClasses>
         <Class abbreviatedIRI="bibo:Document"/>
-        <Class IRI="#Publication"/>
+        <Class IRI="RelatedMaterial"/>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class abbreviatedIRI="org:Organisation"/>
@@ -415,6 +436,10 @@
     <EquivalentClasses>
         <Class abbreviatedIRI="foaf:Person"/>
         <Class IRI="#Investigator"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Project"/>
+        <Class IRI="#Study"/>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#AnalysedResult"/>
@@ -489,10 +514,6 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="org:Site"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="foaf:Person"/>
         <Class abbreviatedIRI="foaf:Agent"/>
     </SubClassOf>
@@ -513,6 +534,17 @@
     <SubClassOf>
         <Class IRI="Laboratory"/>
         <Class abbreviatedIRI="org:Site"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Observer"/>
+        <Class abbreviatedIRI="org:Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Observer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="isObserverOf"/>
+            <Class IRI="#Observation"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AnalysedResult"/>
@@ -670,6 +702,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Investigation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasRelatedMaterial"/>
+            <Class IRI="RelatedMaterial"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Investigation"/>
         <ObjectMinCardinality cardinality="1">
             <ObjectProperty IRI="#hasInvestigator"/>
             <Class IRI="#Investigator"/>
@@ -792,26 +831,12 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Publication"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Publication"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#derivedPublication"/>
-            <Datatype abbreviatedIRI="rdfs:Literal"/>
-        </DataSomeValuesFrom>
+        <Class IRI="RelatedMaterial"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Publication"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#link"/>
-            <Datatype abbreviatedIRI="rdfs:Literal"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Publication"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#motivatingPublication"/>
             <Datatype abbreviatedIRI="rdfs:Literal"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -871,10 +896,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Study"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Study"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasInvestigation"/>
             <Class IRI="#Investigation"/>
@@ -889,17 +910,24 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Study"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasLegalNote"/>
+            <Class IRI="LegalNote"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Study"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasTopic"/>
+            <Class IRI="Topic"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Study"/>
         <ObjectExactCardinality cardinality="1">
             <ObjectProperty IRI="#isStudyOf"/>
             <Class IRI="#Programme"/>
         </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Study"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#relatedMaterial"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Study"/>
@@ -917,7 +945,7 @@
     <SubClassOf>
         <Class IRI="#Study"/>
         <DataExactCardinality cardinality="1">
-            <DataProperty IRI="#hasPurpose"/>
+            <DataProperty IRI="#abstract"/>
         </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
@@ -953,6 +981,10 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="http://www.w3.org/ns/org#&apos;member_of&apos;"/>
         <ObjectProperty IRI="http://www.w3.org/ns/org#&apos;has_member&apos;"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="isObserverOf"/>
+        <ObjectProperty IRI="hasObserver"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isDataOf"/>
@@ -1215,6 +1247,18 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://www.w3.org/ns/org#&apos;member_of&apos;"/>
         <Class abbreviatedIRI="org:Organisation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasObserver"/>
+        <Class IRI="#Observation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasRelatedMaterial"/>
+        <Class IRI="RelatedMaterial"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isObserverOf"/>
+        <Class IRI="Observer"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasAccess"/>
@@ -2173,6 +2217,16 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A more specific Site</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>LegalNote</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A legal note might referr to a Copyright, Patent, Licence issues related to the study/investigation and the data contained.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>RelatedMaterial</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Contextual Information: domain definitional information; links to literature, related studies, user communication etc</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
         <IRI>#AnalysedResult</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Curated and analysed data file</Literal>
@@ -2367,11 +2421,6 @@ A document (noun) is a bounded physical representation of body of information de
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#dataStatus</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">dataStatus</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#derivedPublication</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">derivedPublication</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2605,18 +2654,8 @@ A document (noun) is a bounded physical representation of body of information de
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#motivatingPublication</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">motivatingPublication</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#policyCreatedBy</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">policyCreatedBy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#relatedMaterial</IRI>
-        <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">relatedMaterial</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
