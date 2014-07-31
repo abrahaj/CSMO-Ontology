@@ -434,10 +434,6 @@
         <Class IRI="#Facility"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class abbreviatedIRI="foaf:Person"/>
-        <Class IRI="#Investigator"/>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="Project"/>
         <Class IRI="#Study"/>
     </EquivalentClasses>
@@ -494,10 +490,6 @@
             <DataProperty IRI="#hasDataSetType"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="org:Role"/>
-        <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="org:Role"/>
@@ -739,6 +731,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Investigator"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Investigator"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#memberOf"/>
             <Class IRI="#Institution"/>
@@ -793,10 +789,6 @@
             <ObjectProperty IRI="#isPrincipalInvestigatorOf"/>
             <Class IRI="#Study"/>
         </ObjectMinCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Programme"/>
-        <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Programme"/>
@@ -925,6 +917,13 @@
     <SubClassOf>
         <Class IRI="#Study"/>
         <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasPrincipalInvestigator"/>
+            <Class IRI="#PrincipleInvestigator"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Study"/>
+        <ObjectExactCardinality cardinality="1">
             <ObjectProperty IRI="#isStudyOf"/>
             <Class IRI="#Programme"/>
         </ObjectExactCardinality>
@@ -983,8 +982,8 @@
         <ObjectProperty IRI="http://www.w3.org/ns/org#&apos;has_member&apos;"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="isObserverOf"/>
         <ObjectProperty IRI="hasObserver"/>
+        <ObjectProperty IRI="isObserverOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isDataOf"/>
@@ -1155,11 +1154,11 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasStudy"/>
-        <Class IRI="#Programme"/>
+        <Class IRI="#Institution"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasStudy"/>
-        <Class IRI="#Project"/>
+        <Class IRI="#Programme"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#isADOParameter"/>
@@ -1392,11 +1391,11 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isStudyOf"/>
-        <Class IRI="#Programme"/>
+        <Class IRI="#Institution"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isStudyOf"/>
-        <Class IRI="#Project"/>
+        <Class IRI="#Programme"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#issuedPolicy"/>
@@ -2225,6 +2224,11 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>RelatedMaterial</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Contextual Information: domain definitional information; links to literature, related studies, user communication etc</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Topic</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The topic object property provides a subject relevant to the particular study. Considering the focus of the model to be more investigation and result set oriented, the topic entity might be designed minimalistic as defined in the CCLRC Scientific Metadata Model. Such a Topic will include a set of keywords and a subject pointing to specific disciplines (yet another another entity). However, it makes more sense to connect the &quot;topic&quot; with a standard vocabulary which contains a complete list of scientific disciplines. Such a vocabulary might the German standard classification described in the “DFG Classification of Subject Area, Research Area and Scientific Discipline” [36]. A SKOS representation of this vocabulary has been also defined for the context of this research and is presented in URL-TODOFILL</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
