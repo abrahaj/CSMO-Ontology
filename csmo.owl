@@ -30,6 +30,7 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
     <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="owl-time" IRI="http://www.w3.org/TR/owl-time/#"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">0.3</Literal>
@@ -74,7 +75,16 @@
         <Class IRI="Calibration"/>
     </Declaration>
     <Declaration>
+        <Class IRI="CoordinatingInstitute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="DataContainer"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Environment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="InstitutionRole"/>
     </Declaration>
     <Declaration>
         <Class IRI="Laboratory"/>
@@ -209,7 +219,13 @@
         <ObjectProperty IRI="hasRelatedMaterial"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasTimeLine"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasTopic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isCoordinatorOfStudy"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="isObserverOf"/>
@@ -342,6 +358,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="foaf:name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasStatus"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#abstract"/>
@@ -522,6 +541,21 @@
             <ObjectProperty IRI="#hasRole"/>
             <Class abbreviatedIRI="org:Role"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CoordinatingInstitute"/>
+        <Class IRI="InstitutionRole"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CoordinatingInstitute"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="isCoordinatorOfStudy"/>
+            <Class IRI="#Study"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="InstitutionRole"/>
+        <Class abbreviatedIRI="org:Role"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Laboratory"/>
@@ -754,6 +788,13 @@
     <SubClassOf>
         <Class IRI="#Observation"/>
         <Class IRI="#Investigation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Observation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasObserver"/>
+            <Class IRI="Observer"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Policy"/>
@@ -1457,6 +1498,10 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI="foaf:name"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasStatus"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -2201,6 +2246,11 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Still to be defined</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>DataContainer</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This is a container for one or more DataSets or DataContainers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:title"/>
         <IRI>Environment</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Environment</Literal>
@@ -2209,6 +2259,11 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Environment</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Describes environment conditions for an experiment.There might be different subclasses of this concept. An Experiment has a laboratory environment, while an observer might have a different environment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>InstitutionRole</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Role of the Institution in the Study</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2229,6 +2284,11 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Topic</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The topic object property provides a subject relevant to the particular study. Considering the focus of the model to be more investigation and result set oriented, the topic entity might be designed minimalistic as defined in the CCLRC Scientific Metadata Model. Such a Topic will include a set of keywords and a subject pointing to specific disciplines (yet another another entity). However, it makes more sense to connect the &quot;topic&quot; with a standard vocabulary which contains a complete list of scientific disciplines. Such a vocabulary might the German standard classification described in the “DFG Classification of Subject Area, Research Area and Scientific Discipline” [36]. A SKOS representation of this vocabulary has been also defined for the context of this research and is presented in URL-TODOFILL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasTimeLine</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relates to owl-time:TimeEvent</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
