@@ -105,6 +105,9 @@
         <Class IRI="RelatedMaterial"/>
     </Declaration>
     <Declaration>
+        <Class IRI="Rig"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="TimeEvent"/>
     </Declaration>
     <Declaration>
@@ -375,6 +378,9 @@
         <DataProperty IRI="hasModel"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="hasOrder"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="hasStatus"/>
     </Declaration>
     <Declaration>
@@ -621,6 +627,34 @@
             <ObjectProperty IRI="isObserverOf"/>
             <Class IRI="#Observation"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Rig"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInstrument"/>
+            <Class IRI="#Instrument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Rig"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="terms:title"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Rig"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="hasOrder"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Rig"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#abstract"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AnalysedResult"/>
@@ -1116,10 +1150,6 @@
         <ObjectProperty IRI="#hasFacility"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isInstrumentOf"/>
-        <ObjectProperty IRI="#hasInstrument"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
         <ObjectProperty IRI="#hasInvestigation"/>
         <ObjectProperty IRI="#isInvestigationOf"/>
     </InverseObjectProperties>
@@ -1217,6 +1247,10 @@
             <ObjectProperty IRI="#hasFacility"/>
             <Class IRI="#Institution"/>
         </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInstrument"/>
+        <Class IRI="Rig"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasInstrument"/>
@@ -2376,6 +2410,11 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>RelatedMaterial</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Contextual Information: domain definitional information; links to literature, related studies, user communication etc</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Rig</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Experiments might be run by a group of instruments ordered in a specific way. This composes a rig</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
