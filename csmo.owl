@@ -360,7 +360,13 @@
         <DataProperty abbreviatedIRI="foaf:name"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="hasModel"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="hasStatus"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasVendor"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#abstract"/>
@@ -690,14 +696,24 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Instrument"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Instrument"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#isInstrumentOf"/>
             <Class IRI="#Facility"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="hasModel"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="hasVendor"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Instrument"/>
@@ -2287,8 +2303,18 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasModel</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relates an instrument to a model number obtained by the vendor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasTimeLine</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relates to owl-time:TimeEvent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasVendor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relates an instrument to a vendor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
