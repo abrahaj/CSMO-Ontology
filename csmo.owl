@@ -375,7 +375,19 @@
         <DataProperty abbreviatedIRI="foaf:name"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="acceptedInput"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="dataOutput"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="hasModel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasMonitoredFolder"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasOS"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="hasOrder"/>
@@ -384,7 +396,13 @@
         <DataProperty IRI="hasStatus"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="hasThroughput"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="hasVendor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="returnsInDataFormat"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#abstract"/>
@@ -610,6 +628,27 @@
         <Class IRI="#Instrument"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="DigitalInstrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="hasMonitoredFolder"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DigitalInstrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="hasOS"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DigitalInstrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="returnsInDataFormat"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="InstitutionRole"/>
         <Class abbreviatedIRI="org:Role"/>
     </SubClassOf>
@@ -796,8 +835,29 @@
     <SubClassOf>
         <Class IRI="#Instrument"/>
         <DataSomeValuesFrom>
+            <DataProperty IRI="acceptedInput"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="dataOutput"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="hasModel"/>
             <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="hasThroughput"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2382,6 +2442,11 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This is a container for one or more DataSets or DataContainers</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>DigitalInstrument</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Provides information on the data format which the instrument will store the data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:title"/>
         <IRI>Environment</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Environment</Literal>
@@ -2428,13 +2493,38 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>acceptedInput</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Provides information on the accepted format or composition of the input information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>dataOutput</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Provides information on the result output.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasModel</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relates an instrument to a model number obtained by the vendor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasMonitoredFolder</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Provides information on a path where the information is saved from the investigation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasOS</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Provides information on an operating system for the instrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasProcessingTime</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A temporal interval describing the processing time of the investigation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasThroughput</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Provides information on the sum of the data rates that are delivered by the instrument</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
