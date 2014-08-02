@@ -669,6 +669,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Rig"/>
+        <Class IRI="#Instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Rig"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasInstrument"/>
             <Class IRI="#Instrument"/>
@@ -677,22 +681,8 @@
     <SubClassOf>
         <Class IRI="Rig"/>
         <DataSomeValuesFrom>
-            <DataProperty abbreviatedIRI="terms:title"/>
-            <Datatype abbreviatedIRI="rdfs:Literal"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Rig"/>
-        <DataSomeValuesFrom>
             <DataProperty IRI="hasOrder"/>
             <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Rig"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#abstract"/>
-            <Datatype abbreviatedIRI="rdfs:Literal"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -835,6 +825,13 @@
     <SubClassOf>
         <Class IRI="#Instrument"/>
         <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="terms:title"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
+        <DataSomeValuesFrom>
             <DataProperty IRI="acceptedInput"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
@@ -864,6 +861,13 @@
         <Class IRI="#Instrument"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="hasVendor"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#abstract"/>
             <Datatype abbreviatedIRI="rdfs:Literal"/>
         </DataSomeValuesFrom>
     </SubClassOf>
