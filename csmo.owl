@@ -81,6 +81,9 @@
         <Class IRI="DataContainer"/>
     </Declaration>
     <Declaration>
+        <Class IRI="DigitalInstrument"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Environment"/>
     </Declaration>
     <Declaration>
@@ -208,6 +211,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasCalibration"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasConfiguration"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasEnvironment"/>
@@ -562,6 +568,27 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="Calibration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDataset"/>
+            <Class IRI="DataContainer"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Calibration"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="terms:title"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Calibration"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#abstract"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="CoordinatingInstitute"/>
         <Class IRI="InstitutionRole"/>
     </SubClassOf>
@@ -571,6 +598,10 @@
             <ObjectProperty IRI="isCoordinatorOfStudy"/>
             <Class IRI="#Study"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DigitalInstrument"/>
+        <Class IRI="#Instrument"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="InstitutionRole"/>
@@ -706,6 +737,20 @@
             <ObjectProperty abbreviatedIRI="org:hasSite"/>
             <Class abbreviatedIRI="org:Site"/>
         </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasCalibration"/>
+            <Class IRI="Calibration"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasConfiguration"/>
+            <Class IRI="DataContainer"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Instrument"/>
@@ -1323,6 +1368,14 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="http://www.w3.org/ns/org#&apos;member_of&apos;"/>
         <Class abbreviatedIRI="org:Organisation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasCalibration"/>
+        <Class IRI="Calibration"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasConfiguration"/>
+        <Class IRI="DataContainer"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasObserver"/>
