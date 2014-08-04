@@ -81,6 +81,9 @@
         <Class IRI="DataContainer"/>
     </Declaration>
     <Declaration>
+        <Class IRI="DigitalInstrument"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="Environment"/>
     </Declaration>
     <Declaration>
@@ -100,6 +103,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="RelatedMaterial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Rig"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TimeEvent"/>
     </Declaration>
     <Declaration>
         <Class IRI="Topic"/>
@@ -210,6 +219,9 @@
         <ObjectProperty IRI="hasCalibration"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="hasConfiguration"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="hasEnvironment"/>
     </Declaration>
     <Declaration>
@@ -217,6 +229,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasObserver"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasProcessingTime"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="hasRelatedMaterial"/>
@@ -363,7 +378,34 @@
         <DataProperty abbreviatedIRI="foaf:name"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="acceptedInput"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="dataOutput"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasModel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasMonitoredFolder"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasOS"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasOrder"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="hasStatus"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasThroughput"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasVendor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="returnsInDataFormat"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#abstract"/>
@@ -525,6 +567,7 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasAccess"/>
             <Class IRI="DataContainer"/>
+            <Class IRI="#Instrument"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -553,6 +596,27 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="Calibration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDataset"/>
+            <Class IRI="DataContainer"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Calibration"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="terms:title"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Calibration"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#abstract"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="CoordinatingInstitute"/>
         <Class IRI="InstitutionRole"/>
     </SubClassOf>
@@ -562,6 +626,31 @@
             <ObjectProperty IRI="isCoordinatorOfStudy"/>
             <Class IRI="#Study"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DigitalInstrument"/>
+        <Class IRI="#Instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DigitalInstrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="hasMonitoredFolder"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DigitalInstrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="hasOS"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DigitalInstrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="returnsInDataFormat"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="InstitutionRole"/>
@@ -581,6 +670,24 @@
             <ObjectProperty IRI="isObserverOf"/>
             <Class IRI="#Observation"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Rig"/>
+        <Class IRI="#Instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Rig"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInstrument"/>
+            <Class IRI="#Instrument"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Rig"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="hasOrder"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AnalysedResult"/>
@@ -700,7 +807,17 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Instrument"/>
-        <Class abbreviatedIRI="owl:Thing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasCalibration"/>
+            <Class IRI="Calibration"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasConfiguration"/>
+            <Class IRI="DataContainer"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Instrument"/>
@@ -711,9 +828,65 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Instrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="terms:title"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="acceptedInput"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="dataOutput"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="hasModel"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="hasThroughput"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="hasVendor"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#abstract"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
         <DataExactCardinality cardinality="1">
             <DataProperty IRI="#settings"/>
         </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Investigation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasProcessingTime"/>
+            <Class IRI="TimeEvent"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Investigation"/>
@@ -1049,10 +1222,6 @@
         <ObjectProperty IRI="#hasFacility"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isInstrumentOf"/>
-        <ObjectProperty IRI="#hasInstrument"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
         <ObjectProperty IRI="#hasInvestigation"/>
         <ObjectProperty IRI="#isInvestigationOf"/>
     </InverseObjectProperties>
@@ -1154,6 +1323,10 @@
             <ObjectProperty IRI="#hasFacility"/>
             <Class IRI="#Institution"/>
         </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInstrument"/>
+        <Class IRI="Rig"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasInstrument"/>
@@ -1309,10 +1482,20 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="accessibleBy"/>
         <Class abbreviatedIRI="org:Role"/>
+        <ObjectProperty IRI="hasCalibration"/>
+        <Class IRI="Calibration"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasConfiguration"/>
+        <Class IRI="DataContainer"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasObserver"/>
         <Class IRI="#Observation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasProcessingTime"/>
+        <Class IRI="TimeEvent"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasRelatedMaterial"/>
@@ -1329,6 +1512,7 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasAccess"/>
         <Class IRI="DataContainer"/>
+        <Class IRI="#Instrument"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasAccess"/>
@@ -2277,6 +2461,11 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This is a container for one or more DataSets or DataContainers</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>DigitalInstrument</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Provides information on the data format which the instrument will store the data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:title"/>
         <IRI>Environment</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Environment</Literal>
@@ -2308,6 +2497,16 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Rig</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Experiments might be run by a group of instruments ordered in a specific way. This composes a rig</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TimeEvent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Same as owl-time:TimeEvent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Topic</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The topic object property provides a subject relevant to the particular study. Considering the focus of the model to be more investigation and result set oriented, the topic entity might be designed minimalistic as defined in the CCLRC Scientific Metadata Model. Such a Topic will include a set of keywords and a subject pointing to specific disciplines (yet another another entity). However, it makes more sense to connect the &quot;topic&quot; with a standard vocabulary which contains a complete list of scientific disciplines. Such a vocabulary might the German standard classification described in the “DFG Classification of Subject Area, Research Area and Scientific Discipline” [36]. A SKOS representation of this vocabulary has been also defined for the context of this research and is presented in URL-TODOFILL</Literal>
     </AnnotationAssertion>
@@ -2315,11 +2514,49 @@ The CSMD takes a hierarchical view of data holdings, as data sets may contain ot
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>accessibleBy</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Holds the values of the roles that have access to this resource</Literal>
+        <IRI>acceptedInput</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Provides information on the accepted format or composition of the input information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>dataOutput</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Provides information on the result output.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasModel</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relates an instrument to a model number obtained by the vendor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasMonitoredFolder</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Provides information on a path where the information is saved from the investigation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasOS</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Provides information on an operating system for the instrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasProcessingTime</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A temporal interval describing the processing time of the investigation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasThroughput</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Provides information on the sum of the data rates that are delivered by the instrument</Literal>
+>>>>>>> 5cbff2e9866b2de97adb10d50a45cd1803628af9
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasTimeLine</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relates to owl-time:TimeEvent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasVendor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relates an instrument to a vendor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="terms:description"/>

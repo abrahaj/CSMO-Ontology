@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+<<<<<<< HEAD
         <uri id="Automatically generated entry, Timestamp=1407155292290" name="http://escidoc.org/ontologies/csmo.owl" uri="version-history/csmo.v01.owl"/>
         <uri id="Automatically generated entry, Timestamp=1407155292290" name="duplicate:https://www.escidoc.org/ontologies/csmo/" uri="csmo.rdf"/>
         <uri id="Automatically generated entry, Timestamp=1407155292290" name="duplicate:https://www.escidoc.org/ontologies/csmo/" uri="csmo.owl"/>
         <uri id="Automatically generated entry, Timestamp=1407155292290" name="shadowed:https://www.escidoc.org/ontologies/csmo/" uri="version-history/csmo.v02.owl"/>
+=======
+        <uri id="Automatically generated entry, Timestamp=1407010368793" name="http://escidoc.org/ontologies/csmo.owl" uri="version-history/csmo.v01.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407010368793" name="duplicate:https://www.escidoc.org/ontologies/csmo/" uri="csmo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407010368793" name="duplicate:https://www.escidoc.org/ontologies/csmo/" uri="csmo.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1407010368793" name="shadowed:https://www.escidoc.org/ontologies/csmo/" uri="version-history/csmo.v02.owl"/>
+>>>>>>> 5cbff2e9866b2de97adb10d50a45cd1803628af9
     </group>
 </catalog>
